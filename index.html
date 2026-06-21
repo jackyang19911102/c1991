@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="C1991 — 个人网站，记录文字、影像与思考。">
+<meta name="color-scheme" content="dark">
 <title>C1991</title>
 <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -12,28 +13,33 @@
 <nav class="nav">
   <a href="/" class="nav-brand">C1991</a>
   <ul class="nav-links">
-    <li><a href="/blog.html">文字</a></li>
-    <li><a href="/gallery.html">影像</a></li>
-    <li><a href="/about.html">关于</a></li>
+    <li><a href="/blog.html">posts</a></li>
+    <li><a href="/gallery.html">gallery</a></li>
+    <li><a href="/about.html">about</a></li>
   </ul>
 </nav>
 
 <main class="container">
-  <section class="hero">
-    <h1>见字如面</h1>
-    <p class="subtitle">
-      一个安静写字的角落。记录日常的思绪、偶然的发现，和那些值得被留住的光影。
-    </p>
-  </section>
 
-  <h2 class="section-title">最近文章</h2>
-  <div id="recent-posts">
-    <div class="empty-state">加载中...</div>
+  <div class="terminal-hero">
+    <div class="dots"><span></span><span></span><span></span></div>
+    <div class="title">
+      <span class="prompt">~/c1991</span>
+      <span class="tilde"> $ </span>
+      <span class="cmd">whoami</span>
+    </div>
+    <div class="subtitle">jackyang — developer, writer, photographer. building things and capturing moments.</div>
   </div>
+
+  <h2 class="section-title">// recent posts</h2>
+  <div id="recent-posts">
+    <div class="empty-state">Loading posts...</div>
+  </div>
+
 </main>
 
 <footer class="footer">
-  &copy; 2026 C1991 · <a href="https://github.com/jackyang19911102/c1991" style="color:inherit">GitHub</a>
+  &copy; 2026 C1991 &middot; Built with plain HTML &middot; <a href="https://github.com/jackyang19911102/c1991">source</a>
 </footer>
 
 <script src="/js/main.js"></script>
