@@ -13,39 +13,87 @@
 <nav class="nav">
   <a href="/" class="nav-brand">C1991</a>
   <ul class="nav-links">
-    <li><a href="/blog.html">posts</a></li>
-    <li><a href="/gallery.html">gallery</a></li>
-    <li><a href="/about.html">about</a></li>
+    <li><a href="/blog.html">文字</a></li>
+    <li><a href="/gallery.html">影像</a></li>
+    <li><a href="/about.html">关于</a></li>
   </ul>
 </nav>
 
 <main class="container">
 
-  <div class="terminal-hero">
-    <div class="dots"><span></span><span></span><span></span></div>
-    <div class="title">
-      <span class="prompt">~/c1991</span>
-      <span class="tilde"> $ </span>
-      <span class="cmd">whoami</span>
+  <!-- Profile Card -->
+  <div class="profile-card">
+    <div class="profile-avatar">&#9998;</div>
+    <h1>Jack Yang</h1>
+    <div class="handle">@jackyang19911102</div>
+    <p class="bio">
+      开发者、写作者、摄影爱好者。这里是我记录日常思绪、分享技术发现、留存光影瞬间的数字角落。
+    </p>
+    <div class="status-row">
+      <div class="stat"><div class="num" id="post-count">-</div><div class="label">文章</div></div>
+      <div class="stat"><div class="num" id="photo-count">-</div><div class="label">照片</div></div>
+      <div class="stat"><div class="num">2026</div><div class="label">建站</div></div>
     </div>
-    <div class="subtitle">jackyang — developer, writer, photographer. building things and capturing moments.</div>
   </div>
 
-  <h2 class="section-title">// recent posts</h2>
-  <div id="recent-posts">
-    <div class="empty-state">Loading posts...</div>
+  <!-- Feature Cards -->
+  <div class="feature-grid">
+    <a href="/blog.html" class="feature-card feature-card--blue">
+      <span class="icon">&#9998;</span>
+      <span class="label">文字</span>
+      <span class="desc">随笔 · 技术 · 生活</span>
+    </a>
+    <a href="/gallery.html" class="feature-card feature-card--purple">
+      <span class="icon">&#128247;</span>
+      <span class="label">影像</span>
+      <span class="desc">光影 · 瞬间 · 记忆</span>
+    </a>
+    <a href="/about.html" class="feature-card feature-card--green">
+      <span class="icon">&#9881;</span>
+      <span class="label">关于</span>
+      <span class="desc">关于我 · 关于本站</span>
+    </a>
+    <a href="https://github.com/jackyang19911102/c1991" class="feature-card feature-card--orange" target="_blank" rel="noopener">
+      <span class="icon">&#9000;</span>
+      <span class="label">GitHub</span>
+      <span class="desc">源代码 · 项目</span>
+    </a>
   </div>
+
+  <!-- Recent Posts -->
+  <h2 class="section-title">最近文章</h2>
+  <div id="recent-posts">
+    <div class="empty-state">加载中…</div>
+  </div>
+  <a href="/blog.html" class="view-all">查看全部 →</a>
 
 </main>
 
 <footer class="footer">
-  &copy; 2026 C1991 &middot; Built with plain HTML &middot; <a href="https://github.com/jackyang19911102/c1991">source</a>
+  &copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">源代码</a> &middot; GitHub Pages
 </footer>
 
 <script src="/js/main.js"></script>
 <script src="/js/blog.js"></script>
 <script>
+(async () => {
+  await Blog.init();
+
+  // Post count
+  document.getElementById('post-count').textContent = Blog.manifest.length;
+
+  // Photo count
+  try {
+    const res = await fetch('/images/manifest.json');
+    const photos = res.ok ? await res.json() : [];
+    document.getElementById('photo-count').textContent = photos.length;
+  } catch(e) {
+    document.getElementById('photo-count').textContent = '0';
+  }
+
+  // Recent posts
   Blog.renderRecent('recent-posts', 5);
+})();
 </script>
 </body>
 </html>

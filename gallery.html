@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="C1991 — Gallery">
+<meta name="description" content="C1991 — 影像 · 摄影">
 <meta name="color-scheme" content="dark">
-<title>gallery — C1991</title>
+<title>影像 — C1991</title>
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -13,37 +13,31 @@
 <nav class="nav">
   <a href="/" class="nav-brand">C1991</a>
   <ul class="nav-links">
-    <li><a href="/blog.html">posts</a></li>
-    <li><a href="/gallery.html">gallery</a></li>
-    <li><a href="/about.html">about</a></li>
+    <li><a href="/blog.html">文字</a></li>
+    <li><a href="/gallery.html">影像</a></li>
+    <li><a href="/about.html">关于</a></li>
   </ul>
 </nav>
 
 <main class="container">
 
-  <div class="terminal-hero terminal-hero--compact">
-    <div class="dots"><span></span><span></span><span></span></div>
-    <div class="title">
-      <span class="prompt">~/c1991/gallery</span>
-      <span class="tilde"> $ </span>
-      <span class="cmd">ls -la</span>
-    </div>
-    <div class="subtitle">Photographs and visual fragments.</div>
-  </div>
+  <a href="/" class="back-link">← 返回首页</a>
+
+  <h2 class="section-title">影像记录</h2>
 
   <div class="gallery-grid" id="gallery-grid">
-    <div class="empty-state">No photos yet. Stay tuned.</div>
+    <div class="empty-state">还没有照片，敬请期待 &#128247;</div>
   </div>
 
   <div class="lightbox" id="lightbox">
-    <button type="button" class="close" id="lightbox-close" aria-label="Close">&times;</button>
+    <button type="button" class="close" id="lightbox-close" aria-label="关闭">&times;</button>
     <img src="" alt="" id="lightbox-img">
   </div>
 
 </main>
 
 <footer class="footer">
-  &copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">source</a>
+  &copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">源代码</a>
 </footer>
 
 <script src="/js/main.js"></script>
@@ -59,10 +53,14 @@
       const images = await res.json();
       if (images.length) {
         grid.innerHTML = images.map(img =>
-          `<img src="/images/${img.file}" alt="${img.alt || ''}" loading="lazy">`
+          `<div class="photo-card">
+            <img src="/images/${img.file}" alt="${img.alt || ''}" loading="lazy">
+            ${img.caption ? `<div class="caption">${img.caption}</div>` : ''}
+          </div>`
         ).join('');
-        grid.querySelectorAll('img').forEach(img => {
-          img.addEventListener('click', () => {
+        grid.querySelectorAll('.photo-card').forEach(card => {
+          card.addEventListener('click', () => {
+            const img = card.querySelector('img');
             lbImg.src = img.src;
             lbImg.alt = img.alt;
             lb.classList.add('open');
