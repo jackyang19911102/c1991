@@ -3,96 +3,255 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="C1991 — 个人网站，记录文字、影像与思考。">
+<meta name="description" content="C1991 — 记录文字、影像与思考的个人网站。">
 <meta name="color-scheme" content="dark">
 <title>C1991</title>
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-<nav class="nav">
-  <a href="/" class="nav-brand">C1991</a>
-  <ul class="nav-links">
-    <li><a href="/blog.html">文字</a></li>
-    <li><a href="/gallery.html">影像</a></li>
-    <li><a href="/about.html">关于</a></li>
-  </ul>
-</nav>
+<!-- Particle Background -->
+<canvas id="bg-canvas" style="position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.55;"></canvas>
 
-<main class="container">
+<!-- Corner brand (no nav) -->
+<a href="/" class="page-brand">C1991</a>
 
-  <!-- Profile Card -->
-  <div class="profile-card">
-    <div class="profile-avatar">&#9998;</div>
-    <h1>Jack Yang</h1>
-    <div class="handle">@jackyang19911102</div>
-    <p class="bio">
-      开发者、写作者、摄影爱好者。这里是我记录日常思绪、分享技术发现、留存光影瞬间的数字角落。
-    </p>
-    <div class="status-row">
-      <div class="stat"><div class="num" id="post-count">-</div><div class="label">文章</div></div>
-      <div class="stat"><div class="num" id="photo-count">-</div><div class="label">照片</div></div>
-      <div class="stat"><div class="num">2026</div><div class="label">建站</div></div>
+<!-- Card Stack -->
+<div class="stack" id="card-stack">
+
+  <!-- 1. 关于我 -->
+  <a href="/about.html" class="card card--indigo">
+    <div class="card-inner">
+      <div class="card-icon">&#9998;</div>
+      <div class="card-body">
+        <div class="card-title">关于我</div>
+        <div class="card-sub">About Me · 了解这个站和站长</div>
+      </div>
+      <div class="card-reveal">
+        <span>了解更多</span>
+        <div class="card-arrow">&rarr;</div>
+      </div>
     </div>
+  </a>
+
+  <!-- 2. 文本作品 -->
+  <a href="/blog.html" class="card card--green">
+    <div class="card-inner">
+      <div class="card-icon">&#9998;</div>
+      <div class="card-body">
+        <div class="card-title">文本作品</div>
+        <div class="card-sub">Writing · 随笔、技术与生活</div>
+      </div>
+      <div class="card-reveal">
+        <span>阅读文章</span>
+        <div class="card-arrow">&rarr;</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 3. 图文博客 -->
+  <a href="/blog.html" class="card card--purple">
+    <div class="card-inner">
+      <div class="card-icon">&#128247;</div>
+      <div class="card-body">
+        <div class="card-title">图文博客</div>
+        <div class="card-sub">Photo Blog · 光影与文字交织</div>
+      </div>
+      <div class="card-reveal">
+        <span>浏览图文</span>
+        <div class="card-arrow">&rarr;</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 4. 分享摘要 -->
+  <a href="/gallery.html" class="card card--amber">
+    <div class="card-inner">
+      <div class="card-icon">&#9878;</div>
+      <div class="card-body">
+        <div class="card-title">分享摘要</div>
+        <div class="card-sub">Shares · 好物、灵感与发现</div>
+      </div>
+      <div class="card-reveal">
+        <span>发现更多</span>
+        <div class="card-arrow">&rarr;</div>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+<!-- Stats Bar -->
+<div class="stats-bar">
+  <div class="stats-item">
+    <span class="val" id="stat-posts">-</span>
+    文章
   </div>
-
-  <!-- Feature Cards -->
-  <div class="feature-grid">
-    <a href="/blog.html" class="feature-card feature-card--blue">
-      <span class="icon">&#9998;</span>
-      <span class="label">文字</span>
-      <span class="desc">随笔 · 技术 · 生活</span>
-    </a>
-    <a href="/gallery.html" class="feature-card feature-card--purple">
-      <span class="icon">&#128247;</span>
-      <span class="label">影像</span>
-      <span class="desc">光影 · 瞬间 · 记忆</span>
-    </a>
-    <a href="/about.html" class="feature-card feature-card--green">
-      <span class="icon">&#9881;</span>
-      <span class="label">关于</span>
-      <span class="desc">关于我 · 关于本站</span>
-    </a>
-    <a href="https://github.com/jackyang19911102/c1991" class="feature-card feature-card--orange" target="_blank" rel="noopener">
-      <span class="icon">&#9000;</span>
-      <span class="label">GitHub</span>
-      <span class="desc">源代码 · 项目</span>
-    </a>
+  <div class="stats-divider"></div>
+  <div class="stats-item">
+    <span class="val" id="stat-photos">-</span>
+    照片
   </div>
-
-  <!-- Recent Posts -->
-  <h2 class="section-title">最近文章</h2>
-  <div id="recent-posts">
-    <div class="empty-state">加载中…</div>
+  <div class="stats-divider"></div>
+  <div class="stats-item">
+    <span class="val" id="busuanzi_value_site_pv">-</span>
+    浏览
   </div>
-  <a href="/blog.html" class="view-all">查看全部 →</a>
+  <div class="stats-divider"></div>
+  <div class="stats-item">
+    <span class="val" id="busuanzi_value_site_uv">-</span>
+    访客
+  </div>
+</div>
 
-</main>
+<!-- Copyright -->
+<div style="position:fixed;bottom:0.4rem;left:50%;transform:translateX(-50%);font-size:10px;color:rgba(255,255,255,0.15);z-index:5;letter-spacing:0.03em;pointer-events:none;">
+  &copy; 2026 C1991
+</div>
 
-<footer class="footer">
-  &copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">源代码</a> &middot; GitHub Pages
-</footer>
+<!-- Busuanzi Analytics -->
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<script src="/js/main.js"></script>
-<script src="/js/blog.js"></script>
+<!-- Particle + Cards + Stats -->
 <script>
-(async () => {
-  await Blog.init();
+// ═══════════════════════════════════════════
+// Particle Background
+// ═══════════════════════════════════════════
+(() => {
+  const canvas = document.getElementById('bg-canvas');
+  const ctx = canvas.getContext('2d');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) { canvas.style.display = 'none'; return; }
 
+  const COUNT = 45;
+  const MAX_DIST = 130;
+  const COLORS = ['#6366f1','#10b981','#8b5cf6','#f59e0b'];
+  let W, H, particles = [];
+  let mouse = { x: -1000, y: -1000 };
+  let running = true;
+
+  function resize() {
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    W = innerWidth; H = innerHeight;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function create() {
+    particles = Array.from({ length: COUNT }, () => ({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      vx: (Math.random() - 0.5) * 0.35,
+      vy: (Math.random() - 0.5) * 0.35,
+      r: Math.random() * 1.8 + 0.6,
+      color: COLORS[Math.floor(Math.random() * COLORS.length)],
+    }));
+  }
+
+  function draw() {
+    if (!running) return;
+    ctx.clearRect(0, 0, W, H);
+
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+
+      // Move
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < -20) p.x = W + 20;
+      if (p.x > W + 20) p.x = -20;
+      if (p.y < -20) p.y = H + 20;
+      if (p.y > H + 20) p.y = -20;
+
+      // Draw dot
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = 0.45;
+      ctx.fill();
+
+      // Connections to nearby particles
+      for (let j = i + 1; j < particles.length; j++) {
+        const q = particles[j];
+        const dx = p.x - q.x, dy = p.y - q.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < MAX_DIST) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(q.x, q.y);
+          ctx.strokeStyle = p.color;
+          ctx.globalAlpha = (1 - dist / MAX_DIST) * 0.12;
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      }
+
+      // Connection to mouse
+      const mx = p.x - mouse.x, my = p.y - mouse.y;
+      const mDist = Math.sqrt(mx * mx + my * my);
+      if (mDist < MAX_DIST * 1.3) {
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(mouse.x, mouse.y);
+        ctx.strokeStyle = p.color;
+        ctx.globalAlpha = (1 - mDist / (MAX_DIST * 1.3)) * 0.18;
+        ctx.lineWidth = 0.6;
+        ctx.stroke();
+      }
+    }
+
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  create();
+  draw();
+
+  window.addEventListener('resize', () => { resize(); create(); });
+  document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+  document.addEventListener('mouseleave', () => { mouse.x = -1000; mouse.y = -1000; });
+  document.addEventListener('visibilitychange', () => {
+    running = !document.hidden;
+    if (running) draw();
+  });
+})();
+
+// ═══════════════════════════════════════════
+// Card Stack — Hover dimming
+// ═══════════════════════════════════════════
+const stack = document.getElementById('card-stack');
+const cards = stack.querySelectorAll('.card');
+
+cards.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    cards.forEach(c => { if (c !== card) c.style.opacity = '0.3'; });
+  });
+  card.addEventListener('mouseleave', () => {
+    cards.forEach(c => { c.style.opacity = ''; });
+  });
+});
+
+// ── Stats ──
+(async () => {
   // Post count
-  document.getElementById('post-count').textContent = Blog.manifest.length;
+  try {
+    const m = await fetch('/posts/manifest.json');
+    if (m.ok) {
+      const posts = await m.json();
+      document.getElementById('stat-posts').textContent = posts.length;
+    }
+  } catch(e) {}
 
   // Photo count
   try {
-    const res = await fetch('/images/manifest.json');
-    const photos = res.ok ? await res.json() : [];
-    document.getElementById('photo-count').textContent = photos.length;
-  } catch(e) {
-    document.getElementById('photo-count').textContent = '0';
-  }
-
-  // Recent posts
-  Blog.renderRecent('recent-posts', 5);
+    const p = await fetch('/images/manifest.json');
+    if (p.ok) {
+      const photos = await p.json();
+      document.getElementById('stat-photos').textContent = photos.length;
+    }
+  } catch(e) {}
 })();
 </script>
 </body>

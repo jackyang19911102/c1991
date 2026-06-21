@@ -3,71 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="关于 C1991 和站长">
+<meta name="description" content="关于 C1991 和站长 Jack Yang">
 <meta name="color-scheme" content="dark">
 <title>关于 — C1991</title>
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body style="display:flex;flex-direction:column;min-height:100vh;align-items:stretch;">
 
-<nav class="nav">
-  <a href="/" class="nav-brand">C1991</a>
-  <ul class="nav-links">
-    <li><a href="/blog.html">文字</a></li>
-    <li><a href="/gallery.html">影像</a></li>
-    <li><a href="/about.html">关于</a></li>
-  </ul>
-</nav>
+<a href="/" class="page-brand">C1991</a>
 
-<main class="container">
+<div class="subpage" style="flex:1;">
+  <div class="subpage-container">
+    <a href="/" class="subpage-back">← 返回首页</a>
 
-  <a href="/" class="back-link">← 返回首页</a>
+    <!-- Profile -->
+    <div style="text-align:center;padding:1.5rem 0 2.5rem;">
+      <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#8b5cf6);margin:0 auto 1.2rem;display:flex;align-items:center;justify-content:center;font-size:30px;color:#fff;box-shadow:0 0 50px rgba(99,102,241,0.2);">&#9998;</div>
+      <h1 style="font-size:clamp(1.6rem,4vw,2rem);font-weight:700;letter-spacing:-0.02em;">Jack Yang</h1>
+      <p style="font-family:var(--font-mono);font-size:12px;color:var(--text-muted);margin-top:0.2rem;">@jackyang19911102</p>
+      <p style="color:var(--text-dim);max-width:420px;margin:0.6rem auto 0;line-height:1.7;font-size:14px;">
+        一个喜欢写代码、拍照片、记录生活的人。
+      </p>
+    </div>
 
-  <!-- Profile -->
-  <div class="profile-card">
-    <div class="profile-avatar">&#9998;</div>
-    <h1>Jack Yang</h1>
-    <div class="handle">@jackyang19911102</div>
-    <p class="bio">
-      一个喜欢写代码、拍照片、记录生活的人。
-    </p>
+    <!-- About Site -->
+    <div class="about-card">
+      <h3>&#127760; 关于本站</h3>
+      <p>
+        C1991 是个人博客，托管在 <a href="https://github.com/jackyang19911102/c1991">GitHub Pages</a>，
+        域名 <a href="https://c1991.cn">c1991.cn</a>。没有广告，没有评论区，没有社交分享按钮。
+        有的只是文字和图片，以及偶尔的技术分享。
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div class="about-card">
+      <h3>&#9993; 联系方式</h3>
+      <p>
+        <a href="https://github.com/jackyang19911102">GitHub @jackyang19911102</a>
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="about-card">
+      <h3>&#9203; 时间线</h3>
+      <ul class="timeline">
+        <li>
+          <div class="year">2026</div>
+          c1991.cn 上线。开始在这个角落记录和分享。
+        </li>
+      </ul>
+    </div>
+
   </div>
+</div>
 
-  <!-- About site -->
-  <div class="about-card">
-    <h2>&#127760; 关于本站</h2>
-    <p>
-      C1991 是个人博客，托管在 <a href="https://github.com/jackyang19911102/c1991">GitHub Pages</a>，
-      域名 <a href="https://c1991.cn">c1991.cn</a>。没有广告，没有评论区，没有社交分享按钮。
-      有的只是文字和图片，以及偶尔的技术分享。
-    </p>
-  </div>
-
-  <!-- Contact -->
-  <div class="about-card">
-    <h2>&#9993; 联系方式</h2>
-    <p>
-      <a href="https://github.com/jackyang19911102">GitHub @jackyang19911102</a>
-    </p>
-  </div>
-
-  <!-- Timeline -->
-  <div class="about-card">
-    <h2>&#9203; 时间线</h2>
-    <ul class="timeline">
-      <li>
-        <div class="year">2026</div>
-        c1991.cn 上线。开始在这个角落记录和分享。
-      </li>
-    </ul>
-  </div>
-
-</main>
-
-<footer class="footer">
+<footer class="sub-footer">
+  <div class="footer-divider"></div>
   &copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">源代码</a>
 </footer>
 
-<script src="/js/main.js"></script>
 </body>
 </html>

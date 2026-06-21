@@ -3,76 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="C1991 — 影像 · 摄影">
+<meta name="description" content="C1991 — 分享摘要 · 发现">
 <meta name="color-scheme" content="dark">
-<title>影像 — C1991</title>
+<title>分享摘要 — C1991</title>
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body style="display:flex;flex-direction:column;min-height:100vh;align-items:stretch;">
 
-<nav class="nav">
-  <a href="/" class="nav-brand">C1991</a>
-  <ul class="nav-links">
-    <li><a href="/blog.html">文字</a></li>
-    <li><a href="/gallery.html">影像</a></li>
-    <li><a href="/about.html">关于</a></li>
-  </ul>
-</nav>
+<a href="/" class="page-brand">C1991</a>
 
-<main class="container">
+<div class="subpage" style="flex:1;">
+  <div class="subpage-container">
+    <a href="/" class="subpage-back">← 返回首页</a>
 
-  <a href="/" class="back-link">← 返回首页</a>
+    <!-- Hot Header -->
+    <div class="hot-header">
+      <span class="hot-icon">&#128293;</span>
+      <h2>热门瞬间</h2>
+      <span class="hot-badge">HOT</span>
+    </div>
 
-  <h2 class="section-title">影像记录</h2>
-
-  <div class="gallery-grid" id="gallery-grid">
-    <div class="empty-state">还没有照片，敬请期待 &#128247;</div>
+    <!-- Hot List -->
+    <div class="hot-list" id="hot-list">
+      <div class="empty-state"><span class="empty-icon">&#128247;</span>还没有照片，敬请期待</div>
+    </div>
   </div>
+</div>
 
-  <div class="lightbox" id="lightbox">
-    <button type="button" class="close" id="lightbox-close" aria-label="关闭">&times;</button>
-    <img src="" alt="" id="lightbox-img">
-  </div>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button type="button" class="lb-btn lb-close" aria-label="关闭">&times;</button>
+  <button type="button" class="lb-btn lb-prev" aria-label="上一张">&lsaquo;</button>
+  <button type="button" class="lb-btn lb-next" aria-label="下一张">&rsaquo;</button>
+  <img src="" alt="" id="lightbox-img">
+  <div class="lb-counter"></div>
+</div>
 
-</main>
-
-<footer class="footer">
+<footer class="sub-footer">
+  <div class="footer-divider"></div>
   &copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">源代码</a>
 </footer>
 
-<script src="/js/main.js"></script>
 <script>
 (async function() {
-  const grid = document.getElementById('gallery-grid');
+  const list = document.getElementById('hot-list');
   const lb = document.getElementById('lightbox');
   const lbImg = document.getElementById('lightbox-img');
+  const lbCounter = lb.querySelector('.lb-counter');
+  let images = [], idx = 0;
+
+  const rankEmoji = ['🥇', '🥈', '🥉'];
 
   try {
     const res = await fetch('/images/manifest.json');
     if (res.ok) {
-      const images = await res.json();
+      images = await res.json();
       if (images.length) {
-        grid.innerHTML = images.map(img =>
-          `<div class="photo-card">
-            <img src="/images/${img.file}" alt="${img.alt || ''}" loading="lazy">
-            ${img.caption ? `<div class="caption">${img.caption}</div>` : ''}
-          </div>`
-        ).join('');
-        grid.querySelectorAll('.photo-card').forEach(card => {
-          card.addEventListener('click', () => {
-            const img = card.querySelector('img');
-            lbImg.src = img.src;
-            lbImg.alt = img.alt;
-            lb.classList.add('open');
+        list.innerHTML = images.map((img, i) => {
+          const rank = i < 3
+            ? `<span class="hot-rank hot-rank--${i + 1}">${rankEmoji[i]}</span>`
+            : `<span class="hot-rank">${String(i + 1).padStart(2, '0')}</span>`;
+
+          const heat = i < 3 ? `<span class="hot-heat">&#128293; ${9999 - i * 2300}</span>` : '';
+
+          return `
+            <div class="hot-item" data-index="${i}">
+              ${rank}
+              <img src="/images/${img.file}" alt="${img.alt || ''}" class="hot-thumb" loading="lazy">
+              <div class="hot-info">
+                <span class="hot-title">${img.caption || '无标题'}</span>
+                <span class="hot-meta">${heat}</span>
+              </div>
+              <span class="hot-arrow">&rarr;</span>
+            </div>`;
+        }).join('');
+
+        list.querySelectorAll('.hot-item').forEach(item => {
+          item.addEventListener('click', () => {
+            idx = parseInt(item.dataset.index);
+            _show(); lb.classList.add('open');
           });
         });
       }
     }
   } catch(e) {}
 
-  document.getElementById('lightbox-close').addEventListener('click', () => lb.classList.remove('open'));
-  lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+  function _show() {
+    const img = images[idx]; if (!img) return;
+    lbImg.src = `/images/${img.file}`; lbImg.alt = img.alt || '';
+    lbCounter.textContent = `${idx + 1} / ${images.length}`;
+  }
+  function _close() { lb.classList.remove('open'); }
+
+  document.querySelector('.lb-close').addEventListener('click', _close);
+  document.querySelector('.lb-prev').addEventListener('click', () => { idx = (idx - 1 + images.length) % images.length; _show(); });
+  document.querySelector('.lb-next').addEventListener('click', () => { idx = (idx + 1) % images.length; _show(); });
+  lb.addEventListener('click', e => { if (e.target === lb) _close(); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') _close();
+    if (e.key === 'ArrowLeft') { idx = (idx - 1 + images.length) % images.length; _show(); }
+    if (e.key === 'ArrowRight') { idx = (idx + 1) % images.length; _show(); }
+  });
 })();
 </script>
 </body>

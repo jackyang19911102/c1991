@@ -1,101 +1,131 @@
-// C1991 — Blog Engine (Client-side Markdown rendering)
-// Dependencies: marked.js (loaded via CDN in blog.html)
+/**
+ * C1991 — Blog Engine
+ * Client-side Markdown rendering with cover images, tag filtering,
+ * photo posts, and inline image lightbox support.
+ * Dependencies: marked.js (loaded via CDN in blog.html)
+ */
 
-const Blog = {
-  manifest: [],
-  basePath: '/posts/',
+const Blog = (() => {
+  'use strict';
 
-  async init() {
+  const BASE_PATH = '/posts/';
+  const IMG_BASE = '/posts/images/';
+
+  let manifest = [];
+  let currentTag = null;
+
+  // ============================================================
+  // Init
+  // ============================================================
+  async function init() {
     try {
       const res = await fetch('/posts/manifest.json');
       if (!res.ok) throw new Error('manifest not found');
-      this.manifest = await res.json();
-      // Sort by date descending
-      this.manifest.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+      manifest = await res.json();
+      manifest.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
     } catch (e) {
       console.warn('Blog: failed to load manifest', e);
-      this.manifest = [];
+      manifest = [];
     }
-  },
+  }
 
-  // Render article list for blog.html
-  async renderList(targetId) {
-    await this.init();
+  // ============================================================
+  // Collect all unique tags from manifest
+  // ============================================================
+  function getAllTags() {
+    const tags = new Set();
+    manifest.forEach(p => (p.tags || []).forEach(t => tags.add(t)));
+    return [...tags].sort();
+  }
+
+  // ============================================================
+  // Render chapter-style list (novel TOC)
+  // ============================================================
+  function renderList(targetId) {
     const el = document.getElementById(targetId);
     if (!el) return;
 
-    if (!this.manifest.length) {
-      el.innerHTML = '<div class="empty-state">还没有文章，静待花开 🌱</div>';
+    if (!manifest.length) {
+      el.innerHTML = '<div class="empty-state"><span class="empty-icon">&#127793;</span>还没有文章，静待花开</div>';
       return;
     }
 
-    el.innerHTML = this.manifest.map(post => `
-      <a href="/blog.html?post=${encodeURIComponent(post.slug)}" class="post-card">
-        <div class="date">${this._fmtDate(post.date)}</div>
-        <div class="post-title">${this._esc(post.title)}</div>
-        <div class="excerpt">${this._esc(post.excerpt || '')}</div>
-        ${post.tags ? `<div class="tags">${post.tags.map(t => `<span class="tag">${this._esc(t)}</span>`).join('')}</div>` : ''}
-      </a>
-    `).join('');
-  },
+    const items = manifest.map((post, i) => _chapterRow(post, i + 1)).join('');
 
-  // Render recent posts for home page
-  async renderRecent(targetId, count = 5) {
-    await this.init();
+    el.innerHTML = `
+      <div class="chapter-section-label">目录 · ${manifest.length} 篇</div>
+      <div class="chapter-list">${items}</div>
+    `;
+  }
+
+  // ============================================================
+  // Single chapter row (novel TOC style)
+  // ============================================================
+  function _chapterRow(post, num) {
+    const date = _fmtDate(post.date);
+    const title = _esc(post.title);
+    const href = `/blog.html?post=${encodeURIComponent(post.slug)}`;
+
+    return `
+      <a href="${href}" class="chapter-item">
+        <span class="chapter-num">${String(num).padStart(2, '0')}</span>
+        <span class="chapter-title">${title}</span>
+        <span class="chapter-date">${date}</span>
+      </a>`;
+  }
+
+  // ============================================================
+  // Render recent posts (homepage)
+  // ============================================================
+  function renderRecent(targetId, count = 5) {
     const el = document.getElementById(targetId);
     if (!el) return;
 
-    const recent = this.manifest.slice(0, count);
+    const recent = manifest.slice(0, count);
     if (!recent.length) {
-      el.innerHTML = '<div class="empty-state">还没有文章，静待花开 🌱</div>';
+      el.innerHTML = '<div class="empty-state"><span class="empty-icon">&#127793;</span>还没有文章，静待花开</div>';
       return;
     }
 
-    el.innerHTML = recent.map(post => `
-      <a href="/blog.html?post=${encodeURIComponent(post.slug)}" class="post-card">
-        <div class="date">${this._fmtDate(post.date)}</div>
-        <div class="post-title">${this._esc(post.title)}</div>
-        <div class="excerpt">${this._esc(post.excerpt || '')}</div>
-        ${post.tags ? `<div class="tags">${post.tags.map(t => `<span class="tag">${this._esc(t)}</span>`).join('')}</div>` : ''}
-      </a>
-    `).join('');
-  },
+    el.innerHTML = recent.map(post => _postCard(post)).join('');
+  }
 
+  // ============================================================
   // Render single post detail
-  async renderPost(targetId) {
-    await this.init();
+  // ============================================================
+  async function renderPost(targetId) {
     const slug = new URLSearchParams(location.search).get('post');
     const el = document.getElementById(targetId);
     if (!el) return;
 
     if (!slug) {
-      el.innerHTML = '<div class="empty-state">请选择一篇文章阅读</div>';
+      el.innerHTML = '<div class="empty-state"><span class="empty-icon">&#128214;</span>请选择一篇文章阅读</div>';
       return;
     }
 
-    const post = this.manifest.find(p => p.slug === slug);
+    const post = manifest.find(p => p.slug === slug);
     if (!post) {
-      el.innerHTML = '<div class="empty-state">文章未找到</div>';
+      el.innerHTML = '<div class="empty-state"><span class="empty-icon">&#128533;</span>文章未找到</div>';
       return;
     }
 
     try {
-      const res = await fetch(`${this.basePath}${slug}.md`);
+      const res = await fetch(`${BASE_PATH}${slug}.md`);
       if (!res.ok) throw new Error('post not found');
       const md = await res.text();
 
-      // Parse front-matter if present (simple --- delimiter)
+      // Parse front-matter
       let content = md;
       let title = post.title;
       let date = post.date;
       let tags = post.tags || [];
+      let coverImage = post.coverImage || null;
 
       if (md.startsWith('---')) {
         const end = md.indexOf('---', 3);
         if (end > 0) {
           const fm = md.slice(3, end).trim();
           content = md.slice(end + 3).trim();
-          // Parse simple key: value front-matter
           fm.split('\n').forEach(line => {
             const idx = line.indexOf(':');
             if (idx > 0) {
@@ -104,6 +134,7 @@ const Blog = {
               if (key === 'title') title = val;
               if (key === 'date') date = val;
               if (key === 'tags') tags = val.split(',').map(t => t.trim());
+              if (key === 'coverimage' || key === 'cover_image') coverImage = val;
             }
           });
         }
@@ -113,33 +144,100 @@ const Blog = {
 
       const html = typeof marked !== 'undefined'
         ? marked.parse(content)
-        : `<pre>${this._esc(content)}</pre>`;
+        : `<pre>${_esc(content)}</pre>`;
+
+      // Cover image
+      const coverHtml = coverImage
+        ? `<img src="${coverImage.startsWith('http') ? coverImage : IMG_BASE + coverImage}" alt="${_esc(title)}" class="cover-image" onerror="this.style.display='none'">`
+        : '';
 
       el.innerHTML = `
         <div class="post-detail">
+          ${coverHtml}
           <header>
-            <h1>${this._esc(title)}</h1>
-            <div class="meta">${this._fmtDate(date)}${tags.length ? ' · ' + tags.map(t => `<span class="tag">${this._esc(t)}</span>`).join(' ') : ''}</div>
+            <h1>${_esc(title)}</h1>
+            <div class="meta">
+              ${_fmtDate(date)}
+              ${tags.length ? '· ' + tags.map(t => `<span class="tag">${_esc(t)}</span>`).join(' ') : ''}
+            </div>
           </header>
           <div class="content">${html}</div>
+          <div class="post-footer">
+            <div class="author-avatar">&#9998;</div>
+            <div class="author-info">
+              <div class="name">Jack Yang</div>
+              <div class="desc">写于 ${_fmtDate(date)} · C1991</div>
+            </div>
+          </div>
         </div>
       `;
+
+      // Bind inline image lightbox
+      _initImageLightbox(el);
+
     } catch (e) {
-      el.innerHTML = '<div class="empty-state">文章加载失败，请稍后再试</div>';
+      el.innerHTML = '<div class="empty-state"><span class="empty-icon">&#9888;</span>文章加载失败，请稍后再试</div>';
       console.error('Blog: failed to load post', e);
     }
-  },
+  }
 
-  _esc(s) {
+  // ============================================================
+  // Inline image lightbox
+  // ============================================================
+  function _initImageLightbox(container) {
+    // Create lightbox if not exists
+    let lb = document.querySelector('.content-lightbox');
+    if (!lb) {
+      lb = document.createElement('div');
+      lb.className = 'lightbox content-lightbox';
+      lb.innerHTML = `
+        <button class="close" aria-label="关闭">&times;</button>
+        <img src="" alt="">
+      `;
+      document.body.appendChild(lb);
+
+      const close = lb.querySelector('.close');
+      const img = lb.querySelector('img');
+
+      close.addEventListener('click', () => lb.classList.remove('open'));
+      lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+    }
+
+    const lbImg = lb.querySelector('img');
+    container.querySelectorAll('.content img').forEach(img => {
+      img.addEventListener('click', () => {
+        lbImg.src = img.src;
+        lbImg.alt = img.alt || '';
+        lb.classList.add('open');
+      });
+    });
+  }
+
+  // ============================================================
+  // Helpers
+  // ============================================================
+  function _esc(s) {
     const d = document.createElement('div');
     d.textContent = s;
     return d.innerHTML;
-  },
+  }
 
-  _fmtDate(dateStr) {
+  function _fmtDate(dateStr) {
     if (!dateStr) return '';
     const d = new Date(dateStr);
     if (isNaN(d.getTime())) return dateStr;
     return d.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' });
   }
-};
+
+  // ============================================================
+  // Public API
+  // ============================================================
+  return {
+    get manifest() { return manifest; },
+    init,
+    renderList,
+    renderRecent,
+    renderPost,
+  };
+})();
