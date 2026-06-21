@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="C1991 — 影像">
+<title>影像 — C1991</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-brand">C1991</a>
+  <ul class="nav-links">
+    <li><a href="/blog.html">文字</a></li>
+    <li><a href="/gallery.html">影像</a></li>
+    <li><a href="/about.html">关于</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+
+  <section class="hero" style="padding-top:3rem">
+    <h1>影像</h1>
+    <p class="subtitle">光影留下的痕迹。</p>
+  </section>
+
+  <div class="gallery-grid" id="gallery-grid">
+    <div class="empty-state">还没有照片，敬请期待 📷</div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="close" id="lightbox-close">&times;</button>
+    <img src="" alt="" id="lightbox-img">
+  </div>
+
+</main>
+
+<footer class="footer">
+  &copy; 2026 C1991 · <a href="https://github.com/jackyang19911102/c1991" style="color:inherit">GitHub</a>
+</footer>
+
+<script src="/js/main.js"></script>
+<script>
+// Gallery with lightbox
+(async function() {
+  const grid = document.getElementById('gallery-grid');
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+
+  // Load images from manifest
+  try {
+    const res = await fetch('/images/manifest.json');
+    if (res.ok) {
+      const images = await res.json();
+      if (images.length) {
+        grid.innerHTML = images.map(img => `
+          <img src="/images/${img.file}" alt="${img.alt || ''}" data-caption="${img.caption || ''}" loading="lazy">
+        `).join('');
+        // Lightbox
+        grid.querySelectorAll('img').forEach(img => {
+          img.addEventListener('click', () => {
+            lbImg.src = img.src;
+            lbImg.alt = img.alt;
+            lb.classList.add('open');
+          });
+        });
+      }
+    }
+  } catch(e) {}
+
+  document.getElementById('lightbox-close').addEventListener('click', () => lb.classList.remove('open'));
+  lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+})();
+</script>
+</body>
+</html>
