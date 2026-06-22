@@ -3,51 +3,6 @@
   "children": [
     {
       "type": "frame",
-      "id": "YKsGt",
-      "x": -1172,
-      "y": 0,
-      "name": "Welcome to Pencil",
-      "clip": true,
-      "width": 1000,
-      "height": 1458,
-      "layout": "none",
-      "children": [
-        {
-          "type": "text",
-          "id": "Lmqy1",
-          "x": -51,
-          "y": 325,
-          "name": "Start here",
-          "fill": "#ff8303ff",
-          "textGrowth": "fixed-width-height",
-          "width": 923,
-          "height": 307,
-          "content": "Ask agent to \ndesign something",
-          "lineHeight": 1.399999976158142,
-          "textAlign": "center",
-          "fontFamily": "Noto Sans",
-          "fontSize": 100,
-          "fontWeight": "500",
-          "letterSpacing": -4
-        },
-        {
-          "type": "path",
-          "id": "AmD9T",
-          "x": 267.8010819142764,
-          "y": 632,
-          "rotation": -45,
-          "geometry": "M7 0l0 14m7-7l-7 7-7-7",
-          "width": 366,
-          "height": 366,
-          "stroke": "#ff8302ff",
-          "strokeWidth": 50,
-          "strokeLinejoin": "round",
-          "strokeLinecap": "round"
-        }
-      ]
-    },
-    {
-      "type": "frame",
       "id": "SfWAt",
       "x": 0,
       "y": 0,
@@ -81,7 +36,7 @@
           "id": "moEbs",
           "name": "Tagline",
           "fill": "#ffffff4d",
-          "content": "记录文字、影像与思考",
+          "content": "文字 · 影像 · 作品 · 思考",
           "textAlign": "center",
           "fontFamily": "Inter",
           "fontSize": 14,
@@ -175,7 +130,7 @@
                   "name": "Edit Icon",
                   "width": 20,
                   "height": 20,
-                  "icon": "edit-3",
+                  "icon": "briefcase",
                   "library": "feather",
                   "fill": "#ffffff73"
                 },
@@ -184,7 +139,7 @@
                   "id": "y30glX",
                   "name": "Nav Label 2",
                   "fill": "#ffffffd9",
-                  "content": "文本作品",
+                  "content": "我的作品",
                   "fontFamily": "Inter",
                   "fontSize": 18,
                   "letterSpacing": 0.02
@@ -194,7 +149,7 @@
                   "id": "Edn8L",
                   "name": "Nav Sub 2",
                   "fill": "#ffffff33",
-                  "content": "Writing",
+                  "content": "My Works",
                   "fontFamily": "Inter",
                   "fontSize": 12,
                   "fontWeight": "300",
@@ -283,7 +238,7 @@
                   "name": "Link Icon",
                   "width": 20,
                   "height": 20,
-                  "icon": "link",
+                  "icon": "share-2",
                   "library": "feather",
                   "fill": "#ffffff73"
                 },
@@ -292,7 +247,7 @@
                   "id": "g6cDs",
                   "name": "Nav Label 4",
                   "fill": "#ffffffd9",
-                  "content": "分享摘要",
+                  "content": "作者分享",
                   "fontFamily": "Inter",
                   "fontSize": 18,
                   "letterSpacing": 0.02
@@ -302,7 +257,7 @@
                   "id": "o97nz8",
                   "name": "Nav Sub 4",
                   "fill": "#ffffff33",
-                  "content": "Shares",
+                  "content": "Author Shares",
                   "fontFamily": "Inter",
                   "fontSize": 12,
                   "fontWeight": "300",
@@ -543,7 +498,7 @@
       "id": "Jj1Ui",
       "x": 1520,
       "y": 0,
-      "name": "Share List Page",
+      "name": "Author Shares Page",
       "clip": true,
       "width": 1440,
       "height": 900,
@@ -593,7 +548,7 @@
               "id": "G5Mcwa",
               "name": "Page Title",
               "fill": "#ffffff",
-              "content": "分享摘要",
+              "content": "作者分享",
               "fontFamily": "Playfair Display",
               "fontSize": 32,
               "letterSpacing": 0.02
@@ -603,7 +558,7 @@
               "id": "lPqsj",
               "name": "Page Desc",
               "fill": "#ffffff4d",
-              "content": "技术解决、灵感搜集、技巧整理",
+              "content": "技术要点 · 热门图文 · 灵感收集",
               "fontFamily": "Inter",
               "fontSize": 14,
               "fontWeight": "300",
@@ -662,7 +617,7 @@
                       "fill": "#ffffff4d",
                       "textGrowth": "fixed-width",
                       "width": "fill_container",
-                      "content": "去除 AI 绘画塑料感的完整方法论：从情绪感官到场景搭建",
+                      "content": "去除 AI 绘画塑料感的完整方法论：从情绪感官到场景搭建的实用指南",
                       "lineHeight": 1.5,
                       "fontFamily": "Inter",
                       "fontSize": 13,
@@ -681,7 +636,7 @@
                           "id": "KDawm",
                           "name": "Item Date 1",
                           "fill": "#ffffff33",
-                          "content": "2026.06.22",
+                          "content": "2026.06.22 · 置顶",
                           "fontFamily": "Inter",
                           "fontSize": 11,
                           "fontWeight": "300",
@@ -692,7 +647,7 @@
                           "id": "MHDIs",
                           "name": "Item Tag 1",
                           "fill": "#ffffff4d",
-                          "content": "AI 绘画",
+                          "content": "AI 绘画 · 热门",
                           "fontFamily": "Inter",
                           "fontSize": 11,
                           "fontWeight": "300",
@@ -748,7 +703,7 @@
                       "id": "ddS3K",
                       "name": "Item Title 2",
                       "fill": "#ffffffd9",
-                      "content": "即将到来…",
+                      "content": "现代 CSS 布局最佳实践 2026",
                       "fontFamily": "Inter",
                       "fontSize": 15
                     },
@@ -757,7 +712,7 @@
                       "id": "ZgWQU",
                       "name": "Item Desc 2",
                       "fill": "#ffffff4d",
-                      "content": "更多分享内容正在整理中",
+                      "content": "Grid、Flexbox、Container Queries 的实战总结",
                       "fontFamily": "Inter",
                       "fontSize": 13,
                       "fontWeight": "300"
@@ -794,7 +749,7 @@
     {
       "type": "frame",
       "id": "BZvy0",
-      "x": 3157,
+      "x": 3041,
       "y": 0,
       "name": "About Page",
       "clip": true,
@@ -1021,6 +976,1231 @@
         {
           "type": "text",
           "id": "PLZ89",
+          "name": "Page Footer",
+          "fill": "#ffffff1a",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "© 2026 C1991",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "300",
+          "letterSpacing": 0.06
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "iu5pV",
+      "x": 4561,
+      "y": 0,
+      "name": "Photo Blog Page",
+      "clip": true,
+      "width": 1440,
+      "height": 1024,
+      "fill": "#050508",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": [
+        60,
+        100,
+        48,
+        100
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "yQI80",
+          "name": "Back Link Row",
+          "width": "fill_container",
+          "gap": 6,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "syCVj",
+              "name": "Back Link",
+              "fill": "#ffffff33",
+              "content": "← 返回首页",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "300",
+              "letterSpacing": 0.04
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xrK3q",
+          "name": "Title Block",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "h7Zcdq",
+              "name": "Page Title",
+              "fill": "#ffffff",
+              "content": "图文博客",
+              "fontFamily": "Playfair Display",
+              "fontSize": 32,
+              "fontWeight": "normal",
+              "letterSpacing": 0.02
+            },
+            {
+              "type": "text",
+              "id": "Y88cy",
+              "name": "Page Desc",
+              "fill": "#ffffff4d",
+              "content": "日常打卡 · 生活碎片 · 影像记录",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "300",
+              "letterSpacing": 0.08
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "rzfQf",
+          "name": "Divider",
+          "fill": "#ffffff0d",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "TkD2U",
+          "name": "Tag Filter Row",
+          "width": "fill_container",
+          "gap": 8,
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "TY4Y0",
+              "name": "Tag 全部",
+              "fill": "#ffffff1a",
+              "cornerRadius": 20,
+              "padding": [
+                6,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ggPFz",
+                  "name": "Tag Text",
+                  "fill": "#ffffff99",
+                  "content": "全部",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "300",
+                  "letterSpacing": 0.04
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "OzBN8",
+              "name": "Tag 日常",
+              "fill": "#ffffff08",
+              "cornerRadius": 20,
+              "padding": [
+                6,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "S6nH6L",
+                  "name": "Tag Text",
+                  "fill": "#ffffff4d",
+                  "content": "日常",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "300",
+                  "letterSpacing": 0.04
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "g9e6Ok",
+              "name": "Tag 摄影",
+              "fill": "#ffffff08",
+              "cornerRadius": 20,
+              "padding": [
+                6,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Q6FhAn",
+                  "name": "Tag Text",
+                  "fill": "#ffffff4d",
+                  "content": "摄影",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "300",
+                  "letterSpacing": 0.04
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "GfqLi",
+              "name": "Tag 打卡",
+              "fill": "#ffffff08",
+              "cornerRadius": 20,
+              "padding": [
+                6,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "blHjL",
+                  "name": "Tag Text",
+                  "fill": "#ffffff4d",
+                  "content": "打卡",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "300",
+                  "letterSpacing": 0.04
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "VGeGH",
+              "name": "Tag 旅行",
+              "fill": "#ffffff08",
+              "cornerRadius": 20,
+              "padding": [
+                6,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rN0cF",
+                  "name": "Tag Text",
+                  "fill": "#ffffff4d",
+                  "content": "旅行",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "300",
+                  "letterSpacing": 0.04
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "LFS0W",
+              "name": "Tag 美食",
+              "fill": "#ffffff08",
+              "cornerRadius": 20,
+              "padding": [
+                6,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hxvDq",
+                  "name": "Tag Text",
+                  "fill": "#ffffff4d",
+                  "content": "美食",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "300",
+                  "letterSpacing": 0.04
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "aRoqG",
+          "name": "Card Grid",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "YgE9F",
+              "name": "Card Row 1",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "mHjeC",
+                  "name": "清晨的第一缕阳光",
+                  "width": "fill_container",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "d82Fs",
+                      "name": "Card Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "hillu0",
+                        "link": "https://unsplash.com/@hillu0",
+                        "author": "hilal kh"
+                      },
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1676001225766-23eb91b6fa9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3NTZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "width": "fill_container",
+                      "height": 260
+                    },
+                    {
+                      "type": "frame",
+                      "id": "D6N8OG",
+                      "name": "Card Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        4
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "xNm3V",
+                          "name": "Card Title",
+                          "fill": "#ffffffd9",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "清晨的第一缕阳光",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "letterSpacing": 0.01
+                        },
+                        {
+                          "type": "text",
+                          "id": "nIxcG",
+                          "name": "Card Date",
+                          "fill": "#ffffff33",
+                          "content": "2026.06.22",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "300",
+                          "letterSpacing": 0.06
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zRzdk",
+                  "name": "周末咖啡时光",
+                  "width": "fill_container",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "jMjz0",
+                      "name": "Card Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "haungynphuc",
+                        "link": "https://unsplash.com/@haungynphuc",
+                        "author": "Nguyen Phuc Hau"
+                      },
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1768319303671-afddfc1583ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3NTZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "width": "fill_container",
+                      "height": 260
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Khd08",
+                      "name": "Card Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        4
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lbUQ7",
+                          "name": "Card Title",
+                          "fill": "#ffffffd9",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "周末咖啡时光",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "letterSpacing": 0.01
+                        },
+                        {
+                          "type": "text",
+                          "id": "UAqO3",
+                          "name": "Card Date",
+                          "fill": "#ffffff33",
+                          "content": "2026.06.21",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "300",
+                          "letterSpacing": 0.06
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kRiOG",
+                  "name": "雨后街景随拍",
+                  "width": "fill_container",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "S6kEw",
+                      "name": "Card Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "anamarkovych",
+                        "link": "https://unsplash.com/@anamarkovych",
+                        "author": "Ana Markovych 🇺🇦"
+                      },
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1631348743687-0dd36353a758?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3NTd8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "width": "fill_container",
+                      "height": 260
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jNl8a",
+                      "name": "Card Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        4
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "zWNia",
+                          "name": "Card Title",
+                          "fill": "#ffffffd9",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "雨后街景随拍",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "letterSpacing": 0.01
+                        },
+                        {
+                          "type": "text",
+                          "id": "SxhzA",
+                          "name": "Card Date",
+                          "fill": "#ffffff33",
+                          "content": "2026.06.20",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "300",
+                          "letterSpacing": 0.06
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "qkBMI",
+              "name": "Card Row 2",
+              "width": "fill_container",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "rf4CL",
+                  "name": "书架一角",
+                  "width": "fill_container",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "gQSLW",
+                      "name": "Card Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "benyamin_bohlouli",
+                        "link": "https://unsplash.com/@benyamin_bohlouli",
+                        "author": "Benyamin Bohlouli"
+                      },
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1612909000917-fb13c94ce179?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3NTh8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "width": "fill_container",
+                      "height": 260
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CyfHp",
+                      "name": "Card Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        4
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Lhj62",
+                          "name": "Card Title",
+                          "fill": "#ffffffd9",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "书架一角",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "letterSpacing": 0.01
+                        },
+                        {
+                          "type": "text",
+                          "id": "QfB05",
+                          "name": "Card Date",
+                          "fill": "#ffffff33",
+                          "content": "2026.06.19",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "300",
+                          "letterSpacing": 0.06
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Su6Uf",
+                  "name": "黄昏时分的天际线",
+                  "width": "fill_container",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "gEwvg",
+                      "name": "Card Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "amferatus",
+                        "link": "https://unsplash.com/@amferatus",
+                        "author": "Andrii Burak"
+                      },
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1592596959482-34fb465b60e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3NTl8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "width": "fill_container",
+                      "height": 260
+                    },
+                    {
+                      "type": "frame",
+                      "id": "J0A8kv",
+                      "name": "Card Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        4
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "i3PJQ",
+                          "name": "Card Title",
+                          "fill": "#ffffffd9",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "黄昏时分的天际线",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "letterSpacing": 0.01
+                        },
+                        {
+                          "type": "text",
+                          "id": "puots",
+                          "name": "Card Date",
+                          "fill": "#ffffff33",
+                          "content": "2026.06.18",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "300",
+                          "letterSpacing": 0.06
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zEhYS",
+                  "name": "新发现的小店",
+                  "width": "fill_container",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "d4ifWq",
+                      "name": "Card Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "jackji1211",
+                        "link": "https://unsplash.com/@jackji1211",
+                        "author": "Fangchen Ji"
+                      },
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1778659292530-cd23b56d499c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3NjB8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "width": "fill_container",
+                      "height": 260
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dlJUq",
+                      "name": "Card Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        0,
+                        4
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "rdn1J",
+                          "name": "Card Title",
+                          "fill": "#ffffffd9",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "新发现的小店",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "letterSpacing": 0.01
+                        },
+                        {
+                          "type": "text",
+                          "id": "xUMdP",
+                          "name": "Card Date",
+                          "fill": "#ffffff33",
+                          "content": "2026.06.17",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "300",
+                          "letterSpacing": 0.06
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Oa6Hi",
+          "name": "Spacer",
+          "width": "fill_container",
+          "height": "fill_container"
+        },
+        {
+          "type": "text",
+          "id": "t3zk7o",
+          "name": "Page Footer",
+          "fill": "#ffffff1a",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "© 2026 C1991",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "300",
+          "letterSpacing": 0.06
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "g7ZWJd",
+      "x": 6081,
+      "y": 0,
+      "name": "My Works Page",
+      "clip": true,
+      "width": 1440,
+      "height": 1024,
+      "fill": "#050508",
+      "layout": "vertical",
+      "gap": 28,
+      "padding": [
+        60,
+        100,
+        48,
+        100
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "i7p4r",
+          "name": "Back Link Row",
+          "width": "fill_container",
+          "gap": 6,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Epxip",
+              "name": "Back Link",
+              "fill": "#ffffff33",
+              "content": "← 返回首页",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "300",
+              "letterSpacing": 0.04
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GeU5Q",
+          "name": "Title Block",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "nrNX2",
+              "name": "Page Title",
+              "fill": "#ffffff",
+              "content": "我的作品",
+              "fontFamily": "Playfair Display",
+              "fontSize": 32,
+              "fontWeight": "normal",
+              "letterSpacing": 0.02
+            },
+            {
+              "type": "text",
+              "id": "aHTQ8",
+              "name": "Page Desc",
+              "fill": "#ffffff4d",
+              "content": "文字创作 · 视觉作品 · 个人项目",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "300",
+              "letterSpacing": 0.08
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "K65ONp",
+          "name": "Divider",
+          "fill": "#ffffff0d",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "x5tdNb",
+          "name": "Content Row",
+          "width": "fill_container",
+          "gap": 48,
+          "children": [
+            {
+              "type": "frame",
+              "id": "OFueC",
+              "name": "Text Works Column",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "GOW0N",
+                  "name": "Section Header",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "agEPW",
+                      "name": "Section Title",
+                      "fill": "#ffffff99",
+                      "content": "文字作品",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "letterSpacing": 0.02
+                    },
+                    {
+                      "type": "text",
+                      "id": "xEA0c",
+                      "name": "Section Desc",
+                      "fill": "#ffffff33",
+                      "content": "小说 · 随笔 · 诗歌",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "300",
+                      "letterSpacing": 0.06
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Z2nbls",
+                  "name": "Novel List",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "WtOU3",
+                      "name": "Novel Item 0",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        16,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "y072le",
+                          "name": "Novel Title",
+                          "fill": "#ffffffd9",
+                          "content": "《城市边缘》",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "letterSpacing": 0.01
+                        },
+                        {
+                          "type": "frame",
+                          "id": "kv2G0",
+                          "name": "Novel Meta",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "WzkTI",
+                              "name": "Novel Chapters",
+                              "fill": "#ffffff4d",
+                              "content": "连载中 · 12 章",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "300",
+                              "letterSpacing": 0.04
+                            },
+                            {
+                              "type": "text",
+                              "id": "XO3wY",
+                              "name": "Novel Date",
+                              "fill": "#ffffff33",
+                              "content": "2026.06",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "300",
+                              "letterSpacing": 0.06
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "wxemb",
+                          "name": "Novel Desc",
+                          "fill": "#ffffff4d",
+                          "content": "一个关于都市生活的现实主义小说",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "300",
+                          "letterSpacing": 0.01
+                        }
+                      ]
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "Pq7sN",
+                      "name": "Item Divider",
+                      "fill": "#ffffff08",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lvrNa",
+                      "name": "Novel Item 1",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        16,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "l932H",
+                          "name": "Novel Title",
+                          "fill": "#ffffffd9",
+                          "content": "《夏日终曲》",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "letterSpacing": 0.01
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Cg3Iv",
+                          "name": "Novel Meta",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "rf0WW",
+                              "name": "Novel Chapters",
+                              "fill": "#ffffff4d",
+                              "content": "已完结 · 8 章",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "300",
+                              "letterSpacing": 0.04
+                            },
+                            {
+                              "type": "text",
+                              "id": "sNfgD",
+                              "name": "Novel Date",
+                              "fill": "#ffffff33",
+                              "content": "2025.12",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "300",
+                              "letterSpacing": 0.06
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "TjiYj",
+                          "name": "Novel Desc",
+                          "fill": "#ffffff4d",
+                          "content": "青春短篇小说集",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "300",
+                          "letterSpacing": 0.01
+                        }
+                      ]
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "a32VR",
+                      "name": "Item Divider",
+                      "fill": "#ffffff08",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "a7TCby",
+                      "name": "Novel Item 2",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        16,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Q6e5i",
+                          "name": "Novel Title",
+                          "fill": "#ffffffd9",
+                          "content": "《随笔集》",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "letterSpacing": 0.01
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Li5jf",
+                          "name": "Novel Meta",
+                          "gap": 12,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "GOtqI",
+                              "name": "Novel Chapters",
+                              "fill": "#ffffff4d",
+                              "content": "不定期更新",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "300",
+                              "letterSpacing": 0.04
+                            },
+                            {
+                              "type": "text",
+                              "id": "U7dK3",
+                              "name": "Novel Date",
+                              "fill": "#ffffff33",
+                              "content": "2026.03",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "300",
+                              "letterSpacing": 0.06
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "E6tlYf",
+                          "name": "Novel Desc",
+                          "fill": "#ffffff4d",
+                          "content": "日常随笔与生活感悟",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "300",
+                          "letterSpacing": 0.01
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "t2oGwi",
+              "name": "Image Works Column",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "DYx4A",
+                  "name": "Section Header",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zrSxz",
+                      "name": "Section Title",
+                      "fill": "#ffffff99",
+                      "content": "视觉作品",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "letterSpacing": 0.02
+                    },
+                    {
+                      "type": "text",
+                      "id": "ejW42",
+                      "name": "Section Desc",
+                      "fill": "#ffffff33",
+                      "content": "摄影 · 设计 · 插画",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "300",
+                      "letterSpacing": 0.06
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qXOfy",
+                  "name": "Image Grid",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vNhUT",
+                      "name": "Image Row 1",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 4,
+                          "id": "y61ehP",
+                          "name": "Image 1",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "dawidtkocz",
+                            "link": "https://unsplash.com/@dawidtkocz",
+                            "author": "Dawid Tkocz"
+                          },
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1670180909163-211c7a1fa3cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3ODR8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          },
+                          "width": "fill_container",
+                          "height": 180
+                        },
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 4,
+                          "id": "GwnQt",
+                          "name": "Image 2",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "roma_kaiuk",
+                            "link": "https://unsplash.com/@roma_kaiuk",
+                            "author": "Roma Kaiuk🇺🇦"
+                          },
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1670225597315-782633cfbd2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3ODR8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          },
+                          "width": "fill_container",
+                          "height": 180
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "QlhwT",
+                      "name": "Image Row 2",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 4,
+                          "id": "m6K32",
+                          "name": "Image 3",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "chiuchuuu",
+                            "link": "https://unsplash.com/@chiuchuuu",
+                            "author": "Heng Chiu"
+                          },
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1779612880795-a11ec6f45baa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3ODV8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          },
+                          "width": "fill_container",
+                          "height": 180
+                        },
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 4,
+                          "id": "VbQUa",
+                          "name": "Image 4",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "avesta1",
+                            "link": "https://unsplash.com/@avesta1",
+                            "author": "Avesta"
+                          },
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1760840163528-8421b8f5fc79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3ODZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          },
+                          "width": "fill_container",
+                          "height": 180
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "OFzDJ",
+          "name": "Spacer",
+          "width": "fill_container",
+          "height": "fill_container"
+        },
+        {
+          "type": "text",
+          "id": "Vv1qc",
           "name": "Page Footer",
           "fill": "#ffffff1a",
           "textGrowth": "fixed-width",
