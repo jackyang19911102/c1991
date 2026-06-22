@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="C1991 — 作者分享 · 技术要点与热门图文">
+<meta name="color-scheme" content="dark">
+<title>作者分享 — C1991</title>
+<link rel="icon" type="image/png" href="/images/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<main class="subpage">
+  <div class="subpage-container">
+
+    <a href="/" class="subpage-back">← 返回首页</a>
+
+    <h1 class="subpage-heading">作者分享</h1>
+    <p class="subpage-desc">技术要点 · 热门图文 · 灵感收集</p>
+
+    <hr class="subpage-divider">
+
+    <!-- Share list — time-sorted with priority ranking -->
+    <div class="share-list" id="shareList">
+      <!-- Populated by JS -->
+    </div>
+
+    <p class="empty-state" id="shareEmpty" style="display:none;">更多分享即将到来…</p>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-divider"></div>
+  <p class="copy">&copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">源代码</a></p>
+</footer>
+
+<script>
+// ============================================================
+// Author Shares — priority-sorted, time-ordered list
+// ============================================================
+
+// Share data (in production, loaded from /shares/manifest.json or similar)
+const SHARES = [
+  {
+    title: '如何让 AI 生图更加趋近于真实感',
+    desc: '去除 AI 绘画塑料感的完整方法论：从情绪感官到场景搭建的实用指南。涵盖 Prompt 工程、后期处理与风格迁移的核心技巧。',
+    date: '2026.06.22',
+    tag: 'AI 绘画',
+    priority: 'pin',
+    url: '/shares/ai-prompts.html'
+  },
+  {
+    title: '现代 CSS 布局最佳实践 2026',
+    desc: 'Grid、Flexbox、Container Queries 的实战总结。从响应式到自适应，掌握现代 CSS 布局的全部武器。',
+    date: '2026.06.20',
+    tag: '前端',
+    priority: 'hot',
+    url: '/shares/css-layout.html'
+  },
+  {
+    title: 'Git 工作流的艺术',
+    desc: '从 Conventional Commits 到分支策略，一套适合个人开发者的高效 Git 实践方案。',
+    date: '2026.06.18',
+    tag: '工具',
+    priority: 'new',
+    url: '/shares/git-workflow.html'
+  },
+  {
+    title: '静态网站部署指南',
+    desc: '使用 GitHub Pages + GitHub Actions 实现零成本、自动化的静态网站部署流程。',
+    date: '2026.06.15',
+    tag: 'DevOps',
+    priority: null,
+    url: '/shares/static-deploy.html'
+  },
+  {
+    title: '个人知识管理系统的搭建',
+    desc: '如何用 Markdown + Git 构建一个轻量、持久、可检索的个人知识库。告别 Notion 依赖，拥抱纯文本的未来。',
+    date: '2026.06.10',
+    tag: '效率',
+    priority: null,
+    url: '/shares/pkm.html'
+  },
+];
+
+function renderShares(shares) {
+  const list = document.getElementById('shareList');
+  const empty = document.getElementById('shareEmpty');
+
+  if (!shares.length) {
+    list.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+
+  empty.style.display = 'none';
+
+  // Sort: priority items first, then by date descending
+  const priorityOrder = { pin: 0, hot: 1, new: 2 };
+  const sorted = [...shares].sort((a, b) => {
+    const pa = a.priority ? (priorityOrder[a.priority] ?? 99) : 99;
+    const pb = b.priority ? (priorityOrder[b.priority] ?? 99) : 99;
+    if (pa !== pb) return pa - pb;
+    return b.date.localeCompare(a.date);
+  });
+
+  list.innerHTML = sorted.map((s, i) => {
+    const priorityBadge = s.priority
+      ? `<span class="share-priority ${s.priority}">${
+          s.priority === 'pin' ? '📌 置顶' :
+          s.priority === 'hot' ? '🔥 热门' :
+          s.priority === 'new' ? '🆕 新发布' : ''
+        }</span>`
+      : '';
+
+    return `
+      <a href="${s.url}" class="share-item">
+        <span class="rank-num">${String(i + 1).padStart(2, '0')}</span>
+        <div class="share-body">
+          <div class="share-title-row">
+            <span class="share-title">${s.title}</span>
+            ${priorityBadge}
+          </div>
+          <p class="share-desc">${s.desc}</p>
+          <div class="share-meta">
+            <span class="share-date">${s.date}</span>
+            <span class="share-tag">#${s.tag}</span>
+          </div>
+        </div>
+        <span class="share-arrow">→</span>
+      </a>
+    `;
+  }).join('');
+}
+
+// Initial render
+renderShares(SHARES);
+
+// In production, also try to load from shares manifest
+(async () => {
+  try {
+    const res = await fetch('/shares/manifest.json');
+    if (!res.ok) return;
+    const shares = await res.json();
+    if (shares.length) {
+      // Merge with hardcoded data
+      SHARES.length = 0;
+      SHARES.push(...shares);
+      renderShares(SHARES);
+    }
+  } catch(e) {}
+})();
+</script>
+
+</body>
+</html>

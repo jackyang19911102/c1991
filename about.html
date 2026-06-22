@@ -3,65 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="关于 C1991 和站长 Jack Yang">
+<meta name="description" content="关于小羊 — C1991 站长 Jack Yang 的个人介绍">
 <meta name="color-scheme" content="dark">
-<title>关于 — C1991</title>
+<title>关于我的 — C1991</title>
 <link rel="icon" type="image/png" href="/images/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body style="display:flex;flex-direction:column;min-height:100vh;align-items:stretch;">
+<body>
 
-<a href="/" class="page-brand">C1991</a>
-
-<div class="subpage" style="flex:1;">
+<main class="subpage">
   <div class="subpage-container">
+
     <a href="/" class="subpage-back">← 返回首页</a>
 
-    <!-- Profile -->
-    <div style="text-align:center;padding:1.5rem 0 2.5rem;">
-      <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#8b5cf6);margin:0 auto 1.2rem;display:flex;align-items:center;justify-content:center;font-size:30px;color:#fff;box-shadow:0 0 50px rgba(99,102,241,0.2);">&#9998;</div>
-      <h1 style="font-size:clamp(1.6rem,4vw,2rem);font-weight:700;letter-spacing:-0.02em;">Jack Yang</h1>
-      <p style="font-family:var(--font-mono);font-size:12px;color:var(--text-muted);margin-top:0.2rem;">@jackyang19911102</p>
-      <p style="color:var(--text-dim);max-width:420px;margin:0.6rem auto 0;line-height:1.7;font-size:14px;">
-        一个喜欢写代码、拍照片、记录生活的人。
-      </p>
+    <!-- Header -->
+    <div class="about-header">
+      <h1 class="subpage-heading">小羊的私域</h1>
+      <p class="about-handle">@jackyang19911102</p>
+      <p class="subpage-desc">一个喜欢发掘新奇事物、拍照片、记录生活的人。</p>
     </div>
 
-    <!-- About Site -->
-    <div class="about-card">
-      <h3>&#127760; 关于本站</h3>
-      <p>
-        C1991 是个人博客，托管在 <a href="https://github.com/jackyang19911102/c1991">GitHub Pages</a>，
-        域名 <a href="https://c1991.cn">c1991.cn</a>。没有广告，没有评论区，没有社交分享按钮。
-        有的只是文字和图片，以及偶尔的技术分享。
-      </p>
+    <hr class="subpage-divider">
+
+    <!-- About the site -->
+    <div class="about-section">
+      <h3>关于本站</h3>
+      <p>C1991 是小羊的个人博客。这里没有广告，没有评论区，没有社交分享按钮。有的只是文字和图片，以及偶尔的技术分享。这里是我的一方天地，一个安静记录和表达的空间。</p>
+    </div>
+
+    <!-- About the author -->
+    <div class="about-section">
+      <h3>关于作者</h3>
+      <p>一名热爱技术与生活的开发者。喜欢摄影、写作、探索新事物。相信文字和影像的力量，通过这个网站分享个人的所见所想。工作之余喜欢旅拍和咖啡，也热衷于折腾各种技术工具。</p>
     </div>
 
     <!-- Contact -->
-    <div class="about-card">
-      <h3>&#9993; 联系方式</h3>
-      <p>
-        <a href="https://github.com/jackyang19911102">GitHub @jackyang19911102</a>
-      </p>
+    <div class="about-section">
+      <h3>联系方式</h3>
+      <p>邮箱：<a href="mailto:502055254@qq.com">502055254@qq.com</a></p>
+      <p>GitHub：<a href="https://github.com/jackyang19911102">github.com/jackyang19911102</a></p>
     </div>
 
     <!-- Timeline -->
-    <div class="about-card">
-      <h3>&#9203; 时间线</h3>
+    <div class="about-section">
+      <h3>时间线</h3>
       <ul class="timeline">
         <li>
-          <div class="year">2026</div>
-          c1991.cn 上线。开始在这个角落记录和分享。
+          <span class="year">2026.6.22</span>
+          <span class="event">c1991.cn 小羊的私域全新改版上线。四大板块（关于我、图文博客、我的作品、作者分享）正式推出。</span>
+        </li>
+        <li>
+          <span class="year">2026.6.21</span>
+          <span class="event">C1991 项目开源，代码托管于 GitHub。</span>
+        </li>
+        <li>
+          <span class="year">2026.6</span>
+          <span class="event">注册 c1991.cn 域名，C1991 网站正式启动。</span>
         </li>
       </ul>
     </div>
 
   </div>
-</div>
+</main>
 
-<footer class="sub-footer">
+<footer class="site-footer">
   <div class="footer-divider"></div>
-  &copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">源代码</a>
+  <p class="copy">&copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">源代码</a></p>
 </footer>
 
 </body>

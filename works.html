@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="C1991 — 我的作品 · 文字创作与视觉作品">
+<meta name="color-scheme" content="dark">
+<title>我的作品 — C1991</title>
+<link rel="icon" type="image/png" href="/images/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<main class="subpage">
+  <div class="subpage-container">
+
+    <a href="/" class="subpage-back">← 返回首页</a>
+
+    <h1 class="subpage-heading">我的作品</h1>
+    <p class="subpage-desc">文字创作 · 视觉作品 · 个人项目</p>
+
+    <hr class="subpage-divider">
+
+    <!-- Two-column layout -->
+    <div class="works-layout">
+
+      <!-- Left: Text Works -->
+      <div class="works-column">
+        <div>
+          <h2 class="works-section-title">文字作品</h2>
+          <p class="works-section-desc">小说 · 随笔 · 诗歌</p>
+        </div>
+
+        <div class="novel-list">
+          <a href="/posts/novel-1.html" class="novel-item">
+            <span class="novel-title">《城市边缘》</span>
+            <div class="novel-meta">
+              <span class="status">连载中 · 12 章</span>
+              <span class="date">2026.06</span>
+            </div>
+            <p class="novel-desc">一个关于都市生活的现实主义小说，讲述普通人在城市变迁中的挣扎与坚守。</p>
+          </a>
+
+          <a href="/posts/novel-2.html" class="novel-item">
+            <span class="novel-title">《夏日终曲》</span>
+            <div class="novel-meta">
+              <span class="status">已完结 · 8 章</span>
+              <span class="date">2025.12</span>
+            </div>
+            <p class="novel-desc">青春短篇小说集，收录了八个关于成长、离别与重逢的故事。</p>
+          </a>
+
+          <a href="/posts/essays.html" class="novel-item">
+            <span class="novel-title">《随笔集》</span>
+            <div class="novel-meta">
+              <span class="status">不定期更新</span>
+              <span class="date">2026.03</span>
+            </div>
+            <p class="novel-desc">日常随笔与生活感悟，记录那些值得被记住的瞬间与思考。</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Visual Works -->
+      <div class="works-column">
+        <div>
+          <h2 class="works-section-title">视觉作品</h2>
+          <p class="works-section-desc">摄影 · 设计 · 插画</p>
+        </div>
+
+        <div class="works-image-grid" id="visualGrid">
+          <!-- Images populated by JS -->
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-divider"></div>
+  <p class="copy">&copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">源代码</a></p>
+</footer>
+
+<script>
+// Load visual works from images manifest
+(async () => {
+  const grid = document.getElementById('visualGrid');
+  try {
+    const res = await fetch('/images/manifest.json');
+    if (!res.ok) throw new Error('no manifest');
+    const images = await res.json();
+    const items = images.slice(0, 4).map(img => `
+      <img class="works-image-item"
+           src="${img.src || img.url || img}"
+           alt="${img.title || img.name || '作品'}"
+           loading="lazy"
+           onclick="window.open('${img.src || img.url || img}', '_blank')">
+    `).join('');
+    grid.innerHTML = items || '<p style="color:rgba(255,255,255,0.15);font-size:13px;font-weight:300;">即将推出…</p>';
+  } catch(e) {
+    // Fallback static placeholders
+    grid.innerHTML = `
+      <div class="works-image-item" style="background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.10);font-size:24px;">📷</div>
+      <div class="works-image-item" style="background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.10);font-size:24px;">🎨</div>
+      <div class="works-image-item" style="background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.10);font-size:24px;">🏗</div>
+      <div class="works-image-item" style="background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.10);font-size:24px;">✨</div>
+    `;
+  }
+})();
+</script>
+
+</body>
+</html>

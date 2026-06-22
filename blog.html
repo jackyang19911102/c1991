@@ -3,39 +3,141 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="C1991 — 文字 · 博客">
+<meta name="description" content="C1991 — 图文博客 · 日常打卡记录">
 <meta name="color-scheme" content="dark">
-<title>文本作品 — C1991</title>
+<title>图文博客 — C1991</title>
 <link rel="icon" type="image/png" href="/images/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
-<body style="display:flex;flex-direction:column;min-height:100vh;align-items:stretch;">
+<body>
 
-<a href="/" class="page-brand">C1991</a>
+<main class="subpage">
+  <div class="subpage-container" id="blogContainer">
 
-<div class="subpage" style="flex:1;">
-  <div class="subpage-container" id="blog-content">
-    <div class="empty-state"><span class="empty-icon">&#9998;</span>加载中…</div>
+    <a href="/" class="subpage-back">← 返回首页</a>
+
+    <!-- Photo Blog view (default) -->
+    <div id="photoView">
+      <h1 class="subpage-heading">图文博客</h1>
+      <p class="subpage-desc">日常打卡 · 生活碎片 · 影像记录</p>
+      <hr class="subpage-divider">
+      <div class="tag-filter-bar" id="tagFilter">
+        <button class="tag-pill active" data-tag="all">全部</button>
+        <button class="tag-pill" data-tag="日常">日常</button>
+        <button class="tag-pill" data-tag="摄影">摄影</button>
+        <button class="tag-pill" data-tag="打卡">打卡</button>
+        <button class="tag-pill" data-tag="旅行">旅行</button>
+        <button class="tag-pill" data-tag="美食">美食</button>
+      </div>
+      <div class="photo-grid" id="photoGrid"></div>
+      <div class="empty-state" id="emptyState" style="display:none;">暂无内容，敬请期待…</div>
+    </div>
+
+    <!-- Post detail view (when ?post=xxx) -->
+    <div id="postDetail" style="display:none;"></div>
+
   </div>
-</div>
+</main>
 
-<footer class="sub-footer">
+<footer class="site-footer">
   <div class="footer-divider"></div>
-  &copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">源代码</a>
+  <p class="copy">&copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">源代码</a></p>
 </footer>
 
 <script src="/js/blog.js"></script>
 <script>
-(async () => {
-  const post = new URLSearchParams(location.search).get('post');
-  if (post) {
+// ============================================================
+// Mode detection & routing
+// ============================================================
+const params = new URLSearchParams(location.search);
+const postSlug = params.get('post');
+const initTag = params.get('tag');
+
+if (postSlug) {
+  // Post detail mode — use legacy blog engine
+  document.getElementById('photoView').style.display = 'none';
+  document.getElementById('postDetail').style.display = 'block';
+  document.title = '文章 — C1991';
+
+  (async () => {
     await Blog.init();
-    await Blog.renderPost('blog-content');
-  } else {
-    await Blog.renderList('blog-content');
+    await Blog.renderPost('postDetail', postSlug);
+  })();
+
+} else {
+  // Photo blog grid mode
+  document.getElementById('photoView').style.display = 'block';
+
+  const PHOTO_POSTS = [
+    { title: '清晨的第一缕阳光', date: '2026.06.22', tag: '日常', img: '' },
+    { title: '周末咖啡时光', date: '2026.06.21', tag: '美食', img: '' },
+    { title: '雨后街景随拍', date: '2026.06.20', tag: '摄影', img: '' },
+    { title: '书架一角', date: '2026.06.19', tag: '日常', img: '' },
+    { title: '黄昏时分的天际线', date: '2026.06.18', tag: '摄影', img: '' },
+    { title: '新发现的小店', date: '2026.06.17', tag: '打卡', img: '' },
+    { title: '周末徒步日记', date: '2026.06.15', tag: '旅行', img: '' },
+    { title: '自制晚餐记录', date: '2026.06.14', tag: '美食', img: '' },
+    { title: '城市夜景', date: '2026.06.12', tag: '摄影', img: '' },
+  ];
+
+  let activeTag = initTag || 'all';
+
+  function renderCards(posts) {
+    const grid = document.getElementById('photoGrid');
+    const empty = document.getElementById('emptyState');
+    if (!posts.length) { grid.innerHTML = ''; empty.style.display = 'block'; return; }
+    empty.style.display = 'none';
+    grid.innerHTML = posts.map(p => `
+      <article class="photo-card">
+        <div class="card-image" style="background:rgba(255,255,255,0.03);${p.img ? `background-image:url('${p.img}');background-size:cover;background-position:center;` : ''}"></div>
+        <div class="card-body">
+          <h3 class="card-title">${p.title}</h3>
+          <span class="card-date">${p.date}</span>
+          <span class="card-tag">#${p.tag}</span>
+        </div>
+      </article>
+    `).join('');
   }
-})();
+
+  function filterByTag(tag) {
+    activeTag = tag;
+    const filtered = tag === 'all' ? PHOTO_POSTS : PHOTO_POSTS.filter(p => p.tag === tag);
+    renderCards(filtered);
+    document.querySelectorAll('.tag-pill').forEach(btn => btn.classList.toggle('active', btn.dataset.tag === tag));
+  }
+
+  document.getElementById('tagFilter').addEventListener('click', (e) => {
+    if (e.target.classList.contains('tag-pill')) filterByTag(e.target.dataset.tag);
+  });
+
+  // Highlight initial tag if provided
+  if (initTag) filterByTag(initTag);
+  else renderCards(PHOTO_POSTS);
+
+  // Load from manifest if available
+  (async () => {
+    try {
+      const res = await fetch('/posts/manifest.json');
+      if (!res.ok) return;
+      const posts = await res.json();
+      const photoPosts = posts.filter(p => p.type === 'photo' || (p.tags && p.tags.includes('摄影')));
+      if (photoPosts.length >= 3) {
+        PHOTO_POSTS.length = 0;
+        PHOTO_POSTS.push(...photoPosts.map(p => ({
+          title: p.title, date: p.date,
+          tag: (p.tags || ['日常'])[0],
+          img: p.cover || ''
+        })));
+        filterByTag(activeTag);
+      }
+    } catch(e) {}
+  })();
+}
 </script>
+
 </body>
 </html>

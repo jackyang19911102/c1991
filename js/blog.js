@@ -40,20 +40,33 @@ const Blog = (() => {
 
   // ============================================================
   // Render chapter-style list (novel TOC)
+  // Supports ?tag=xxx filtering
   // ============================================================
   function renderList(targetId) {
     const el = document.getElementById(targetId);
     if (!el) return;
 
+    const tagParam = new URLSearchParams(location.search).get('tag');
+    let posts = manifest;
+    if (tagParam) {
+      posts = manifest.filter(p => (p.tags || []).includes(tagParam));
+    }
+
     if (!manifest.length) {
-      el.innerHTML = '<div class="empty-state"><span class="empty-icon">&#127793;</span>还没有文章，静待花开</div>';
+      el.innerHTML = '<div class="empty-state">还没有文章，静待花开</div>';
       return;
     }
 
-    const items = manifest.map((post, i) => _chapterRow(post, i + 1)).join('');
+    if (tagParam && !posts.length) {
+      el.innerHTML = `<div class="empty-state">还没有「${tagParam}」标签的文章</div>`;
+      return;
+    }
+
+    const label = tagParam ? `「${tagParam}」· ${posts.length} 篇` : `目录 · ${posts.length} 篇`;
+    const items = posts.map((post, i) => _chapterRow(post, i + 1)).join('');
 
     el.innerHTML = `
-      <div class="chapter-section-label">目录 · ${manifest.length} 篇</div>
+      <div class="chapter-section-label">${label}</div>
       <div class="chapter-list">${items}</div>
     `;
   }
@@ -83,7 +96,7 @@ const Blog = (() => {
 
     const recent = manifest.slice(0, count);
     if (!recent.length) {
-      el.innerHTML = '<div class="empty-state"><span class="empty-icon">&#127793;</span>还没有文章，静待花开</div>';
+      el.innerHTML = '<div class="empty-state">还没有文章，静待花开</div>';
       return;
     }
 
@@ -99,13 +112,13 @@ const Blog = (() => {
     if (!el) return;
 
     if (!slug) {
-      el.innerHTML = '<div class="empty-state"><span class="empty-icon">&#128214;</span>请选择一篇文章阅读</div>';
+      el.innerHTML = '<div class="empty-state">请选择一篇文章阅读</div>';
       return;
     }
 
     const post = manifest.find(p => p.slug === slug);
     if (!post) {
-      el.innerHTML = '<div class="empty-state"><span class="empty-icon">&#128533;</span>文章未找到</div>';
+      el.innerHTML = '<div class="empty-state">文章未找到</div>';
       return;
     }
 
@@ -163,7 +176,7 @@ const Blog = (() => {
           </header>
           <div class="content">${html}</div>
           <div class="post-footer">
-            <div class="author-avatar">&#9998;</div>
+            <div class="author-avatar"><img src="/images/icon.png" alt="" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></div>
             <div class="author-info">
               <div class="name">Jack Yang</div>
               <div class="desc">写于 ${_fmtDate(date)} · C1991</div>
@@ -176,7 +189,7 @@ const Blog = (() => {
       _initImageLightbox(el);
 
     } catch (e) {
-      el.innerHTML = '<div class="empty-state"><span class="empty-icon">&#9888;</span>文章加载失败，请稍后再试</div>';
+      el.innerHTML = '<div class="empty-state">文章加载失败，请稍后再试</div>';
       console.error('Blog: failed to load post', e);
     }
   }
