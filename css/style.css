@@ -376,13 +376,15 @@ a:hover { text-decoration: underline; }
   flex-direction: column;
   gap: 8px;
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   overflow: hidden;
   transition: border-color 0.15s;
 }
-.photo-card:hover { border-color: var(--color-text-tertiary); }
+.photo-card:hover { border-color: var(--color-text-tertiary); text-decoration: none; }
 
 .photo-card .card-image {
   width: 100%;
@@ -942,6 +944,38 @@ a:hover { text-decoration: underline; }
 
 .post-detail .content p { margin-bottom: 12px; }
 .post-detail .content img { max-width: 100%; border-radius: var(--radius-sm); margin: 16px 0; cursor: zoom-in; }
+
+/* Image watermark wrapper */
+.img-watermark {
+  position: relative; display: inline-block;
+  max-width: 100%; vertical-align: top;
+}
+.img-watermark::after {
+  content: 'c1991';
+  position: absolute; bottom: 10px; right: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px; font-weight: 500;
+  color: rgba(230, 237, 243, 0.15);
+  pointer-events: none; user-select: none;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+}
+.img-watermark img {
+  display: block; max-width: 100%;
+}
+/* Cover image wrapper */
+.cover-img-wrap {
+  display: block; width: 100%;
+  margin-bottom: 24px; cursor: zoom-in;
+}
+.cover-img-wrap .cover-image { margin-bottom: 0; }
+/* Lightbox watermark */
+.lightbox .img-watermark::after {
+  bottom: 16px; right: 16px;
+  font-size: 14px;
+  color: rgba(230, 237, 243, 0.22);
+}
+
 .post-detail .content blockquote { border-left: 3px solid var(--color-border); margin: 12px 0; padding: 4px 0 4px 16px; color: var(--color-text-secondary); }
 .post-detail .content code { font-family: var(--font-mono); font-size: 0.9em; background: var(--color-border-muted); padding: 2px 6px; border-radius: 4px; color: var(--color-text-secondary); }
 .post-detail .content pre { background: var(--color-canvas); border: 1px solid var(--color-border); padding: 16px; border-radius: var(--radius-sm); overflow-x: auto; margin: 12px 0; }
@@ -969,6 +1003,40 @@ a:hover { text-decoration: underline; }
 
 .post-footer .author-info .name { font-weight: 600; font-size: 13px; }
 .post-footer .author-info .desc { font-size: 12px; font-weight: 400; color: var(--color-text-tertiary); }
+
+/* ============================================================
+   LIGHTBOX — Image zoom overlay
+   ============================================================ */
+.lightbox {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 1000;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.25s var(--ease-out), visibility 0s 0.25s;
+}
+
+.lightbox.open {
+  opacity: 1; visibility: visible;
+  transition: opacity 0.25s var(--ease-out), visibility 0s 0s;
+}
+
+.lightbox .close {
+  position: absolute; top: 20px; right: 24px;
+  font-size: 36px; font-weight: 300; line-height: 1;
+  color: rgba(230, 237, 243, 0.55);
+  background: none; border: none; cursor: pointer;
+  z-index: 1001; padding: 8px;
+  transition: color 0.15s;
+}
+.lightbox .close:hover { color: #fff; }
+
+.lightbox img {
+  max-width: 90vw; max-height: 85vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+}
 
 /* ============================================================
    FOCUS & REDUCED MOTION

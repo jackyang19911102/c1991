@@ -159,9 +159,9 @@ const Blog = (() => {
         ? marked.parse(content)
         : `<pre>${_esc(content)}</pre>`;
 
-      // Cover image
+      // Cover image (wrapped for watermark)
       const coverHtml = coverImage
-        ? `<img src="${coverImage.startsWith('http') ? coverImage : IMG_BASE + coverImage}" alt="${_esc(title)}" class="cover-image" onerror="this.style.display='none'">`
+        ? `<span class="img-watermark cover-img-wrap"><img src="${coverImage.startsWith('http') ? coverImage : IMG_BASE + coverImage}" alt="${_esc(title)}" class="cover-image" onerror="this.parentElement.style.display='none'"></span>`
         : '';
 
       el.innerHTML = `
@@ -185,7 +185,10 @@ const Blog = (() => {
         </div>
       `;
 
-      // Bind inline image lightbox
+      // Wrap content images with watermark containers
+      _wrapImagesWithWatermark(el);
+
+      // Bind inline image lightbox (must come after wrapping)
       _initImageLightbox(el);
 
     } catch (e) {
@@ -205,7 +208,7 @@ const Blog = (() => {
       lb.className = 'lightbox content-lightbox';
       lb.innerHTML = `
         <button class="close" aria-label="关闭">&times;</button>
-        <img src="" alt="">
+        <span class="img-watermark"><img src="" alt=""></span>
       `;
       document.body.appendChild(lb);
 
@@ -224,6 +227,30 @@ const Blog = (() => {
         lbImg.alt = img.alt || '';
         lb.classList.add('open');
       });
+    });
+
+    // Bind cover image click
+    const coverImg = container.querySelector('.cover-image');
+    if (coverImg) {
+      coverImg.addEventListener('click', () => {
+        lbImg.src = coverImg.src;
+        lbImg.alt = coverImg.alt || '';
+        lb.classList.add('open');
+      });
+    }
+  }
+
+  // ============================================================
+  // Wrap content images with watermark containers
+  // ============================================================
+  function _wrapImagesWithWatermark(container) {
+    container.querySelectorAll('.content img').forEach(img => {
+      // Skip if already wrapped (idempotent)
+      if (img.parentElement && img.parentElement.classList.contains('img-watermark')) return;
+      const wrapper = document.createElement('span');
+      wrapper.className = 'img-watermark';
+      img.parentNode.insertBefore(wrapper, img);
+      wrapper.appendChild(img);
     });
   }
 
