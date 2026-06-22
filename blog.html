@@ -71,6 +71,7 @@ if (postSlug) {
 
   const PHOTO_POSTS = [
     { title: '清晨的第一缕阳光', date: '2026.06.22', tag: '日常', img: '' },
+    { title: '打卡深圳"湾区之眼BOOK"最大书店', date: '2026.06.21', tag: '打卡', slug: 'wanquzhiyan-book', img: 'posts/images/wanquzhiyan-book-01.jpg' },
     { title: '周末咖啡时光', date: '2026.06.21', tag: '美食', img: '' },
     { title: '雨后街景随拍', date: '2026.06.20', tag: '摄影', img: '' },
     { title: '书架一角', date: '2026.06.19', tag: '日常', img: '' },
@@ -88,16 +89,18 @@ if (postSlug) {
     const empty = document.getElementById('emptyState');
     if (!posts.length) { grid.innerHTML = ''; empty.style.display = 'block'; return; }
     empty.style.display = 'none';
-    grid.innerHTML = posts.map(p => `
-      <article class="photo-card">
-        <div class="card-image" style="background:rgba(255,255,255,0.03);${p.img ? `background-image:url('${p.img}');background-size:cover;background-position:center;` : ''}"></div>
-        <div class="card-body">
-          <h3 class="card-title">${p.title}</h3>
-          <span class="card-date">${p.date}</span>
-          <span class="card-tag">#${p.tag}</span>
-        </div>
-      </article>
-    `).join('');
+    grid.innerHTML = posts.map(p => {
+      const link = p.slug ? '?post=' + encodeURIComponent(p.slug) : null;
+      const imgStyle = p.img ? "background-image:url('" + p.img + "');background-size:cover;background-position:center;" : '';
+      return '<article class="photo-card">' +
+        '<div class="card-image" style="background:rgba(255,255,255,0.03);' + imgStyle + '"></div>' +
+        '<div class="card-body">' +
+          '<h3 class="card-title">' + (link ? '<a href="' + link + '" style="color:inherit;text-decoration:none;">' + p.title + '</a>' : p.title) + '</h3>' +
+          '<span class="card-date">' + p.date + '</span>' +
+          '<span class="card-tag">#' + p.tag + '</span>' +
+        '</div>' +
+      '</article>';
+    }).join('');
   }
 
   function filterByTag(tag) {
@@ -122,13 +125,20 @@ if (postSlug) {
       if (!res.ok) return;
       const posts = await res.json();
       const photoPosts = posts.filter(p => p.type === 'photo' || (p.tags && p.tags.includes('摄影')));
-      if (photoPosts.length >= 3) {
-        PHOTO_POSTS.length = 0;
-        PHOTO_POSTS.push(...photoPosts.map(p => ({
-          title: p.title, date: p.date,
-          tag: (p.tags || ['日常'])[0],
-          img: p.cover || ''
-        })));
+      if (photoPosts.length >= 1) {
+        // Merge manifest posts with hardcoded ones, dedup by title
+        const existing = new Set(PHOTO_POSTS.map(p => p.title));
+        photoPosts.forEach(p => {
+          if (!existing.has(p.title)) {
+            const img = p.coverImage ? 'posts/images/' + p.coverImage : '';
+            PHOTO_POSTS.unshift({
+              title: p.title, date: p.date,
+              tag: (p.tags || ['日常'])[0],
+              slug: p.slug || '',
+              img: img
+            });
+          }
+        });
         filterByTag(activeTag);
       }
     } catch(e) {}

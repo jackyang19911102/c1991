@@ -1,5 +1,14 @@
 [
   {
+    "slug": "wanquzhiyan-book",
+    "title": "打卡深圳“湾区之眼BOOK”最大书店",
+    "date": "2026-06-21",
+    "excerpt": "打卡全球最大实体书城——深圳湾区之眼BOOK，13.1万平米的文化综合体，大湾区的阅读新地标。",
+    "tags": ["打卡", "深圳", "书店"],
+    "coverImage": "wanquzhiyan-book-01.jpg",
+    "type": "photo"
+  },
+  {
     "slug": "hello-world",
     "title": "Hello, World",
     "date": "2026-06-21",
