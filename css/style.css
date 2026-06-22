@@ -122,11 +122,13 @@ body {
 /* ============================================================
    CARD INNER LAYOUT
    ============================================================ */
+/* ---- Inner wrapper slides on hover (not the card itself, to avoid flicker) ---- */
 .card-inner {
   display: flex;
   align-items: center;
   width: 100%;
   gap: 1.2rem;
+  transition: transform 0.45s var(--ease-bounce);
 }
 
 .card-icon {
@@ -234,14 +236,19 @@ body {
    HOVER STATE — The "Pull-Out"
    ============================================================ */
 
-/* Pulled-out card */
+/* Pulled-out card — NOT translated: keeping the hit area stable prevents flicker */
 .card:hover {
-  transform: translateX(var(--pull-distance)) scale(1.03) rotate(0deg) !important;
+  transform: scale(1.03) rotate(0deg) !important;
   z-index: 10 !important;
   border-color: rgba(255,255,255,0.16);
   box-shadow:
     0 0 40px rgba(0,0,0,0.6),
     0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* Inner content slides on hover to create the "pull-out" feel */
+.card:hover .card-inner {
+  transform: translateX(var(--pull-distance));
 }
 
 /* Glow per card color on hover */
@@ -279,7 +286,7 @@ body {
 /* ---- Other cards dim when any card is hovered ---- */
 .stack:hover .card:not(:hover) {
   opacity: 0.35;
-  transform: translateX(calc(var(--stack-offset) * 0.5)) rotate(0deg);
+  transform: rotate(0deg);
 }
 
 /* ============================================================
