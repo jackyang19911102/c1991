@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="个人知识管理系统的搭建 — Markdown + Git 构建轻量知识库">
+<meta name="color-scheme" content="dark">
+<title>个人知识管理系统的搭建 — C1991</title>
+<link rel="icon" type="image/png" href="/images/icon.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<main class="subpage">
+  <div class="subpage-container">
+
+    <a href="/shares.html" class="subpage-back">← 返回作者分享</a>
+
+    <article class="article-content">
+
+      <header class="article-header">
+        <h1>个人知识管理系统的搭建</h1>
+        <p class="article-subtitle">如何用 Markdown + Git 构建一个轻量、持久、可检索的个人知识库</p>
+        <div class="article-meta">
+          <time>2026.06.10</time>
+          <span class="article-meta-sep">·</span>
+          <span>作者分享</span>
+        </div>
+      </header>
+
+      <p class="article-lead">
+        如何用 Markdown + Git 构建一个轻量、持久、可检索的个人知识库。告别 Notion 依赖，拥抱纯文本的未来。
+      </p>
+
+      <hr class="section-divider">
+
+      <section>
+        <h2>一、为什么选择纯文本？</h2>
+        <p>纯文本是所有格式中兼容性最好、最持久的存储方式。Markdown 文件可以被任何编辑器打开，可以被 Git 追踪版本变化，可以用 grep 全文搜索——不依赖任何特定平台或工具。</p>
+
+        <div class="compare-box">
+          <div class="compare-item bad">
+            <span class="compare-badge">✕ Notion / 语雀</span>
+            <p>数据在别人服务器上，导出困难，格式锁定，未来不确定性高。</p>
+          </div>
+          <div class="compare-item good">
+            <span class="compare-badge">✓ Markdown + Git</span>
+            <p>数据完全归你所有，纯文本可被任何工具读取，Git 提供完整的版本历史和同步能力。</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <section>
+        <h2>二、目录结构设计</h2>
+        <p>一个好的目录结构是知识管理的基础。推荐按领域或项目组织，保持扁平化避免过深嵌套。</p>
+
+        <pre class="code-block"><code>knowledge-base/
+├── daily/          # 日记和日常记录
+│   └── 2026-06-10.md
+├── tech/           # 技术笔记
+│   ├── css.md
+│   ├── git.md
+│   └── js.md
+├── books/          # 读书笔记
+├── projects/       # 项目相关
+├── ideas/          # 想法和灵感
+└── README.md       # 索引和使用说明</code></pre>
+      </section>
+
+      <hr class="section-divider">
+
+      <section>
+        <h2>三、工具链</h2>
+        <div class="tips-list">
+          <div class="tip-item">
+            <span class="tip-num">01</span>
+            <div class="tip-body">
+              <strong>编辑器</strong>
+              <p>VS Code + Markdown 插件即可。支持实时预览、语法高亮、快捷插入链接和图片。</p>
+            </div>
+          </div>
+          <div class="tip-item">
+            <span class="tip-num">02</span>
+            <div class="tip-body">
+              <strong>版本控制</strong>
+              <p>Git + GitHub 私有仓库。每次修改都有记录，可在任何设备上同步。</p>
+            </div>
+          </div>
+          <div class="tip-item">
+            <span class="tip-num">03</span>
+            <div class="tip-body">
+              <strong>搜索</strong>
+              <p>ripgrep (rg) 命令行全文搜索，秒级检索整个知识库的内容。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <section>
+        <h2>四、核心原则</h2>
+        <p>知识管理的核心不是工具，而是习惯。坚持记录、定期整理、敢于删除过时内容。一个轻量的纯文本知识库，配合 Git 的版本追踪能力，远胜于任何臃肿的笔记应用。</p>
+      </section>
+
+      <div class="article-tags">
+        <span class="article-tag accent">效率</span>
+        <span class="article-tag">知识管理</span>
+        <span class="article-tag">Markdown</span>
+        <span class="article-tag">Git</span>
+        <span class="article-tag">PKM</span>
+      </div>
+
+    </article>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-divider"></div>
+  <p class="copy">&copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">源代码</a></p>
+</footer>
+
+</body>
+</html>

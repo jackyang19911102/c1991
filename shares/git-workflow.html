@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Git 工作流的艺术 — 从 Conventional Commits 到分支策略">
+<meta name="color-scheme" content="dark">
+<title>Git 工作流的艺术 — C1991</title>
+<link rel="icon" type="image/png" href="/images/icon.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<main class="subpage">
+  <div class="subpage-container">
+
+    <a href="/shares.html" class="subpage-back">← 返回作者分享</a>
+
+    <article class="article-content">
+
+      <header class="article-header">
+        <h1>Git 工作流的艺术</h1>
+        <p class="article-subtitle">从 Conventional Commits 到分支策略 — 适合个人开发者的高效 Git 实践方案</p>
+        <div class="article-meta">
+          <time>2026.06.18</time>
+          <span class="article-meta-sep">·</span>
+          <span>作者分享</span>
+        </div>
+      </header>
+
+      <p class="article-lead">
+        从 Conventional Commits 到分支策略，一套适合个人开发者的高效 Git 实践方案。
+      </p>
+
+      <hr class="section-divider">
+
+      <section>
+        <h2>一、Conventional Commits — 提交信息规范化</h2>
+        <p>规范化提交信息不仅让 Git 历史清晰可读，还能自动生成 Changelog 和版本号。Conventional Commits 是目前最广泛采用的规范。</p>
+
+        <pre class="code-block"><code>feat: 添加用户登录功能
+fix: 修复导航栏在移动端的显示问题
+docs: 更新 README 安装说明
+style: 统一代码缩进格式
+refactor: 重构用户验证逻辑
+test: 添加登录模块单元测试
+chore: 更新依赖版本</code></pre>
+
+        <div class="callout callout-accent">
+          <div class="callout-label">💡 核心格式</div>
+          <p><code>type(scope): description</code> — type 表示变更类型，scope 是可选的模块范围，description 为简洁描述。</p>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <section>
+        <h2>二、分支策略</h2>
+        <p>对于个人项目，推荐采用简化版的 Trunk-Based Development：主分支保持稳定可部署，功能开发在特性分支上进行，完成后合并回主分支。</p>
+
+        <div class="tips-list">
+          <div class="tip-item">
+            <span class="tip-num">01</span>
+            <div class="tip-body">
+              <strong>主分支 master / main</strong>
+              <p>始终保持可部署状态。不直接在 master 上提交代码。</p>
+            </div>
+          </div>
+          <div class="tip-item">
+            <span class="tip-num">02</span>
+            <div class="tip-body">
+              <strong>特性分支 feat/xxx</strong>
+              <p>每个功能或修复在独立分支开发，完成后通过 merge 或 rebase 合入主分支。</p>
+            </div>
+          </div>
+          <div class="tip-item">
+            <span class="tip-num">03</span>
+            <div class="tip-body">
+              <strong>热修复 hotfix/xxx</strong>
+              <p>紧急修复从 master 切出，修复后快速合回并打 tag。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <section>
+        <h2>三、实用技巧</h2>
+
+        <h3>交互式 Rebase 整理提交历史</h3>
+        <pre class="code-block"><code>git rebase -i HEAD~3  # 整理最近 3 次提交</code></pre>
+        <p>在推送前用 rebase 将多个零散的 WIP 提交合并为一个有意义的提交，保持历史整洁。</p>
+
+        <h3>别名提高效率</h3>
+        <pre class="code-block"><code>git config --global alias.lg "log --oneline --graph --all"
+git config --global alias.st "status -s"
+git config --global alias.co "checkout"</code></pre>
+      </section>
+
+      <hr class="section-divider">
+
+      <section>
+        <h2>四、总结</h2>
+        <p>好的 Git 工作流不在于规则多么复杂，而在于一致性和可追溯性。坚持 Conventional Commits 规范 + 简洁的分支策略，足以让个人项目的版本管理井井有条。</p>
+      </section>
+
+      <div class="article-tags">
+        <span class="article-tag accent">工具</span>
+        <span class="article-tag">Git</span>
+        <span class="article-tag">工作流</span>
+        <span class="article-tag">效率</span>
+        <span class="article-tag">版本控制</span>
+      </div>
+
+    </article>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-divider"></div>
+  <p class="copy">&copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">源代码</a></p>
+</footer>
+
+</body>
+</html>

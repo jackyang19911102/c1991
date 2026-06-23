@@ -30,7 +30,7 @@
         <button class="tag-pill" data-tag="旅行">旅行</button>
         <button class="tag-pill" data-tag="美食">美食</button>
       </div>
-      <div class="photo-grid" id="photoGrid"></div>
+      <div class="card-grid" id="photoGrid"></div>
       <div class="empty-state" id="emptyState" style="display:none;">暂无内容，敬请期待…</div>
     </div>
 
@@ -100,13 +100,13 @@ if (postSlug) {
       const inner = '<div class="card-image placeholder-surface" style="' + imgStyle + '"></div>' +
         '<div class="card-body">' +
           '<h3 class="card-title">' + p.title + '</h3>' +
-          '<span class="card-date">' + p.date + '</span>' +
-          '<span class="card-tag">#' + p.tag + '</span>' +
+          '<div class="card-meta-row"><span class="card-date">' + p.date + '</span>' +
+          '<span class="card-tag">#' + p.tag + '</span></div>' +
         '</div>';
       if (link) {
-        return '<a href="' + link + '" class="photo-card">' + inner + '</a>';
+        return '<a href="' + link + '" class="sq-card blog-card">' + inner + '</a>';
       }
-      return '<article class="photo-card">' + inner + '</article>';
+      return '<article class="sq-card blog-card">' + inner + '</article>';
     }).join('');
   }
 

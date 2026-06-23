@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="静态网站部署指南 — GitHub Pages + GitHub Actions 零成本自动化部署">
+<meta name="color-scheme" content="dark">
+<title>静态网站部署指南 — C1991</title>
+<link rel="icon" type="image/png" href="/images/icon.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<main class="subpage">
+  <div class="subpage-container">
+
+    <a href="/shares.html" class="subpage-back">← 返回作者分享</a>
+
+    <article class="article-content">
+
+      <header class="article-header">
+        <h1>静态网站部署指南</h1>
+        <p class="article-subtitle">使用 GitHub Pages + GitHub Actions 实现零成本、自动化的静态网站部署流程</p>
+        <div class="article-meta">
+          <time>2026.06.15</time>
+          <span class="article-meta-sep">·</span>
+          <span>作者分享</span>
+        </div>
+      </header>
+
+      <p class="article-lead">
+        使用 GitHub Pages + GitHub Actions 实现零成本、自动化的静态网站部署流程。
+      </p>
+
+      <hr class="section-divider">
+
+      <section>
+        <h2>一、GitHub Pages 设置</h2>
+        <p>在仓库 Settings → Pages 中将部署源设为 GitHub Actions。这比直接从分支部署更灵活，允许在部署前进行构建、检查等自定义操作。</p>
+
+        <div class="callout">
+          <div class="callout-label">📋 前置条件</div>
+          <p>需要一个 GitHub 仓库（公开仓库免费使用 GitHub Pages，私有仓库需要付费）。推荐使用自定义域名以获得更好的品牌形象。</p>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <section>
+        <h2>二、GitHub Actions 工作流</h2>
+        <p>创建 <code>.github/workflows/deploy.yml</code> 文件，配置自动部署流程：</p>
+
+        <pre class="code-block"><code>name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4</code></pre>
+
+        <p>每次推送代码到 master 分支时，GitHub Actions 会自动运行此工作流，将静态文件部署到 GitHub Pages。</p>
+      </section>
+
+      <hr class="section-divider">
+
+      <section>
+        <h2>三、自定义域名</h2>
+        <p>在仓库根目录添加 <code>CNAME</code> 文件，内容为你的域名（如 <code>c1991.cn</code>）。然后在 DNS 服务商处添加 CNAME 记录指向 <code>username.github.io</code>。</p>
+
+        <h3>DNS 配置示例</h3>
+        <pre class="code-block"><code>类型: CNAME
+主机记录: @ (或 www)
+记录值: username.github.io
+TTL: 600</code></pre>
+      </section>
+
+      <hr class="section-divider">
+
+      <section>
+        <h2>四、总结</h2>
+        <p>GitHub Pages + GitHub Actions 组合是个人博客和静态网站的理想部署方案：零成本、全自动、无需管理服务器。只需推送代码，一切自动完成。</p>
+      </section>
+
+      <div class="article-tags">
+        <span class="article-tag accent">DevOps</span>
+        <span class="article-tag">GitHub Pages</span>
+        <span class="article-tag">CI/CD</span>
+        <span class="article-tag">部署</span>
+        <span class="article-tag">静态网站</span>
+      </div>
+
+    </article>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-divider"></div>
+  <p class="copy">&copy; 2026 C1991 &middot; <a href="https://github.com/jackyang19911102/c1991">源代码</a></p>
+</footer>
+
+</body>
+</html>

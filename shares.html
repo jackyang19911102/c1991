@@ -22,7 +22,7 @@
     <hr class="subpage-divider">
 
     <!-- Share list — time-sorted with priority ranking -->
-    <div class="share-list" id="shareList">
+    <div class="card-grid" id="shareGrid">
       <!-- Populated by JS -->
     </div>
 
@@ -86,7 +86,7 @@ const SHARES = [
 ];
 
 function renderShares(shares) {
-  const list = document.getElementById('shareList');
+  const list = document.getElementById('shareGrid');
   const empty = document.getElementById('shareEmpty');
 
   if (!shares.length) {
@@ -106,33 +106,39 @@ function renderShares(shares) {
     return b.date.localeCompare(a.date);
   });
 
-  list.innerHTML = sorted.map((s, i) => {
-    const priorityBadge = s.priority
-      ? `<span class="share-priority ${s.priority}">${
-          s.priority === 'pin' ? '📌 置顶' :
-          s.priority === 'hot' ? '🔥 热门' :
-          s.priority === 'new' ? '🆕 新发布' : ''
-        }</span>`
+  grid.innerHTML = sorted.map((s, i) => {
+    const accentMap = { pin: 'accent-yellow', hot: 'accent-red', new: 'accent-blue' };
+    const badgeMap = { pin: '📌 置顶', hot: '🔥 热门', new: '🆕 新发布' };
+    const accent = s.priority ? accentMap[s.priority] : '';
+    const badgeHTML = s.priority
+      ? '<span class="sq-card-badge ' + s.priority + '">' + badgeMap[s.priority] + '</span>'
       : '';
+    const rankColor = s.priority === 'pin' ? 'color:var(--color-warning)' :
+                       s.priority === 'hot' ? 'color:var(--color-danger)' :
+                       s.priority === 'new' ? 'color:var(--color-accent)' :
+                       'color:var(--color-text-tertiary)';
 
-    return `
-      <a href="${s.url}" class="share-item">
-        <span class="rank-num">${String(i + 1).padStart(2, '0')}</span>
-        <div class="share-body">
-          <div class="share-title-row">
-            <span class="share-title">${s.title}</span>
-            ${priorityBadge}
-          </div>
-          <p class="share-desc">${s.desc}</p>
-          <div class="share-meta">
-            <span class="share-date">${s.date}</span>
-            <span class="share-tag">#${s.tag}</span>
-          </div>
-        </div>
-        <span class="share-arrow">→</span>
-      </a>
-    `;
+    return '<a href="' + s.url + '" class="sq-card ' + accent + '">' +
+      '<div class="sq-card-top">' +
+        '<span class="sq-card-rank" style="' + rankColor + '">' + String(i + 1).padStart(2, '0') + '</span>' +
+        badgeHTML +
+      '</div>' +
+      '<h3 class="sq-card-title">' + s.title + '</h3>' +
+      '<p class="sq-card-desc">' + s.desc + '</p>' +
+      '<div class="sq-card-meta">' +
+        '<span>' + s.date + '</span>' +
+        '<span class="sq-card-tag">#' + s.tag + '</span>' +
+      '</div>' +
+    '</a>';
   }).join('');
+
+  if (sorted.length < 6) {
+    grid.innerHTML += '<div class="sq-card ghost">' +
+      '<svg class="ghost-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>' +
+      '<span class="ghost-text">更多分享即将到来</span>' +
+      '<span class="ghost-sub">敬请期待…</span>' +
+    '</div>';
+  }
 }
 
 // Initial render

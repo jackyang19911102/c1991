@@ -3,760 +3,1206 @@
   "children": [
     {
       "type": "frame",
-      "id": "SfWAt",
-      "x": 0,
+      "id": "QP8MP",
+      "x": 560,
       "y": 0,
-      "name": "C1991 Homepage",
+      "name": "Homepage",
       "clip": true,
       "width": 1440,
       "height": 900,
       "fill": "#0d1117",
       "layout": "vertical",
-      "gap": 48,
+      "gap": 32,
       "padding": [
         80,
-        0
+        24
       ],
       "justifyContent": "center",
       "alignItems": "center",
       "children": [
         {
-          "type": "text",
-          "id": "t2jmD",
-          "name": "Brand",
-          "fill": "$text-primary",
-          "content": "C1991",
-          "fontFamily": "Playfair Display",
-          "fontSize": 56,
-          "fontWeight": "300",
-          "letterSpacing": 0.08
+          "type": "frame",
+          "id": "DljvV",
+          "name": "Brand Logo",
+          "width": 180,
+          "height": 180,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "images/white.png",
+            "mode": "fit"
+          }
         },
         {
           "type": "text",
-          "id": "moEbs",
+          "id": "E4Byw9",
           "name": "Tagline",
-          "fill": "$text-secondary",
+          "fill": "#9198a1",
           "content": "文字 · 影像 · 作品 · 思考",
-          "textAlign": "center",
           "fontFamily": "Inter",
-          "fontSize": 14,
-          "fontWeight": "300",
-          "letterSpacing": 0.12
-        },
-        {
-          "type": "rectangle",
-          "id": "CQ4Qb",
-          "name": "Top Divider",
-          "fill": "#30363d",
-          "width": 60,
-          "height": 1
+          "fontSize": 14
         },
         {
           "type": "frame",
-          "id": "luraa",
-          "name": "Nav Section",
-          "layout": "vertical",
-          "gap": 4,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "FcyWB",
-              "name": "Nav Item 1",
-              "gap": 16,
-              "padding": [
-                14,
-                0
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon",
-                  "id": "uTD8Q",
-                  "name": "User Icon",
-                  "width": 20,
-                  "height": 20,
-                  "icon": "user",
-                  "library": "feather",
-                  "fill": "$text-secondary"
-                },
-                {
-                  "type": "text",
-                  "id": "GSwk6",
-                  "name": "Nav Label 1",
-                  "fill": "$text-primary",
-                  "content": "关于我",
-                  "fontFamily": "Inter",
-                  "fontSize": 18,
-                  "fontWeight": "normal",
-                  "letterSpacing": 0.02
-                },
-                {
-                  "type": "text",
-                  "id": "x70Ywy",
-                  "name": "Nav Sub 1",
-                  "fill": "$text-muted",
-                  "content": "About Me",
-                  "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.06
-                },
-                {
-                  "type": "icon",
-                  "id": "d8P5LP",
-                  "name": "Nav Arrow 1",
-                  "width": 14,
-                  "height": 14,
-                  "icon": "chevron-right",
-                  "library": "feather",
-                  "fill": "$text-muted"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "VkV3b",
-              "name": "Nav Item 2",
-              "gap": 16,
-              "padding": [
-                14,
-                0
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon",
-                  "id": "TToVK",
-                  "name": "Edit Icon",
-                  "width": 20,
-                  "height": 20,
-                  "icon": "briefcase",
-                  "library": "feather",
-                  "fill": "$text-secondary"
-                },
-                {
-                  "type": "text",
-                  "id": "y30glX",
-                  "name": "Nav Label 2",
-                  "fill": "$text-primary",
-                  "content": "我的作品",
-                  "fontFamily": "Inter",
-                  "fontSize": 18,
-                  "fontWeight": "normal",
-                  "letterSpacing": 0.02
-                },
-                {
-                  "type": "text",
-                  "id": "Edn8L",
-                  "name": "Nav Sub 2",
-                  "fill": "$text-muted",
-                  "content": "My Works",
-                  "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.06
-                },
-                {
-                  "type": "icon",
-                  "id": "PY87R",
-                  "name": "Nav Arrow 2",
-                  "width": 14,
-                  "height": 14,
-                  "icon": "chevron-right",
-                  "library": "feather",
-                  "fill": "$text-muted"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "lmdUg",
-              "name": "Nav Item 3",
-              "gap": 16,
-              "padding": [
-                14,
-                0
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon",
-                  "id": "HtHa6",
-                  "name": "Camera Icon",
-                  "width": 20,
-                  "height": 20,
-                  "icon": "camera",
-                  "library": "feather",
-                  "fill": "$text-secondary"
-                },
-                {
-                  "type": "text",
-                  "id": "BHISz",
-                  "name": "Nav Label 3",
-                  "fill": "$text-primary",
-                  "content": "图文博客",
-                  "fontFamily": "Inter",
-                  "fontSize": 18,
-                  "fontWeight": "normal",
-                  "letterSpacing": 0.02
-                },
-                {
-                  "type": "text",
-                  "id": "X2FIM",
-                  "name": "Nav Sub 3",
-                  "fill": "$text-muted",
-                  "content": "Photo Blog",
-                  "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.06
-                },
-                {
-                  "type": "icon",
-                  "id": "Clm7l",
-                  "name": "Nav Arrow 3",
-                  "width": 14,
-                  "height": 14,
-                  "icon": "chevron-right",
-                  "library": "feather",
-                  "fill": "$text-muted"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "lJaPi",
-              "name": "Nav Item 4",
-              "gap": 16,
-              "padding": [
-                14,
-                0
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon",
-                  "id": "JAuY0",
-                  "name": "Link Icon",
-                  "width": 20,
-                  "height": 20,
-                  "icon": "share-2",
-                  "library": "feather",
-                  "fill": "$text-secondary"
-                },
-                {
-                  "type": "text",
-                  "id": "g6cDs",
-                  "name": "Nav Label 4",
-                  "fill": "$text-primary",
-                  "content": "作者分享",
-                  "fontFamily": "Inter",
-                  "fontSize": 18,
-                  "fontWeight": "normal",
-                  "letterSpacing": 0.02
-                },
-                {
-                  "type": "text",
-                  "id": "o97nz8",
-                  "name": "Nav Sub 4",
-                  "fill": "$text-muted",
-                  "content": "Author Shares",
-                  "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.06
-                },
-                {
-                  "type": "icon",
-                  "id": "x4xcb9",
-                  "name": "Nav Arrow 4",
-                  "width": 14,
-                  "height": 14,
-                  "icon": "chevron-right",
-                  "library": "feather",
-                  "fill": "$text-muted"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "rectangle",
-          "id": "JA2LX",
-          "name": "Bottom Divider",
-          "fill": "#30363d",
-          "width": 60,
-          "height": 1
+          "id": "gOyrE",
+          "name": "Divider",
+          "width": 80,
+          "height": 1,
+          "fill": "#30363d"
         },
         {
           "type": "frame",
-          "id": "MB1nb",
-          "name": "Stats Bar",
-          "width": "fill_container",
-          "gap": 40,
-          "justifyContent": "center",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "o2KyXc",
-              "name": "Stat 文章",
-              "gap": 4,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "DUKMG",
-                  "name": "Value",
-                  "fill": "$text-secondary",
-                  "content": "12",
-                  "fontFamily": "Inter",
-                  "fontSize": 13,
-                  "fontWeight": "300"
-                },
-                {
-                  "type": "text",
-                  "id": "v5urT",
-                  "name": "Label",
-                  "fill": "$text-muted",
-                  "content": "文章",
-                  "fontFamily": "Inter",
-                  "fontSize": 11,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.08
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "zHc0j",
-              "name": "Stat 照片",
-              "gap": 4,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "eFc4R",
-                  "name": "Value",
-                  "fill": "$text-secondary",
-                  "content": "8",
-                  "fontFamily": "Inter",
-                  "fontSize": 13,
-                  "fontWeight": "300"
-                },
-                {
-                  "type": "text",
-                  "id": "nnx7R",
-                  "name": "Label",
-                  "fill": "$text-muted",
-                  "content": "照片",
-                  "fontFamily": "Inter",
-                  "fontSize": 11,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.08
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "x0sA6j",
-              "name": "Stat 浏览",
-              "gap": 4,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "idx1r",
-                  "name": "Value",
-                  "fill": "$text-secondary",
-                  "content": "1.2k",
-                  "fontFamily": "Inter",
-                  "fontSize": 13,
-                  "fontWeight": "300"
-                },
-                {
-                  "type": "text",
-                  "id": "guV9u",
-                  "name": "Label",
-                  "fill": "$text-muted",
-                  "content": "浏览",
-                  "fontFamily": "Inter",
-                  "fontSize": 11,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.08
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "i6HJF",
-              "name": "Stat 访客",
-              "gap": 4,
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "text",
-                  "id": "dC38i",
-                  "name": "Value",
-                  "fill": "$text-secondary",
-                  "content": "328",
-                  "fontFamily": "Inter",
-                  "fontSize": 13,
-                  "fontWeight": "300"
-                },
-                {
-                  "type": "text",
-                  "id": "JRG1w",
-                  "name": "Label",
-                  "fill": "$text-muted",
-                  "content": "访客",
-                  "fontFamily": "Inter",
-                  "fontSize": 11,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.08
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "id": "amFor",
-          "name": "Copyright",
-          "fill": "$text-muted",
-          "textGrowth": "fixed-width",
-          "width": "fill_container",
-          "content": "© 2026 C1991",
-          "textAlign": "center",
-          "fontFamily": "Inter",
-          "fontSize": 11,
-          "fontWeight": "normal",
-          "letterSpacing": 0.06
-        },
-        {
-          "type": "ellipse",
-          "id": "V6liG",
-          "layoutPosition": "absolute",
-          "x": 1320,
-          "y": 60,
-          "name": "Deco Circle TR",
-          "innerRadius": 0.92,
-          "fill": "#30363d1a",
-          "width": 40,
-          "height": 40,
-          "stroke": "#30363d1a",
-          "strokeWidth": 0.5
-        },
-        {
-          "type": "ellipse",
-          "id": "JhROt",
-          "layoutPosition": "absolute",
-          "x": 80,
-          "y": 780,
-          "name": "Deco Circle BL",
-          "innerRadius": 0.9,
-          "fill": "#30363d1a",
-          "width": 28,
-          "height": 28,
-          "stroke": "#30363d1a",
-          "strokeWidth": 0.5
-        },
-        {
-          "type": "rectangle",
-          "id": "p1Flx",
-          "layoutPosition": "absolute",
-          "x": 60,
-          "y": 380,
-          "name": "Deco Line Left",
-          "fill": "#30363d33",
-          "width": 1,
-          "height": 120
-        },
-        {
-          "type": "rectangle",
-          "id": "JcJKI",
-          "layoutPosition": "absolute",
-          "x": 1379,
-          "y": 340,
-          "name": "Deco Line Right",
-          "fill": "#30363d33",
-          "width": 1,
-          "height": 80
-        },
-        {
-          "type": "ellipse",
-          "id": "x8yBT",
-          "layoutPosition": "absolute",
-          "x": 718,
-          "y": 345,
-          "name": "Deco Dot",
-          "fill": "$text-secondary",
-          "width": 3,
-          "height": 3
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "Jj1Ui",
-      "x": 1520,
-      "y": 0,
-      "name": "Author Shares Page",
-      "clip": true,
-      "width": 1440,
-      "height": 900,
-      "fill": "#0d1117",
-      "layout": "vertical",
-      "gap": 24,
-      "padding": [
-        60,
-        48,
-        48,
-        48
-      ],
-      "alignItems": "center",
-      "children": [
-        {
-          "type": "frame",
-          "id": "cglMJ",
-          "name": "Back Link Row",
-          "width": "fill_container",
-          "gap": 6,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "X12obZ",
-              "name": "Back Link",
-              "fill": "$text-muted",
-              "content": "← 返回首页",
-              "fontFamily": "Inter",
-              "fontSize": 13,
-              "fontWeight": "300",
-              "letterSpacing": 0.04
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "TNQ6A",
-          "name": "Title Block",
-          "width": "fill_container",
+          "id": "roLOx",
+          "name": "Nav Cards",
+          "width": 600,
           "layout": "vertical",
           "gap": 8,
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "G5Mcwa",
-              "name": "Page Title",
-              "fill": "$text-primary",
-              "content": "作者分享",
-              "fontFamily": "Playfair Display",
-              "fontSize": 32,
-              "fontWeight": "normal",
-              "letterSpacing": 0.02
-            },
-            {
-              "type": "text",
-              "id": "lPqsj",
-              "name": "Page Desc",
-              "fill": "$text-secondary",
-              "content": "技术要点 · 热门图文 · 灵感收集",
-              "fontFamily": "Inter",
-              "fontSize": 14,
-              "fontWeight": "300",
-              "letterSpacing": 0.08
-            }
-          ]
-        },
-        {
-          "type": "rectangle",
-          "id": "NeXxz",
-          "name": "Divider",
-          "fill": "#30363d",
-          "width": "fill_container",
-          "height": 1
-        },
-        {
-          "type": "frame",
-          "id": "EiIK7",
-          "name": "List Area",
-          "width": 800,
-          "layout": "vertical",
-          "children": [
-            {
               "type": "frame",
-              "id": "Gqz79",
-              "name": "Share Item 1",
+              "id": "UCymh",
+              "name": "Nav Card: 关于我的",
               "width": "fill_container",
-              "gap": 16,
-              "padding": [
-                16,
-                0
-              ],
+              "fill": "#161b22",
+              "cornerRadius": 6,
+              "stroke": "#30363d",
+              "strokeWidth": 1,
+              "gap": 14,
+              "padding": 16,
               "alignItems": "center",
               "children": [
                 {
                   "type": "frame",
-                  "id": "cWxaN",
-                  "name": "Item Body 1",
+                  "id": "nRiyu",
+                  "name": "Icon Box",
+                  "width": 36,
+                  "height": 36,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "O36EIJ",
+                      "name": "Icon",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "user",
+                      "library": "lucide",
+                      "fill": "#9198a1"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "AQmcH",
+                  "name": "Card Body",
                   "width": "fill_container",
                   "layout": "vertical",
-                  "gap": 4,
+                  "gap": 2,
                   "children": [
                     {
                       "type": "text",
-                      "id": "dC40C",
-                      "name": "Item Title 1",
-                      "fill": "$text-primary",
-                      "content": "如何让 AI 生图更加趋近于真实感",
+                      "id": "xh2OU",
+                      "name": "Label",
+                      "fill": "#f0f6fc",
+                      "content": "关于我的",
                       "fontFamily": "Inter",
                       "fontSize": 15,
-                      "fontWeight": "normal"
+                      "fontWeight": "600"
                     },
                     {
                       "type": "text",
-                      "id": "zzlb1",
-                      "name": "Item Desc 1",
-                      "fill": "$text-secondary",
-                      "textGrowth": "fixed-width",
-                      "width": "fill_container",
-                      "content": "去除 AI 绘画塑料感的完整方法论：从情绪感官到场景搭建的实用指南",
-                      "lineHeight": 1.5,
+                      "id": "P5hP4B",
+                      "name": "Subtitle",
+                      "fill": "#7d8590",
+                      "content": "了解作者，关于本站",
                       "fontFamily": "Inter",
-                      "fontSize": 13,
-                      "fontWeight": "300",
-                      "letterSpacing": 0.01
+                      "fontSize": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "icon",
+                  "id": "JrGto",
+                  "name": "Arrow",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "chevron-right",
+                  "library": "lucide",
+                  "fill": "#7d8590"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "J189Gb",
+              "name": "Nav Card: 图文博客",
+              "width": "fill_container",
+              "fill": "#161b22",
+              "cornerRadius": 6,
+              "stroke": "#30363d",
+              "strokeWidth": 1,
+              "gap": 14,
+              "padding": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "SDYit",
+                  "name": "Icon Box",
+                  "width": 36,
+                  "height": 36,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "O9cmJg",
+                      "name": "Icon",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "folder",
+                      "library": "lucide",
+                      "fill": "#9198a1"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aDRiJ",
+                  "name": "Card Body",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XjtGx",
+                      "name": "Label",
+                      "fill": "#f0f6fc",
+                      "content": "图文博客",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "C21ESP",
+                      "name": "Subtitle",
+                      "fill": "#7d8590",
+                      "content": "日常打卡 · 生活碎片",
+                      "fontFamily": "Inter",
+                      "fontSize": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "icon",
+                  "id": "fpjcH",
+                  "name": "Arrow",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "chevron-right",
+                  "library": "lucide",
+                  "fill": "#7d8590"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Scu7A",
+              "name": "Nav Card: 我的作品",
+              "width": "fill_container",
+              "fill": "#161b22",
+              "cornerRadius": 6,
+              "stroke": "#30363d",
+              "strokeWidth": 1,
+              "gap": 14,
+              "padding": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "U621Ti",
+                  "name": "Icon Box",
+                  "width": 36,
+                  "height": 36,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "wCxCz",
+                      "name": "Icon",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "monitor",
+                      "library": "lucide",
+                      "fill": "#9198a1"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "E69owC",
+                  "name": "Card Body",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "v4jHYR",
+                      "name": "Label",
+                      "fill": "#f0f6fc",
+                      "content": "我的作品",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "r6ji3H",
+                      "name": "Subtitle",
+                      "fill": "#7d8590",
+                      "content": "文字创作 · 视觉作品",
+                      "fontFamily": "Inter",
+                      "fontSize": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "icon",
+                  "id": "JmZCi",
+                  "name": "Arrow",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "chevron-right",
+                  "library": "lucide",
+                  "fill": "#7d8590"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mXBlq",
+              "name": "Nav Card: 作者分享",
+              "width": "fill_container",
+              "fill": "#161b22",
+              "cornerRadius": 6,
+              "stroke": "#30363d",
+              "strokeWidth": 1,
+              "gap": 14,
+              "padding": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "RSHD7",
+                  "name": "Icon Box",
+                  "width": 36,
+                  "height": 36,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "f9v6mg",
+                      "name": "Icon",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "share-2",
+                      "library": "lucide",
+                      "fill": "#9198a1"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "w5n45T",
+                  "name": "Card Body",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VaGTL",
+                      "name": "Label",
+                      "fill": "#f0f6fc",
+                      "content": "作者分享",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "A7EEW",
+                      "name": "Subtitle",
+                      "fill": "#7d8590",
+                      "content": "技术要点 · 灵感收集",
+                      "fontFamily": "Inter",
+                      "fontSize": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "icon",
+                  "id": "BzDkA",
+                  "name": "Arrow",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "chevron-right",
+                  "library": "lucide",
+                  "fill": "#7d8590"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "V540y6",
+      "x": 2080,
+      "y": 0,
+      "name": "Blog Page",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "#0d1117",
+      "layout": "vertical",
+      "padding": [
+        48,
+        0,
+        0,
+        0
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "k3VjH",
+          "name": "Content Area",
+          "width": 960,
+          "layout": "vertical",
+          "gap": 20,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "dk2cK",
+              "name": "Back Link",
+              "width": "fill_container",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "AoFFo",
+                  "name": "Back Arrow",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "arrow-left",
+                  "library": "lucide",
+                  "fill": "#7d8590"
+                },
+                {
+                  "type": "text",
+                  "id": "fJeUE",
+                  "name": "Back Text",
+                  "fill": "#7d8590",
+                  "content": "返回首页",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "OqbJz",
+              "name": "Page Heading",
+              "fill": "#f0f6fc",
+              "content": "图文博客",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "G9qU9",
+              "name": "Page Desc",
+              "fill": "#9198a1",
+              "content": "日常打卡 · 生活碎片 · 影像记录",
+              "fontFamily": "Inter",
+              "fontSize": 14
+            },
+            {
+              "type": "frame",
+              "id": "x3L1K",
+              "name": "Divider",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#30363d"
+            },
+            {
+              "type": "frame",
+              "id": "Tgeek",
+              "name": "Tag Filter Bar",
+              "width": "fill_container",
+              "gap": 8,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "R21fDa",
+                  "name": "Tag: 全部",
+                  "fill": "#1f6feb",
+                  "cornerRadius": 20,
+                  "stroke": "#1f6feb",
+                  "strokeWidth": 1,
+                  "padding": [
+                    6,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ISV5D",
+                      "name": "Tag Label",
+                      "fill": "#ffffff",
+                      "content": "全部",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "otowo",
+                  "name": "Tag: 日常",
+                  "fill": "#21262d",
+                  "cornerRadius": 20,
+                  "stroke": "#30363d",
+                  "strokeWidth": 1,
+                  "padding": [
+                    6,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tBiQF",
+                      "name": "Tag Label",
+                      "fill": "#9198a1",
+                      "content": "日常",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "TY3iS",
+                  "name": "Tag: 摄影",
+                  "fill": "#21262d",
+                  "cornerRadius": 20,
+                  "stroke": "#30363d",
+                  "strokeWidth": 1,
+                  "padding": [
+                    6,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Fg74n",
+                      "name": "Tag Label",
+                      "fill": "#9198a1",
+                      "content": "摄影",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ye7sj",
+                  "name": "Tag: 打卡",
+                  "fill": "#21262d",
+                  "cornerRadius": 20,
+                  "stroke": "#30363d",
+                  "strokeWidth": 1,
+                  "padding": [
+                    6,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vyMhV",
+                      "name": "Tag Label",
+                      "fill": "#9198a1",
+                      "content": "打卡",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "e9WLQU",
+                  "name": "Tag: 旅行",
+                  "fill": "#21262d",
+                  "cornerRadius": 20,
+                  "stroke": "#30363d",
+                  "strokeWidth": 1,
+                  "padding": [
+                    6,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "UWknb",
+                      "name": "Tag Label",
+                      "fill": "#9198a1",
+                      "content": "旅行",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pZndd",
+                  "name": "Tag: 美食",
+                  "fill": "#21262d",
+                  "cornerRadius": 20,
+                  "stroke": "#30363d",
+                  "strokeWidth": 1,
+                  "padding": [
+                    6,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZBveR",
+                      "name": "Tag Label",
+                      "fill": "#9198a1",
+                      "content": "美食",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "D4fLqd",
+              "name": "Photo Grid",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "VGM6w",
+                  "name": "Card Row 1",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "pWGli",
+                      "name": "Photo Card",
+                      "width": 230,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "CKa0c",
+                          "name": "Card Image",
+                          "width": 230,
+                          "height": 230,
+                          "fill": "#010409",
+                          "cornerRadius": [
+                            8,
+                            8,
+                            0,
+                            0
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "I49042",
+                              "name": "Image Icon",
+                              "width": 40,
+                              "height": 40,
+                              "icon": "image",
+                              "library": "lucide",
+                              "fill": "#484f58"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "tRMh4",
+                          "name": "Card Body",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": [
+                            12,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "gPPCg",
+                              "name": "Card Title",
+                              "fill": "#f0f6fc",
+                              "textGrowth": "fixed-width",
+                              "width": 202,
+                              "content": "清晨的第一缕阳光",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "V5Axn",
+                              "name": "Meta Row",
+                              "gap": 8,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "eRBcz",
+                                  "name": "Card Date",
+                                  "fill": "#7d8590",
+                                  "content": "2026.06.22",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "w5miU",
+                                  "name": "Card Tag",
+                                  "fill": "#7d8590",
+                                  "content": "#日常",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     },
                     {
                       "type": "frame",
-                      "id": "UG9Nq",
-                      "name": "Item Meta 1",
-                      "gap": 12,
-                      "alignItems": "center",
+                      "id": "Rwe6k",
+                      "name": "Photo Card",
+                      "width": 230,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
                       "children": [
                         {
-                          "type": "text",
-                          "id": "KDawm",
-                          "name": "Item Date 1",
-                          "fill": "$text-muted",
-                          "content": "2026.06.22 · 置顶",
-                          "fontFamily": "Inter",
-                          "fontSize": 11,
-                          "fontWeight": "300",
-                          "letterSpacing": 0.04
+                          "type": "frame",
+                          "id": "KlgK1",
+                          "name": "Card Image",
+                          "width": 230,
+                          "height": 230,
+                          "fill": "#010409",
+                          "cornerRadius": [
+                            8,
+                            8,
+                            0,
+                            0
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "jIZDz",
+                              "name": "Image Icon",
+                              "width": 40,
+                              "height": 40,
+                              "icon": "image",
+                              "library": "lucide",
+                              "fill": "#484f58"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "id": "MHDIs",
-                          "name": "Item Tag 1",
-                          "fill": "$text-secondary",
-                          "content": "AI 绘画 · 热门",
-                          "fontFamily": "Inter",
-                          "fontSize": 11,
-                          "fontWeight": "300",
-                          "letterSpacing": 0.04
+                          "type": "frame",
+                          "id": "MKfck",
+                          "name": "Card Body",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": [
+                            12,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "A2yZC",
+                              "name": "Card Title",
+                              "fill": "#f0f6fc",
+                              "textGrowth": "fixed-width",
+                              "width": 202,
+                              "content": "打卡深圳最大书店",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "O0e5Lm",
+                              "name": "Meta Row",
+                              "gap": 8,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "E2ijbJ",
+                                  "name": "Card Date",
+                                  "fill": "#7d8590",
+                                  "content": "2026.06.21",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "bKaFG",
+                                  "name": "Card Tag",
+                                  "fill": "#7d8590",
+                                  "content": "#打卡",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "eyXtC",
+                      "name": "Photo Card",
+                      "width": 230,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "grjrE",
+                          "name": "Card Image",
+                          "width": 230,
+                          "height": 230,
+                          "fill": "#010409",
+                          "cornerRadius": [
+                            8,
+                            8,
+                            0,
+                            0
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "f1kKj",
+                              "name": "Image Icon",
+                              "width": 40,
+                              "height": 40,
+                              "icon": "image",
+                              "library": "lucide",
+                              "fill": "#484f58"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "a4SnpE",
+                          "name": "Card Body",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": [
+                            12,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "p0bqs",
+                              "name": "Card Title",
+                              "fill": "#f0f6fc",
+                              "textGrowth": "fixed-width",
+                              "width": 202,
+                              "content": "周末咖啡时光",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "UcC5T",
+                              "name": "Meta Row",
+                              "gap": 8,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "W0GPkf",
+                                  "name": "Card Date",
+                                  "fill": "#7d8590",
+                                  "content": "2026.06.21",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "JhmY0",
+                                  "name": "Card Tag",
+                                  "fill": "#7d8590",
+                                  "content": "#美食",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
                   ]
                 },
                 {
-                  "type": "icon",
-                  "id": "tKWAi",
-                  "name": "Arrow 1",
-                  "width": 14,
-                  "height": 14,
-                  "icon": "chevron-right",
-                  "library": "feather",
-                  "fill": "$text-muted"
-                }
-              ]
-            },
-            {
-              "type": "rectangle",
-              "id": "cbHwG",
-              "name": "Item Divider",
-              "fill": "#30363d",
-              "width": "fill_container",
-              "height": 1
-            },
-            {
-              "type": "frame",
-              "id": "Ve0HS",
-              "name": "Share Item 2",
-              "opacity": 0.2,
-              "width": "fill_container",
-              "gap": 16,
-              "padding": [
-                16,
-                0
-              ],
-              "alignItems": "center",
-              "children": [
-                {
                   "type": "frame",
-                  "id": "dbu7A",
-                  "name": "Item Body 2",
+                  "id": "jU2Ml",
+                  "name": "Card Row 2",
                   "width": "fill_container",
-                  "layout": "vertical",
-                  "gap": 4,
+                  "gap": 20,
+                  "justifyContent": "center",
                   "children": [
                     {
-                      "type": "text",
-                      "id": "ddS3K",
-                      "name": "Item Title 2",
-                      "fill": "$text-primary",
-                      "content": "现代 CSS 布局最佳实践 2026",
-                      "fontFamily": "Inter",
-                      "fontSize": 15,
-                      "fontWeight": "normal"
+                      "type": "frame",
+                      "id": "Z2oHC",
+                      "name": "Photo Card",
+                      "width": 230,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "hSB4z",
+                          "name": "Card Image",
+                          "width": 230,
+                          "height": 230,
+                          "fill": "#010409",
+                          "cornerRadius": [
+                            8,
+                            8,
+                            0,
+                            0
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "oaaVN",
+                              "name": "Image Icon",
+                              "width": 40,
+                              "height": 40,
+                              "icon": "image",
+                              "library": "lucide",
+                              "fill": "#484f58"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "byXOK",
+                          "name": "Card Body",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": [
+                            12,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ohWh9",
+                              "name": "Card Title",
+                              "fill": "#f0f6fc",
+                              "textGrowth": "fixed-width",
+                              "width": 202,
+                              "content": "雨后街景随拍",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "mdt8c",
+                              "name": "Meta Row",
+                              "gap": 8,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "Lm6Pm",
+                                  "name": "Card Date",
+                                  "fill": "#7d8590",
+                                  "content": "2026.06.20",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "va5Up",
+                                  "name": "Card Tag",
+                                  "fill": "#7d8590",
+                                  "content": "#摄影",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     },
                     {
-                      "type": "text",
-                      "id": "ZgWQU",
-                      "name": "Item Desc 2",
-                      "fill": "$text-secondary",
-                      "content": "Grid、Flexbox、Container Queries 的实战总结",
-                      "fontFamily": "Inter",
-                      "fontSize": 13,
-                      "fontWeight": "300"
+                      "type": "frame",
+                      "id": "s9Wu0F",
+                      "name": "Photo Card",
+                      "width": 230,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "NLVeH",
+                          "name": "Card Image",
+                          "width": 230,
+                          "height": 230,
+                          "fill": "#010409",
+                          "cornerRadius": [
+                            8,
+                            8,
+                            0,
+                            0
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "ih6Ay",
+                              "name": "Image Icon",
+                              "width": 40,
+                              "height": 40,
+                              "icon": "image",
+                              "library": "lucide",
+                              "fill": "#484f58"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "cR2vu",
+                          "name": "Card Body",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": [
+                            12,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "yXx0Y",
+                              "name": "Card Title",
+                              "fill": "#f0f6fc",
+                              "textGrowth": "fixed-width",
+                              "width": 202,
+                              "content": "书架一角",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "pX8z2",
+                              "name": "Meta Row",
+                              "gap": 8,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "tLhKB",
+                                  "name": "Card Date",
+                                  "fill": "#7d8590",
+                                  "content": "2026.06.19",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "oflUJ",
+                                  "name": "Card Tag",
+                                  "fill": "#7d8590",
+                                  "content": "#日常",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hQSrJ",
+                      "name": "Photo Card",
+                      "width": 230,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Phwyh",
+                          "name": "Card Image",
+                          "width": 230,
+                          "height": 230,
+                          "fill": "#010409",
+                          "cornerRadius": [
+                            8,
+                            8,
+                            0,
+                            0
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "L1FvFW",
+                              "name": "Image Icon",
+                              "width": 40,
+                              "height": 40,
+                              "icon": "image",
+                              "library": "lucide",
+                              "fill": "#484f58"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "sdPYL",
+                          "name": "Card Body",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": [
+                            12,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "hLgLg",
+                              "name": "Card Title",
+                              "fill": "#f0f6fc",
+                              "textGrowth": "fixed-width",
+                              "width": 202,
+                              "content": "黄昏天际线",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "qtFVs",
+                              "name": "Meta Row",
+                              "gap": 8,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "W4zwRm",
+                                  "name": "Card Date",
+                                  "fill": "#7d8590",
+                                  "content": "2026.06.18",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "n919A1",
+                                  "name": "Card Tag",
+                                  "fill": "#7d8590",
+                                  "content": "#摄影",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "frame",
-          "id": "GcYyL",
-          "name": "Bottom Spacer",
-          "width": "fill_container",
-          "height": "fill_container"
-        },
-        {
-          "type": "text",
-          "id": "FXxJj",
-          "name": "Page Footer",
-          "fill": "$text-muted",
-          "textGrowth": "fixed-width",
-          "width": "fill_container",
-          "content": "© 2026 C1991",
-          "textAlign": "center",
-          "fontFamily": "Inter",
-          "fontSize": 11,
-          "fontWeight": "300",
-          "letterSpacing": 0.06
         }
       ]
     },
     {
       "type": "frame",
-      "id": "BZvy0",
-      "x": 3041,
+      "id": "FPIvC",
+      "x": 3600,
       "y": 0,
       "name": "About Page",
       "clip": true,
@@ -764,770 +1210,175 @@
       "height": 900,
       "fill": "#0d1117",
       "layout": "vertical",
-      "gap": 20,
       "padding": [
-        60,
         48,
-        48,
-        48
+        0,
+        0,
+        0
       ],
       "alignItems": "center",
       "children": [
         {
           "type": "frame",
-          "id": "zAAqR",
-          "name": "Back Link Row",
-          "width": "fill_container",
-          "gap": 6,
+          "id": "m2zBd",
+          "name": "Content Area",
+          "width": 800,
+          "layout": "vertical",
+          "gap": 20,
           "alignItems": "center",
           "children": [
             {
-              "type": "text",
-              "id": "G5OQJ9",
-              "name": "Back Link",
-              "fill": "$text-muted",
-              "content": "← 返回首页",
-              "fontFamily": "Inter",
-              "fontSize": 13,
-              "fontWeight": "300",
-              "letterSpacing": 0.04
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "PgxmI",
-          "name": "Top Spacer",
-          "width": "fill_container",
-          "height": 16
-        },
-        {
-          "type": "text",
-          "id": "TijlJ",
-          "name": "Name",
-          "fill": "$text-primary",
-          "content": "小羊的私域",
-          "fontFamily": "Playfair Display",
-          "fontSize": 32,
-          "fontWeight": "normal",
-          "letterSpacing": 0.02
-        },
-        {
-          "type": "text",
-          "id": "nSR5R",
-          "name": "Handle",
-          "fill": "$text-muted",
-          "content": "@jackyang19911102",
-          "fontFamily": "Inter",
-          "fontSize": 12,
-          "fontWeight": "300",
-          "letterSpacing": 0.06
-        },
-        {
-          "type": "text",
-          "id": "oll9V",
-          "name": "Bio",
-          "fill": "$text-secondary",
-          "textGrowth": "fixed-width",
-          "width": 400,
-          "content": "一个喜欢发掘新奇事物、拍照片、记录生活的人。",
-          "textAlign": "center",
-          "fontFamily": "Inter",
-          "fontSize": 14,
-          "fontWeight": "300",
-          "letterSpacing": 0.04
-        },
-        {
-          "type": "rectangle",
-          "id": "jiu0N",
-          "name": "Divider",
-          "fill": "#30363d",
-          "width": "fill_container",
-          "height": 1
-        },
-        {
-          "type": "frame",
-          "id": "BSUph",
-          "name": "Card 1",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": 4,
-          "children": [
-            {
-              "type": "text",
-              "id": "ylyZG",
-              "name": "Card 1 Title",
-              "fill": "$text-secondary",
-              "content": "关于本站",
-              "fontFamily": "Inter",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "letterSpacing": 0.02
-            },
-            {
-              "type": "text",
-              "id": "RPv5Q",
-              "name": "Card 1 Body",
-              "fill": "$text-secondary",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "C1991 是小羊的个人博客，没有广告，没有评论区，没有社交分享按钮。有的只是文字和图片，以及偶尔的技术分享。",
-              "lineHeight": 1.7,
-              "fontFamily": "Inter",
-              "fontSize": 13,
-              "fontWeight": "300",
-              "letterSpacing": 0.01
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "zSIl6",
-          "name": "Card 2",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": 4,
-          "children": [
-            {
-              "type": "text",
-              "id": "uBF5S",
-              "name": "Card 2 Title",
-              "fill": "$text-secondary",
-              "content": "联系方式",
-              "fontFamily": "Inter",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "letterSpacing": 0.02
-            },
-            {
-              "type": "text",
-              "id": "BjAiB",
-              "name": "Card 2 Body",
-              "fill": "$text-secondary",
-              "content": "邮箱：502055254@qq.com",
-              "fontFamily": "Inter",
-              "fontSize": 13,
-              "fontWeight": "300",
-              "letterSpacing": 0.01
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "eMUp8",
-          "name": "Card 3",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": 10,
-          "children": [
-            {
-              "type": "text",
-              "id": "wVjF5",
-              "name": "Card 3 Title",
-              "fill": "$text-secondary",
-              "content": "时间线",
-              "fontFamily": "Inter",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "letterSpacing": 0.02
-            },
-            {
               "type": "frame",
-              "id": "P7Ao1",
-              "name": "Timeline Item",
+              "id": "fkgsb",
+              "name": "Back Link",
               "width": "fill_container",
-              "gap": 16,
-              "padding": [
-                6,
-                0,
-                6,
-                14
-              ],
+              "gap": 4,
+              "alignItems": "center",
               "children": [
                 {
-                  "type": "text",
-                  "id": "AesRm",
-                  "name": "Year",
-                  "fill": "$text-secondary",
-                  "textGrowth": "fixed-width",
-                  "width": 90,
-                  "content": "2026.6.22",
-                  "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "normal",
-                  "letterSpacing": 0.04
+                  "type": "icon",
+                  "id": "bjPQt",
+                  "name": "Back Arrow",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "arrow-left",
+                  "library": "lucide",
+                  "fill": "#7d8590"
                 },
                 {
                   "type": "text",
-                  "id": "uTkN4",
-                  "name": "Event",
-                  "fill": "$text-secondary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container",
-                  "content": "c1991.cn 小羊的私域上线。开始在这个角落记录和分享个人的工作和想法。",
-                  "lineHeight": 1.6,
+                  "id": "WSDio",
+                  "name": "Back Text",
+                  "fill": "#7d8590",
+                  "content": "返回首页",
                   "fontFamily": "Inter",
-                  "fontSize": 13,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.01
+                  "fontSize": 13
                 }
               ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "xuWfV",
-          "name": "Bottom Spacer",
-          "width": "fill_container",
-          "height": "fill_container"
-        },
-        {
-          "type": "text",
-          "id": "PLZ89",
-          "name": "Page Footer",
-          "fill": "$text-muted",
-          "textGrowth": "fixed-width",
-          "width": "fill_container",
-          "content": "© 2026 C1991",
-          "textAlign": "center",
-          "fontFamily": "Inter",
-          "fontSize": 11,
-          "fontWeight": "300",
-          "letterSpacing": 0.06
-        }
-      ]
-    },
-    {
-      "type": "frame",
-      "id": "iu5pV",
-      "x": 4561,
-      "y": 0,
-      "name": "Photo Blog Page",
-      "clip": true,
-      "width": 1440,
-      "height": 1024,
-      "fill": "#0d1117",
-      "layout": "vertical",
-      "gap": 32,
-      "padding": [
-        60,
-        100,
-        48,
-        100
-      ],
-      "children": [
-        {
-          "type": "frame",
-          "id": "yQI80",
-          "name": "Back Link Row",
-          "width": "fill_container",
-          "gap": 6,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "syCVj",
-              "name": "Back Link",
-              "fill": "$text-muted",
-              "content": "← 返回首页",
-              "fontFamily": "Inter",
-              "fontSize": 13,
-              "fontWeight": "300",
-              "letterSpacing": 0.04
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "xrK3q",
-          "name": "Title Block",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": 8,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "h7Zcdq",
-              "name": "Page Title",
-              "fill": "$text-primary",
-              "content": "图文博客",
-              "fontFamily": "Playfair Display",
-              "fontSize": 32,
-              "fontWeight": "normal",
-              "letterSpacing": 0.02
             },
             {
               "type": "text",
-              "id": "Y88cy",
+              "id": "ByGoK",
+              "name": "Page Heading",
+              "fill": "#f0f6fc",
+              "content": "小羊的私域",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "AP0Mk",
+              "name": "Handle",
+              "fill": "#7d8590",
+              "content": "@jackyang19911102",
+              "fontFamily": "Inter",
+              "fontSize": 13
+            },
+            {
+              "type": "text",
+              "id": "hTWE0",
               "name": "Page Desc",
-              "fill": "$text-secondary",
-              "content": "日常打卡 · 生活碎片 · 影像记录",
+              "fill": "#9198a1",
+              "content": "一个喜欢发掘新奇事物、拍照片、记录生活的人。",
               "fontFamily": "Inter",
-              "fontSize": 14,
-              "fontWeight": "300",
-              "letterSpacing": 0.08
-            }
-          ]
-        },
-        {
-          "type": "rectangle",
-          "id": "rzfQf",
-          "name": "Divider",
-          "fill": "#30363d",
-          "width": "fill_container",
-          "height": 1
-        },
-        {
-          "type": "frame",
-          "id": "TkD2U",
-          "name": "Tag Filter Row",
-          "width": "fill_container",
-          "gap": 8,
-          "justifyContent": "center",
-          "children": [
-            {
-              "type": "frame",
-              "id": "TY4Y0",
-              "name": "Tag 全部",
-              "fill": "$accent-emphasis",
-              "cornerRadius": 20,
-              "padding": [
-                6,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "ggPFz",
-                  "name": "Tag Text",
-                  "fill": "$text-primary",
-                  "content": "全部",
-                  "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.04
-                }
-              ]
+              "fontSize": 14
             },
             {
               "type": "frame",
-              "id": "OzBN8",
-              "name": "Tag 日常",
-              "fill": "$border-muted",
-              "cornerRadius": 20,
-              "padding": [
-                6,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "S6nH6L",
-                  "name": "Tag Text",
-                  "fill": "$text-secondary",
-                  "content": "日常",
-                  "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.04
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "g9e6Ok",
-              "name": "Tag 摄影",
-              "fill": "$border-muted",
-              "cornerRadius": 20,
-              "padding": [
-                6,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "Q6FhAn",
-                  "name": "Tag Text",
-                  "fill": "$text-secondary",
-                  "content": "摄影",
-                  "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.04
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "GfqLi",
-              "name": "Tag 打卡",
-              "fill": "$border-muted",
-              "cornerRadius": 20,
-              "padding": [
-                6,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "blHjL",
-                  "name": "Tag Text",
-                  "fill": "$text-secondary",
-                  "content": "打卡",
-                  "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.04
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "VGeGH",
-              "name": "Tag 旅行",
-              "fill": "$border-muted",
-              "cornerRadius": 20,
-              "padding": [
-                6,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "rN0cF",
-                  "name": "Tag Text",
-                  "fill": "$text-secondary",
-                  "content": "旅行",
-                  "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.04
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "LFS0W",
-              "name": "Tag 美食",
-              "fill": "$border-muted",
-              "cornerRadius": 20,
-              "padding": [
-                6,
-                16
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "hxvDq",
-                  "name": "Tag Text",
-                  "fill": "$text-secondary",
-                  "content": "美食",
-                  "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "300",
-                  "letterSpacing": 0.04
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "aRoqG",
-          "name": "Card Grid",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": 16,
-          "children": [
-            {
-              "type": "frame",
-              "id": "YgE9F",
-              "name": "Card Row 1",
+              "id": "OR760",
+              "name": "Divider",
               "width": "fill_container",
-              "gap": 16,
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "mHjeC",
-                  "name": "清晨的第一缕阳光",
-                  "width": "fill_container",
-                  "cornerRadius": 8,
-                  "layout": "vertical",
-                  "gap": 10,
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "cornerRadius": 8,
-                      "id": "d82Fs",
-                      "name": "Card Image",
-                      "metadata": {
-                        "type": "unsplash",
-                        "username": "hillu0",
-                        "link": "https://unsplash.com/@hillu0",
-                        "author": "hilal kh"
-                      },
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "https://images.unsplash.com/photo-1676001225766-23eb91b6fa9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3NTZ8&ixlib=rb-4.1.0&q=80&w=1080",
-                        "mode": "fill"
-                      },
-                      "width": "fill_container",
-                      "height": 260
-                    },
-                    {
-                      "type": "frame",
-                      "id": "D6N8OG",
-                      "name": "Card Body",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 4,
-                      "padding": [
-                        0,
-                        4
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "xNm3V",
-                          "name": "Card Title",
-                          "fill": "$text-primary",
-                          "textGrowth": "fixed-width",
-                          "width": "fill_container",
-                          "content": "清晨的第一缕阳光",
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal",
-                          "letterSpacing": 0.01
-                        },
-                        {
-                          "type": "text",
-                          "id": "nIxcG",
-                          "name": "Card Date",
-                          "fill": "$text-muted",
-                          "content": "2026.06.22",
-                          "fontFamily": "Inter",
-                          "fontSize": 11,
-                          "fontWeight": "300",
-                          "letterSpacing": 0.06
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "zRzdk",
-                  "name": "周末咖啡时光",
-                  "width": "fill_container",
-                  "cornerRadius": 8,
-                  "layout": "vertical",
-                  "gap": 10,
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "cornerRadius": 8,
-                      "id": "jMjz0",
-                      "name": "Card Image",
-                      "metadata": {
-                        "type": "unsplash",
-                        "username": "haungynphuc",
-                        "link": "https://unsplash.com/@haungynphuc",
-                        "author": "Nguyen Phuc Hau"
-                      },
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "https://images.unsplash.com/photo-1768319303671-afddfc1583ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3NTZ8&ixlib=rb-4.1.0&q=80&w=1080",
-                        "mode": "fill"
-                      },
-                      "width": "fill_container",
-                      "height": 260
-                    },
-                    {
-                      "type": "frame",
-                      "id": "Khd08",
-                      "name": "Card Body",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 4,
-                      "padding": [
-                        0,
-                        4
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "lbUQ7",
-                          "name": "Card Title",
-                          "fill": "$text-primary",
-                          "textGrowth": "fixed-width",
-                          "width": "fill_container",
-                          "content": "周末咖啡时光",
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal",
-                          "letterSpacing": 0.01
-                        },
-                        {
-                          "type": "text",
-                          "id": "UAqO3",
-                          "name": "Card Date",
-                          "fill": "$text-muted",
-                          "content": "2026.06.21",
-                          "fontFamily": "Inter",
-                          "fontSize": 11,
-                          "fontWeight": "300",
-                          "letterSpacing": 0.06
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "kRiOG",
-                  "name": "雨后街景随拍",
-                  "width": "fill_container",
-                  "cornerRadius": 8,
-                  "layout": "vertical",
-                  "gap": 10,
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "cornerRadius": 8,
-                      "id": "S6kEw",
-                      "name": "Card Image",
-                      "metadata": {
-                        "type": "unsplash",
-                        "username": "anamarkovych",
-                        "link": "https://unsplash.com/@anamarkovych",
-                        "author": "Ana Markovych 🇺🇦"
-                      },
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "https://images.unsplash.com/photo-1631348743687-0dd36353a758?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3NTd8&ixlib=rb-4.1.0&q=80&w=1080",
-                        "mode": "fill"
-                      },
-                      "width": "fill_container",
-                      "height": 260
-                    },
-                    {
-                      "type": "frame",
-                      "id": "jNl8a",
-                      "name": "Card Body",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 4,
-                      "padding": [
-                        0,
-                        4
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "zWNia",
-                          "name": "Card Title",
-                          "fill": "$text-primary",
-                          "textGrowth": "fixed-width",
-                          "width": "fill_container",
-                          "content": "雨后街景随拍",
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal",
-                          "letterSpacing": 0.01
-                        },
-                        {
-                          "type": "text",
-                          "id": "SxhzA",
-                          "name": "Card Date",
-                          "fill": "$text-muted",
-                          "content": "2026.06.20",
-                          "fontFamily": "Inter",
-                          "fontSize": 11,
-                          "fontWeight": "300",
-                          "letterSpacing": 0.06
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "height": 1,
+              "fill": "#30363d"
             },
             {
               "type": "frame",
-              "id": "qkBMI",
-              "name": "Card Row 2",
+              "id": "AOxaX",
+              "name": "Card Grid",
               "width": "fill_container",
-              "gap": 16,
+              "layout": "vertical",
+              "gap": 20,
               "children": [
                 {
                   "type": "frame",
-                  "id": "rf4CL",
-                  "name": "书架一角",
+                  "id": "Pz7b5",
+                  "name": "Card Row 1",
                   "width": "fill_container",
-                  "cornerRadius": 8,
-                  "layout": "vertical",
-                  "gap": 10,
+                  "gap": 20,
+                  "justifyContent": "center",
                   "children": [
                     {
-                      "type": "rectangle",
-                      "cornerRadius": 8,
-                      "id": "gQSLW",
-                      "name": "Card Image",
-                      "metadata": {
-                        "type": "unsplash",
-                        "username": "benyamin_bohlouli",
-                        "link": "https://unsplash.com/@benyamin_bohlouli",
-                        "author": "Benyamin Bohlouli"
-                      },
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "https://images.unsplash.com/photo-1612909000917-fb13c94ce179?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3NTh8&ixlib=rb-4.1.0&q=80&w=1080",
-                        "mode": "fill"
-                      },
-                      "width": "fill_container",
-                      "height": 260
-                    },
-                    {
                       "type": "frame",
-                      "id": "CyfHp",
-                      "name": "Card Body",
-                      "width": "fill_container",
+                      "id": "oMvd1",
+                      "name": "Card: 关于本站",
+                      "width": 310,
+                      "height": 310,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
                       "layout": "vertical",
-                      "gap": 4,
-                      "padding": [
-                        0,
-                        4
-                      ],
+                      "gap": 12,
+                      "padding": 20,
                       "children": [
                         {
                           "type": "text",
-                          "id": "Lhj62",
+                          "id": "sEgj6",
                           "name": "Card Title",
-                          "fill": "$text-primary",
-                          "textGrowth": "fixed-width",
-                          "width": "fill_container",
-                          "content": "书架一角",
+                          "fill": "#58a6ff",
+                          "content": "关于本站",
                           "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal",
-                          "letterSpacing": 0.01
+                          "fontSize": 17,
+                          "fontWeight": "600"
                         },
                         {
                           "type": "text",
-                          "id": "QfB05",
-                          "name": "Card Date",
-                          "fill": "$text-muted",
-                          "content": "2026.06.19",
+                          "id": "x0J6uP",
+                          "name": "Card Content",
+                          "fill": "#9198a1",
+                          "textGrowth": "fixed-width",
+                          "width": 270,
+                          "content": "　　C1991 是小羊的个人博客。这里没有广告，没有评论区，没有社交分享按钮。有的只是文字和图片，以及偶尔的技术分享。这里是我的一方天地，一个安静记录和表达的空间。",
                           "fontFamily": "Inter",
-                          "fontSize": 11,
-                          "fontWeight": "300",
-                          "letterSpacing": 0.06
+                          "fontSize": 14
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "o6BdU",
+                      "name": "Card: 关于作者",
+                      "width": 310,
+                      "height": 310,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "n42Loz",
+                          "name": "Card Title",
+                          "fill": "#3fb950",
+                          "content": "关于作者",
+                          "fontFamily": "Inter",
+                          "fontSize": 17,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "EdsXF",
+                          "name": "Card Content",
+                          "fill": "#9198a1",
+                          "textGrowth": "fixed-width",
+                          "width": 270,
+                          "content": "　　一名热爱技术与生活的开发者。喜欢摄影、写作、探索新事物。相信文字和影像的力量，通过这个网站分享个人的所见所想。工作之余喜欢旅拍和咖啡，也热衷于折腾各种技术工具。",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
                         }
                       ]
                     }
@@ -1535,137 +1386,296 @@
                 },
                 {
                   "type": "frame",
-                  "id": "Su6Uf",
-                  "name": "黄昏时分的天际线",
+                  "id": "hHVJU",
+                  "name": "Card Row 2",
                   "width": "fill_container",
-                  "cornerRadius": 8,
-                  "layout": "vertical",
-                  "gap": 10,
+                  "gap": 20,
+                  "justifyContent": "center",
                   "children": [
                     {
-                      "type": "rectangle",
-                      "cornerRadius": 8,
-                      "id": "gEwvg",
-                      "name": "Card Image",
-                      "metadata": {
-                        "type": "unsplash",
-                        "username": "amferatus",
-                        "link": "https://unsplash.com/@amferatus",
-                        "author": "Andrii Burak"
-                      },
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "https://images.unsplash.com/photo-1592596959482-34fb465b60e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3NTl8&ixlib=rb-4.1.0&q=80&w=1080",
-                        "mode": "fill"
-                      },
-                      "width": "fill_container",
-                      "height": 260
-                    },
-                    {
                       "type": "frame",
-                      "id": "J0A8kv",
-                      "name": "Card Body",
-                      "width": "fill_container",
+                      "id": "W1nLSU",
+                      "name": "Card: 联系方式",
+                      "width": 310,
+                      "height": 310,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
                       "layout": "vertical",
-                      "gap": 4,
-                      "padding": [
-                        0,
-                        4
-                      ],
+                      "gap": 14,
+                      "padding": 20,
                       "children": [
                         {
                           "type": "text",
-                          "id": "i3PJQ",
+                          "id": "FAMKn",
                           "name": "Card Title",
-                          "fill": "$text-primary",
-                          "textGrowth": "fixed-width",
-                          "width": "fill_container",
-                          "content": "黄昏时分的天际线",
+                          "fill": "#d2991d",
+                          "content": "联系方式",
                           "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal",
-                          "letterSpacing": 0.01
+                          "fontSize": 17,
+                          "fontWeight": "600"
                         },
                         {
                           "type": "text",
-                          "id": "puots",
-                          "name": "Card Date",
-                          "fill": "$text-muted",
-                          "content": "2026.06.18",
+                          "id": "VHI31",
+                          "name": "Contact Email",
+                          "fill": "#9198a1",
+                          "textGrowth": "fixed-width",
+                          "width": 270,
+                          "content": "邮箱：502055254@qq.com",
                           "fontFamily": "Inter",
-                          "fontSize": 11,
-                          "fontWeight": "300",
-                          "letterSpacing": 0.06
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "fiB52",
+                          "name": "Contact GitHub",
+                          "fill": "#9198a1",
+                          "textGrowth": "fixed-width",
+                          "width": 270,
+                          "content": "GitHub：github.com/jackyang19911102",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "zEhYS",
-                  "name": "新发现的小店",
-                  "width": "fill_container",
-                  "cornerRadius": 8,
-                  "layout": "vertical",
-                  "gap": 10,
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "cornerRadius": 8,
-                      "id": "d4ifWq",
-                      "name": "Card Image",
-                      "metadata": {
-                        "type": "unsplash",
-                        "username": "jackji1211",
-                        "link": "https://unsplash.com/@jackji1211",
-                        "author": "Fangchen Ji"
-                      },
-                      "fill": {
-                        "type": "image",
-                        "enabled": true,
-                        "url": "https://images.unsplash.com/photo-1778659292530-cd23b56d499c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3NjB8&ixlib=rb-4.1.0&q=80&w=1080",
-                        "mode": "fill"
-                      },
-                      "width": "fill_container",
-                      "height": 260
                     },
                     {
                       "type": "frame",
-                      "id": "dlJUq",
-                      "name": "Card Body",
-                      "width": "fill_container",
+                      "id": "YCMGS",
+                      "name": "Card: 时间线",
+                      "width": 310,
+                      "height": 310,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
                       "layout": "vertical",
-                      "gap": 4,
-                      "padding": [
-                        0,
-                        4
-                      ],
+                      "gap": 14,
+                      "padding": 20,
                       "children": [
                         {
                           "type": "text",
-                          "id": "rdn1J",
+                          "id": "JxlBf",
                           "name": "Card Title",
-                          "fill": "$text-primary",
-                          "textGrowth": "fixed-width",
-                          "width": "fill_container",
-                          "content": "新发现的小店",
+                          "fill": "#f85149",
+                          "content": "时间线",
                           "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal",
-                          "letterSpacing": 0.01
+                          "fontSize": 17,
+                          "fontWeight": "600"
                         },
                         {
-                          "type": "text",
-                          "id": "xUMdP",
-                          "name": "Card Date",
-                          "fill": "$text-muted",
-                          "content": "2026.06.17",
-                          "fontFamily": "Inter",
-                          "fontSize": 11,
-                          "fontWeight": "300",
-                          "letterSpacing": 0.06
+                          "type": "frame",
+                          "id": "ia0cc",
+                          "name": "Timeline Event",
+                          "width": 302,
+                          "height": 60,
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "H7ZsH",
+                              "name": "Dot Column",
+                              "width": 8,
+                              "height": 60,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "X4zpF",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Timeline Dot",
+                                  "fill": "#f85149",
+                                  "width": 8,
+                                  "height": 8
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "B9Mgz",
+                                  "x": 3.5,
+                                  "y": 8,
+                                  "name": "Timeline Line",
+                                  "width": 1,
+                                  "height": 52,
+                                  "fill": "#30363d"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "XIHrL",
+                              "name": "Text Column",
+                              "width": 252,
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "vBLPr",
+                                  "name": "Event Year",
+                                  "fill": "#f0f6fc",
+                                  "content": "2026.6.22",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "VigJy",
+                                  "name": "Event Text",
+                                  "fill": "#9198a1",
+                                  "textGrowth": "fixed-width",
+                                  "width": 270,
+                                  "content": "c1991.cn 全新改版上线。四大板块正式推出。",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "JTZZ8",
+                          "name": "Timeline Event",
+                          "width": 302,
+                          "height": 60,
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "eVPgV",
+                              "name": "Dot Column",
+                              "width": 8,
+                              "height": 60,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "p0QRU",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Timeline Dot",
+                                  "fill": "#f85149",
+                                  "width": 8,
+                                  "height": 8
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "TYNlu",
+                                  "x": 3.5,
+                                  "y": 8,
+                                  "name": "Timeline Line",
+                                  "width": 1,
+                                  "height": 52,
+                                  "fill": "#30363d"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "KVPBP",
+                              "name": "Text Column",
+                              "width": 252,
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "V3fCEf",
+                                  "name": "Event Year",
+                                  "fill": "#f0f6fc",
+                                  "content": "2026.6.21",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "E3d44w",
+                                  "name": "Event Text",
+                                  "fill": "#9198a1",
+                                  "textGrowth": "fixed-width",
+                                  "width": 270,
+                                  "content": "C1991 项目开源，代码托管于 GitHub。",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "MJiMG",
+                          "name": "Timeline Event",
+                          "width": 302,
+                          "height": 60,
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "KZcaC",
+                              "name": "Dot Column",
+                              "width": 8,
+                              "height": 60,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "SMX76",
+                                  "x": 0,
+                                  "y": 0,
+                                  "name": "Timeline Dot",
+                                  "fill": "#f85149",
+                                  "width": 8,
+                                  "height": 8
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "aaVuu",
+                                  "x": 3.5,
+                                  "y": 8,
+                                  "name": "Timeline Line",
+                                  "width": 1,
+                                  "height": 52,
+                                  "fill": "#30363d"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "AIZZ6",
+                              "name": "Text Column",
+                              "width": 252,
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "DaEar",
+                                  "name": "Event Year",
+                                  "fill": "#f0f6fc",
+                                  "content": "2026.6",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "v7fS41",
+                                  "name": "Event Text",
+                                  "fill": "#9198a1",
+                                  "textGrowth": "fixed-width",
+                                  "width": 270,
+                                  "content": "注册 c1991.cn 域名，C1991 网站正式启动。",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 13
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
@@ -1674,532 +1684,1437 @@
               ]
             }
           ]
-        },
-        {
-          "type": "frame",
-          "id": "Oa6Hi",
-          "name": "Spacer",
-          "width": "fill_container",
-          "height": "fill_container"
-        },
-        {
-          "type": "text",
-          "id": "t3zk7o",
-          "name": "Page Footer",
-          "fill": "$text-muted",
-          "textGrowth": "fixed-width",
-          "width": "fill_container",
-          "content": "© 2026 C1991",
-          "textAlign": "center",
-          "fontFamily": "Inter",
-          "fontSize": 11,
-          "fontWeight": "300",
-          "letterSpacing": 0.06
         }
       ]
     },
     {
       "type": "frame",
-      "id": "g7ZWJd",
-      "x": 6081,
+      "id": "iZAPh",
+      "x": 5120,
       "y": 0,
-      "name": "My Works Page",
+      "name": "Works Page",
       "clip": true,
       "width": 1440,
-      "height": 1024,
+      "height": 900,
       "fill": "#0d1117",
       "layout": "vertical",
-      "gap": 28,
       "padding": [
-        60,
-        100,
         48,
-        100
+        0,
+        0,
+        0
       ],
+      "alignItems": "center",
       "children": [
         {
           "type": "frame",
-          "id": "i7p4r",
-          "name": "Back Link Row",
-          "width": "fill_container",
-          "gap": 6,
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "Epxip",
-              "name": "Back Link",
-              "fill": "$text-muted",
-              "content": "← 返回首页",
-              "fontFamily": "Inter",
-              "fontSize": 13,
-              "fontWeight": "300",
-              "letterSpacing": 0.04
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "GeU5Q",
-          "name": "Title Block",
-          "width": "fill_container",
+          "id": "OOfry",
+          "name": "Content Area",
+          "width": 960,
           "layout": "vertical",
-          "gap": 8,
+          "gap": 18,
           "alignItems": "center",
           "children": [
             {
+              "type": "frame",
+              "id": "TrJXj",
+              "name": "Back Link",
+              "width": "fill_container",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "fL2K3",
+                  "name": "Back Arrow",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "arrow-left",
+                  "library": "lucide",
+                  "fill": "#7d8590"
+                },
+                {
+                  "type": "text",
+                  "id": "Qs2Gu",
+                  "name": "Back Text",
+                  "fill": "#7d8590",
+                  "content": "返回首页",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
+                }
+              ]
+            },
+            {
               "type": "text",
-              "id": "nrNX2",
-              "name": "Page Title",
-              "fill": "$text-primary",
+              "id": "mI7cU",
+              "name": "Page Heading",
+              "fill": "#f0f6fc",
               "content": "我的作品",
-              "fontFamily": "Playfair Display",
-              "fontSize": 32,
-              "fontWeight": "normal",
-              "letterSpacing": 0.02
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "600"
             },
             {
               "type": "text",
-              "id": "aHTQ8",
+              "id": "l5JqLT",
               "name": "Page Desc",
-              "fill": "$text-secondary",
+              "fill": "#9198a1",
               "content": "文字创作 · 视觉作品 · 个人项目",
               "fontFamily": "Inter",
-              "fontSize": 14,
-              "fontWeight": "300",
-              "letterSpacing": 0.08
-            }
-          ]
-        },
-        {
-          "type": "rectangle",
-          "id": "K65ONp",
-          "name": "Divider",
-          "fill": "#30363d",
-          "width": "fill_container",
-          "height": 1
-        },
-        {
-          "type": "frame",
-          "id": "x5tdNb",
-          "name": "Content Row",
-          "width": "fill_container",
-          "gap": 48,
-          "children": [
+              "fontSize": 14
+            },
             {
               "type": "frame",
-              "id": "OFueC",
-              "name": "Text Works Column",
+              "id": "NdyqH",
+              "name": "Divider",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#30363d"
+            },
+            {
+              "type": "frame",
+              "id": "s1r19",
+              "name": "Card Grid",
               "width": "fill_container",
               "layout": "vertical",
-              "gap": 16,
+              "gap": 20,
               "children": [
                 {
                   "type": "frame",
-                  "id": "GOW0N",
-                  "name": "Section Header",
+                  "id": "JQFhu",
+                  "name": "Card Row 1",
                   "width": "fill_container",
-                  "layout": "vertical",
-                  "gap": 4,
+                  "gap": 20,
+                  "justifyContent": "center",
                   "children": [
                     {
-                      "type": "text",
-                      "id": "agEPW",
-                      "name": "Section Title",
-                      "fill": "$text-secondary",
-                      "content": "文字作品",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "500",
-                      "letterSpacing": 0.02
+                      "type": "frame",
+                      "id": "ALRnH",
+                      "name": "Card: 文字作品",
+                      "width": 300,
+                      "height": 300,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "iY4GI",
+                          "name": "Card Title",
+                          "fill": "#58a6ff",
+                          "content": "文字作品",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "fGeMy",
+                          "name": "Para",
+                          "fill": "#7d8590",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "小说 · 随笔 · 诗歌",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "frame",
+                          "id": "M06Hc",
+                          "name": "Novel Row",
+                          "width": 260,
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "sCTdk",
+                              "name": "Novel Dot",
+                              "width": 6,
+                              "height": 6,
+                              "fill": "#58a6ff",
+                              "cornerRadius": 3
+                            },
+                            {
+                              "type": "text",
+                              "id": "pqroe",
+                              "name": "Novel Title",
+                              "fill": "#f0f6fc",
+                              "content": "《城市边缘》",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "XAVEr",
+                              "name": "Novel Status",
+                              "fill": "#7d8590",
+                              "content": "连载中 · 12章",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "jJpAQ",
+                          "name": "Novel Row",
+                          "width": 260,
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "i7XE0",
+                              "name": "Novel Dot",
+                              "width": 6,
+                              "height": 6,
+                              "fill": "#58a6ff",
+                              "cornerRadius": 3
+                            },
+                            {
+                              "type": "text",
+                              "id": "yEU9o",
+                              "name": "Novel Title",
+                              "fill": "#f0f6fc",
+                              "content": "《夏日终曲》",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "t5I9X",
+                              "name": "Novel Status",
+                              "fill": "#7d8590",
+                              "content": "已完结 · 8章",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Mu7Cy",
+                          "name": "Novel Row",
+                          "width": 260,
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "BFAi5",
+                              "name": "Novel Dot",
+                              "width": 6,
+                              "height": 6,
+                              "fill": "#58a6ff",
+                              "cornerRadius": 3
+                            },
+                            {
+                              "type": "text",
+                              "id": "pp8TS",
+                              "name": "Novel Title",
+                              "fill": "#f0f6fc",
+                              "content": "《随笔集》",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "lvTr7",
+                              "name": "Novel Status",
+                              "fill": "#7d8590",
+                              "content": "不定期更新",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            }
+                          ]
+                        }
+                      ]
                     },
                     {
-                      "type": "text",
-                      "id": "xEA0c",
-                      "name": "Section Desc",
-                      "fill": "$text-muted",
-                      "content": "小说 · 随笔 · 诗歌",
-                      "fontFamily": "Inter",
-                      "fontSize": 12,
-                      "fontWeight": "300",
-                      "letterSpacing": 0.06
+                      "type": "frame",
+                      "id": "GZmxQ",
+                      "name": "Card: 《城市边缘》",
+                      "width": 300,
+                      "height": 300,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "MVoiJ",
+                          "name": "Card Title",
+                          "fill": "#3fb950",
+                          "content": "《城市边缘》",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "MIIkF",
+                          "name": "Meta Row",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Jl2gq",
+                              "name": "Meta Left",
+                              "fill": "#9198a1",
+                              "content": "连载中 · 12 章",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "MZzfZ",
+                              "name": "Meta Right",
+                              "fill": "#7d8590",
+                              "content": "2026.06",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "nprPz",
+                          "name": "Para",
+                          "fill": "#9198a1",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "　　一个关于都市生活的现实主义小说，讲述普通人在城市变迁中的挣扎与坚守。故事围绕几位不同背景的年轻人展开，描绘他们在快速发展的都市中寻找自我、守护初心的旅程。",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "VEVWB",
+                      "name": "Card: 《夏日终曲》",
+                      "width": 300,
+                      "height": 300,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "J4ICq0",
+                          "name": "Card Title",
+                          "fill": "#d2991d",
+                          "content": "《夏日终曲》",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "FgVq0",
+                          "name": "Meta Row",
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "oQZE9",
+                              "name": "Meta Left",
+                              "fill": "#9198a1",
+                              "content": "已完结 · 8 章",
+                              "fontFamily": "Inter",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "FPxG3",
+                              "name": "Meta Right",
+                              "fill": "#7d8590",
+                              "content": "2025.12",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "yJvYy",
+                          "name": "Para",
+                          "fill": "#9198a1",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "　　青春短篇小说集，收录了八个关于成长、离别与重逢的故事。每个故事独立成篇，却又在情感脉络中相互呼应，构成一幅完整的青春图景。",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        }
+                      ]
                     }
                   ]
                 },
                 {
                   "type": "frame",
-                  "id": "Z2nbls",
-                  "name": "Novel List",
+                  "id": "qEsNm",
+                  "name": "Card Row 2",
                   "width": "fill_container",
-                  "layout": "vertical",
+                  "gap": 20,
+                  "justifyContent": "center",
                   "children": [
                     {
                       "type": "frame",
-                      "id": "WtOU3",
-                      "name": "Novel Item 0",
-                      "width": "fill_container",
+                      "id": "Z2WXB",
+                      "name": "Card: 《随笔集》",
+                      "width": 300,
+                      "height": 300,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
                       "layout": "vertical",
-                      "gap": 4,
-                      "padding": [
-                        16,
-                        0
-                      ],
+                      "gap": 10,
+                      "padding": 20,
                       "children": [
                         {
                           "type": "text",
-                          "id": "y072le",
-                          "name": "Novel Title",
-                          "fill": "$text-primary",
-                          "content": "《城市边缘》",
-                          "fontFamily": "Inter",
-                          "fontSize": 15,
-                          "fontWeight": "normal",
-                          "letterSpacing": 0.01
-                        },
-                        {
-                          "type": "frame",
-                          "id": "kv2G0",
-                          "name": "Novel Meta",
-                          "gap": 12,
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "WzkTI",
-                              "name": "Novel Chapters",
-                              "fill": "$text-secondary",
-                              "content": "连载中 · 12 章",
-                              "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "300",
-                              "letterSpacing": 0.04
-                            },
-                            {
-                              "type": "text",
-                              "id": "XO3wY",
-                              "name": "Novel Date",
-                              "fill": "$text-muted",
-                              "content": "2026.06",
-                              "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "300",
-                              "letterSpacing": 0.06
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "id": "wxemb",
-                          "name": "Novel Desc",
-                          "fill": "$text-secondary",
-                          "content": "一个关于都市生活的现实主义小说",
-                          "lineHeight": 1.5,
-                          "fontFamily": "Inter",
-                          "fontSize": 12,
-                          "fontWeight": "300",
-                          "letterSpacing": 0.01
-                        }
-                      ]
-                    },
-                    {
-                      "type": "rectangle",
-                      "id": "Pq7sN",
-                      "name": "Item Divider",
-                      "fill": "$border-muted",
-                      "width": "fill_container",
-                      "height": 1
-                    },
-                    {
-                      "type": "frame",
-                      "id": "lvrNa",
-                      "name": "Novel Item 1",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 4,
-                      "padding": [
-                        16,
-                        0
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "l932H",
-                          "name": "Novel Title",
-                          "fill": "$text-primary",
-                          "content": "《夏日终曲》",
-                          "fontFamily": "Inter",
-                          "fontSize": 15,
-                          "fontWeight": "normal",
-                          "letterSpacing": 0.01
-                        },
-                        {
-                          "type": "frame",
-                          "id": "Cg3Iv",
-                          "name": "Novel Meta",
-                          "gap": 12,
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "text",
-                              "id": "rf0WW",
-                              "name": "Novel Chapters",
-                              "fill": "$text-secondary",
-                              "content": "已完结 · 8 章",
-                              "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "300",
-                              "letterSpacing": 0.04
-                            },
-                            {
-                              "type": "text",
-                              "id": "sNfgD",
-                              "name": "Novel Date",
-                              "fill": "$text-muted",
-                              "content": "2025.12",
-                              "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "300",
-                              "letterSpacing": 0.06
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "id": "TjiYj",
-                          "name": "Novel Desc",
-                          "fill": "$text-secondary",
-                          "content": "青春短篇小说集",
-                          "lineHeight": 1.5,
-                          "fontFamily": "Inter",
-                          "fontSize": 12,
-                          "fontWeight": "300",
-                          "letterSpacing": 0.01
-                        }
-                      ]
-                    },
-                    {
-                      "type": "rectangle",
-                      "id": "a32VR",
-                      "name": "Item Divider",
-                      "fill": "$border-muted",
-                      "width": "fill_container",
-                      "height": 1
-                    },
-                    {
-                      "type": "frame",
-                      "id": "a7TCby",
-                      "name": "Novel Item 2",
-                      "width": "fill_container",
-                      "layout": "vertical",
-                      "gap": 4,
-                      "padding": [
-                        16,
-                        0
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "Q6e5i",
-                          "name": "Novel Title",
-                          "fill": "$text-primary",
+                          "id": "uRYSM",
+                          "name": "Card Title",
+                          "fill": "#f85149",
                           "content": "《随笔集》",
                           "fontFamily": "Inter",
-                          "fontSize": 15,
-                          "fontWeight": "normal",
-                          "letterSpacing": 0.01
+                          "fontSize": 16,
+                          "fontWeight": "600"
                         },
                         {
                           "type": "frame",
-                          "id": "Li5jf",
-                          "name": "Novel Meta",
-                          "gap": 12,
+                          "id": "DhCok",
+                          "name": "Meta Row",
+                          "gap": 8,
                           "alignItems": "center",
                           "children": [
                             {
                               "type": "text",
-                              "id": "GOtqI",
-                              "name": "Novel Chapters",
-                              "fill": "$text-secondary",
+                              "id": "ywiwi",
+                              "name": "Meta Left",
+                              "fill": "#9198a1",
                               "content": "不定期更新",
                               "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "300",
-                              "letterSpacing": 0.04
+                              "fontSize": 12,
+                              "fontWeight": "500"
                             },
                             {
                               "type": "text",
-                              "id": "U7dK3",
-                              "name": "Novel Date",
-                              "fill": "$text-muted",
+                              "id": "QA8Sk",
+                              "name": "Meta Right",
+                              "fill": "#7d8590",
                               "content": "2026.03",
                               "fontFamily": "Inter",
-                              "fontSize": 11,
-                              "fontWeight": "300",
-                              "letterSpacing": 0.06
+                              "fontSize": 11
                             }
                           ]
                         },
                         {
                           "type": "text",
-                          "id": "E6tlYf",
-                          "name": "Novel Desc",
-                          "fill": "$text-secondary",
-                          "content": "日常随笔与生活感悟",
-                          "lineHeight": 1.5,
+                          "id": "VwMdN",
+                          "name": "Para",
+                          "fill": "#9198a1",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "　　日常随笔与生活感悟，记录那些值得被记住的瞬间与思考。从一杯咖啡的温度到一场雨后的街景，用文字捕捉生活中的微光时刻。",
                           "fontFamily": "Inter",
-                          "fontSize": 12,
-                          "fontWeight": "300",
-                          "letterSpacing": 0.01
+                          "fontSize": 13
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WJByx",
+                      "name": "Card: 视觉作品",
+                      "width": 300,
+                      "height": 300,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "bbBJ3",
+                          "name": "Card Title",
+                          "fill": "#a371f7",
+                          "content": "视觉作品",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "RxVGI",
+                          "name": "Visual Grid",
+                          "width": 260,
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "WBj4x",
+                              "name": "Vis Row 1",
+                              "width": 260,
+                              "gap": 8,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "nVW65",
+                                  "name": "Vis Thumb",
+                                  "width": 126,
+                                  "height": 94,
+                                  "fill": "#010409",
+                                  "cornerRadius": 4,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon",
+                                      "id": "lFfD5",
+                                      "name": "Vis Icon",
+                                      "width": 24,
+                                      "height": 24,
+                                      "icon": "camera",
+                                      "library": "lucide",
+                                      "fill": "#58a6ff"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "CFmsB",
+                                  "name": "Vis Thumb",
+                                  "width": 126,
+                                  "height": 94,
+                                  "fill": "#010409",
+                                  "cornerRadius": 4,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon",
+                                      "id": "laVBr",
+                                      "name": "Vis Icon",
+                                      "width": 24,
+                                      "height": 24,
+                                      "icon": "palette",
+                                      "library": "lucide",
+                                      "fill": "#3fb950"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "PUSjA",
+                              "name": "Vis Row 2",
+                              "width": 260,
+                              "gap": 8,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "uytPQ",
+                                  "name": "Vis Thumb",
+                                  "width": 126,
+                                  "height": 94,
+                                  "fill": "#010409",
+                                  "cornerRadius": 4,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon",
+                                      "id": "EWEzP",
+                                      "name": "Vis Icon",
+                                      "width": 24,
+                                      "height": 24,
+                                      "icon": "layers",
+                                      "library": "lucide",
+                                      "fill": "#d2991d"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "r4cVPg",
+                                  "name": "Vis Thumb",
+                                  "width": 126,
+                                  "height": 94,
+                                  "fill": "#010409",
+                                  "cornerRadius": 4,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "icon",
+                                      "id": "dqp1m",
+                                      "name": "Vis Icon",
+                                      "width": 24,
+                                      "height": 24,
+                                      "icon": "sparkles",
+                                      "library": "lucide",
+                                      "fill": "#f85149"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Db7zV",
+                      "name": "Card: 个人项目",
+                      "width": 300,
+                      "height": 300,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Reeaj",
+                          "name": "Card Title",
+                          "fill": "#56d4dd",
+                          "content": "个人项目",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xz2GO",
+                          "name": "Para",
+                          "fill": "#9198a1",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "　　探索技术与创意的交叉点，构建有意义的数字产品与体验。以下是一些正在进行的个人项目：",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "frame",
+                          "id": "t0sc6q",
+                          "name": "Project List",
+                          "width": 260,
+                          "layout": "vertical",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "SanQ3",
+                              "name": "Project Row",
+                              "width": 260,
+                              "gap": 8,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "T1dlvr",
+                                  "name": "Proj Dot",
+                                  "width": 6,
+                                  "height": 6,
+                                  "fill": "#56d4dd",
+                                  "cornerRadius": 3
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "r0M9lD",
+                                  "name": "Proj Name",
+                                  "fill": "#f0f6fc",
+                                  "content": "C1991 网站",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 14,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "KsyOa",
+                                  "name": "Proj Desc",
+                                  "fill": "#7d8590",
+                                  "content": "个人博客系统",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "XK8i7",
+                              "name": "Project Row",
+                              "width": 260,
+                              "gap": 8,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "Cg1Vy",
+                                  "name": "Proj Dot",
+                                  "width": 6,
+                                  "height": 6,
+                                  "fill": "#56d4dd",
+                                  "cornerRadius": 3
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "hGYAC",
+                                  "name": "Proj Name",
+                                  "fill": "#f0f6fc",
+                                  "content": "Photo Grid",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 14,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "tIMiz",
+                                  "name": "Proj Desc",
+                                  "fill": "#7d8590",
+                                  "content": "照片展示工具",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "gUNSL",
+                              "name": "Project Row",
+                              "width": 260,
+                              "gap": 8,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "O0xwtN",
+                                  "name": "Proj Dot",
+                                  "width": 6,
+                                  "height": 6,
+                                  "fill": "#56d4dd",
+                                  "cornerRadius": 3
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "OncM6",
+                                  "name": "Proj Name",
+                                  "fill": "#f0f6fc",
+                                  "content": "Blog Engine",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 14,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "UmE9f",
+                                  "name": "Proj Desc",
+                                  "fill": "#7d8590",
+                                  "content": "轻量写作平台",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ftpoU",
+      "x": 6640,
+      "y": 0,
+      "name": "Shares Page",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "#0d1117",
+      "layout": "vertical",
+      "padding": [
+        48,
+        0,
+        0,
+        0
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "m5rZO",
+          "name": "Content Area",
+          "width": 960,
+          "layout": "vertical",
+          "gap": 18,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ALpQu",
+              "name": "Back Link",
+              "width": "fill_container",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "YTRpn",
+                  "name": "Back Arrow",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "arrow-left",
+                  "library": "lucide",
+                  "fill": "#7d8590"
+                },
+                {
+                  "type": "text",
+                  "id": "IQ9z0",
+                  "name": "Back Text",
+                  "fill": "#7d8590",
+                  "content": "返回首页",
+                  "fontFamily": "Inter",
+                  "fontSize": 13
                 }
               ]
             },
             {
+              "type": "text",
+              "id": "DsnKS",
+              "name": "Page Heading",
+              "fill": "#f0f6fc",
+              "content": "作者分享",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "a91hc4",
+              "name": "Page Desc",
+              "fill": "#9198a1",
+              "content": "技术要点 · 热门图文 · 灵感收集",
+              "fontFamily": "Inter",
+              "fontSize": 14
+            },
+            {
               "type": "frame",
-              "id": "t2oGwi",
-              "name": "Image Works Column",
+              "id": "vkrPo",
+              "name": "Divider",
+              "width": "fill_container",
+              "height": 1,
+              "fill": "#30363d"
+            },
+            {
+              "type": "frame",
+              "id": "SZmzJ",
+              "name": "Card Grid",
               "width": "fill_container",
               "layout": "vertical",
-              "gap": 16,
+              "gap": 20,
               "children": [
                 {
                   "type": "frame",
-                  "id": "DYx4A",
-                  "name": "Section Header",
+                  "id": "a3RYF",
+                  "name": "Row 1",
                   "width": "fill_container",
-                  "layout": "vertical",
-                  "gap": 4,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "zrSxz",
-                      "name": "Section Title",
-                      "fill": "$text-secondary",
-                      "content": "视觉作品",
-                      "fontFamily": "Inter",
-                      "fontSize": 16,
-                      "fontWeight": "500",
-                      "letterSpacing": 0.02
-                    },
-                    {
-                      "type": "text",
-                      "id": "ejW42",
-                      "name": "Section Desc",
-                      "fill": "$text-muted",
-                      "content": "摄影 · 设计 · 插画",
-                      "fontFamily": "Inter",
-                      "fontSize": 12,
-                      "fontWeight": "300",
-                      "letterSpacing": 0.06
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "qXOfy",
-                  "name": "Image Grid",
-                  "width": "fill_container",
-                  "layout": "vertical",
-                  "gap": 12,
+                  "gap": 20,
+                  "justifyContent": "center",
                   "children": [
                     {
                       "type": "frame",
-                      "id": "vNhUT",
-                      "name": "Image Row 1",
-                      "width": "fill_container",
-                      "gap": 12,
+                      "id": "pG8Az",
+                      "name": "Card: 如何让 AI 生图更加趋近于真实感",
+                      "width": 300,
+                      "height": 300,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 20,
                       "children": [
                         {
-                          "type": "rectangle",
-                          "cornerRadius": 4,
-                          "id": "y61ehP",
-                          "name": "Image 1",
-                          "metadata": {
-                            "type": "unsplash",
-                            "username": "dawidtkocz",
-                            "link": "https://unsplash.com/@dawidtkocz",
-                            "author": "Dawid Tkocz"
-                          },
-                          "fill": {
-                            "type": "image",
-                            "enabled": true,
-                            "url": "https://images.unsplash.com/photo-1670180909163-211c7a1fa3cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3ODR8&ixlib=rb-4.1.0&q=80&w=1080",
-                            "mode": "fill"
-                          },
-                          "width": "fill_container",
-                          "height": 180
+                          "type": "frame",
+                          "id": "HHez6",
+                          "name": "Top Row",
+                          "width": 260,
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "l9fSvh",
+                              "name": "Rank",
+                              "fill": "#d2991d",
+                              "content": "01",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "i7NUK",
+                              "name": "Badge",
+                              "fill": "#d2991d1f",
+                              "cornerRadius": 12,
+                              "padding": [
+                                3,
+                                10
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "Nf8xb",
+                                  "name": "Badge Text",
+                                  "fill": "#d2991d",
+                                  "content": "📌 置顶",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
                         },
                         {
-                          "type": "rectangle",
-                          "cornerRadius": 4,
-                          "id": "GwnQt",
-                          "name": "Image 2",
-                          "metadata": {
-                            "type": "unsplash",
-                            "username": "roma_kaiuk",
-                            "link": "https://unsplash.com/@roma_kaiuk",
-                            "author": "Roma Kaiuk🇺🇦"
-                          },
-                          "fill": {
-                            "type": "image",
-                            "enabled": true,
-                            "url": "https://images.unsplash.com/photo-1670225597315-782633cfbd2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3ODR8&ixlib=rb-4.1.0&q=80&w=1080",
-                            "mode": "fill"
-                          },
-                          "width": "fill_container",
-                          "height": 180
+                          "type": "text",
+                          "id": "MfMIg",
+                          "name": "Card Title",
+                          "fill": "#f0f6fc",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "如何让 AI 生图更加趋近于真实感",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "f3kL5Q",
+                          "name": "Card Desc",
+                          "fill": "#9198a1",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "　　去除 AI 绘画塑料感的完整方法论：从情绪感官到场景搭建的实用指南。涵盖 Prompt 工程、后期处理与风格迁移的核心技巧。",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "frame",
+                          "id": "U4eCrj",
+                          "name": "Meta Row",
+                          "width": 260,
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "v9MQnq",
+                              "name": "Date",
+                              "fill": "#7d8590",
+                              "content": "2026.06.22",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            },
+                            {
+                              "type": "text",
+                              "id": "f8QbTm",
+                              "name": "Tag",
+                              "fill": "#d2991d",
+                              "content": "#AI 绘画",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            }
+                          ]
                         }
                       ]
                     },
                     {
                       "type": "frame",
-                      "id": "QlhwT",
-                      "name": "Image Row 2",
-                      "width": "fill_container",
-                      "gap": 12,
+                      "id": "AYzpS",
+                      "name": "Card: 现代 CSS 布局最佳实践 2026",
+                      "width": 300,
+                      "height": 300,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 20,
                       "children": [
                         {
-                          "type": "rectangle",
-                          "cornerRadius": 4,
-                          "id": "m6K32",
-                          "name": "Image 3",
-                          "metadata": {
-                            "type": "unsplash",
-                            "username": "chiuchuuu",
-                            "link": "https://unsplash.com/@chiuchuuu",
-                            "author": "Heng Chiu"
-                          },
-                          "fill": {
-                            "type": "image",
-                            "enabled": true,
-                            "url": "https://images.unsplash.com/photo-1779612880795-a11ec6f45baa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3ODV8&ixlib=rb-4.1.0&q=80&w=1080",
-                            "mode": "fill"
-                          },
-                          "width": "fill_container",
-                          "height": 180
+                          "type": "frame",
+                          "id": "e0UuBT",
+                          "name": "Top Row",
+                          "width": 260,
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "orJV1",
+                              "name": "Rank",
+                              "fill": "#f85149",
+                              "content": "02",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "prPUC",
+                              "name": "Badge",
+                              "fill": "#f851491f",
+                              "cornerRadius": 12,
+                              "padding": [
+                                3,
+                                10
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "gwynt",
+                                  "name": "Badge Text",
+                                  "fill": "#f85149",
+                                  "content": "🔥 热门",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
                         },
                         {
-                          "type": "rectangle",
-                          "cornerRadius": 4,
-                          "id": "VbQUa",
-                          "name": "Image 4",
-                          "metadata": {
-                            "type": "unsplash",
-                            "username": "avesta1",
-                            "link": "https://unsplash.com/@avesta1",
-                            "author": "Avesta"
-                          },
-                          "fill": {
-                            "type": "image",
-                            "enabled": true,
-                            "url": "https://images.unsplash.com/photo-1760840163528-8421b8f5fc79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODIxMTQ3ODZ8&ixlib=rb-4.1.0&q=80&w=1080",
-                            "mode": "fill"
-                          },
-                          "width": "fill_container",
-                          "height": 180
+                          "type": "text",
+                          "id": "W7jKnR",
+                          "name": "Card Title",
+                          "fill": "#f0f6fc",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "现代 CSS 布局最佳实践 2026",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "g9WWz",
+                          "name": "Card Desc",
+                          "fill": "#9198a1",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "　　Grid、Flexbox、Container Queries 的实战总结。从响应式到自适应，掌握现代 CSS 布局的全部武器。",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "frame",
+                          "id": "nHPhC",
+                          "name": "Meta Row",
+                          "width": 260,
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "PHLB0",
+                              "name": "Date",
+                              "fill": "#7d8590",
+                              "content": "2026.06.20",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            },
+                            {
+                              "type": "text",
+                              "id": "gcLxQ",
+                              "name": "Tag",
+                              "fill": "#f85149",
+                              "content": "#前端",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "O7P386",
+                      "name": "Card: Git 工作流的艺术",
+                      "width": 300,
+                      "height": 300,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "MBrqB",
+                          "name": "Top Row",
+                          "width": 260,
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ErwJc",
+                              "name": "Rank",
+                              "fill": "#58a6ff",
+                              "content": "03",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "mNSTZ",
+                              "name": "Badge",
+                              "fill": "#58a6ff1f",
+                              "cornerRadius": 12,
+                              "padding": [
+                                3,
+                                10
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "tVx1T",
+                                  "name": "Badge Text",
+                                  "fill": "#58a6ff",
+                                  "content": "🆕 新发布",
+                                  "fontFamily": "Inter",
+                                  "fontSize": 11,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "S27uny",
+                          "name": "Card Title",
+                          "fill": "#f0f6fc",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "Git 工作流的艺术",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "DoFHr",
+                          "name": "Card Desc",
+                          "fill": "#9198a1",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "　　从 Conventional Commits 到分支策略，一套适合个人开发者的高效 Git 实践方案。",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Q3OKNn",
+                          "name": "Meta Row",
+                          "width": 260,
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "VZJrx",
+                              "name": "Date",
+                              "fill": "#7d8590",
+                              "content": "2026.06.18",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            },
+                            {
+                              "type": "text",
+                              "id": "vPsTg",
+                              "name": "Tag",
+                              "fill": "#58a6ff",
+                              "content": "#工具",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZWJ7p",
+                  "name": "Row 2",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "EBLLk",
+                      "name": "Card: 静态网站部署指南",
+                      "width": 300,
+                      "height": 300,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Z29gB",
+                          "name": "Top Row",
+                          "width": 260,
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Ngsbt",
+                              "name": "Rank",
+                              "fill": "#9198a1",
+                              "content": "04",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "U2wtpW",
+                          "name": "Card Title",
+                          "fill": "#f0f6fc",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "静态网站部署指南",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "WX7Jf",
+                          "name": "Card Desc",
+                          "fill": "#9198a1",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "　　使用 GitHub Pages + GitHub Actions 实现零成本、自动化的静态网站部署流程。",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "frame",
+                          "id": "i5Rms5",
+                          "name": "Meta Row",
+                          "width": 260,
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "VlOrO",
+                              "name": "Date",
+                              "fill": "#7d8590",
+                              "content": "2026.06.15",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            },
+                            {
+                              "type": "text",
+                              "id": "y4I78c",
+                              "name": "Tag",
+                              "fill": "#9198a1",
+                              "content": "#DevOps",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DtXzb",
+                      "name": "Card: 个人知识管理系统的搭建",
+                      "width": 300,
+                      "height": 300,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Y6ic6T",
+                          "name": "Top Row",
+                          "width": 260,
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "eW7jT",
+                              "name": "Rank",
+                              "fill": "#9198a1",
+                              "content": "05",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "S2HUn",
+                          "name": "Card Title",
+                          "fill": "#f0f6fc",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "个人知识管理系统的搭建",
+                          "fontFamily": "Inter",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "QhENy",
+                          "name": "Card Desc",
+                          "fill": "#9198a1",
+                          "textGrowth": "fixed-width",
+                          "width": 260,
+                          "content": "　　如何用 Markdown + Git 构建一个轻量、持久、可检索的个人知识库。告别 Notion 依赖，拥抱纯文本的未来。",
+                          "fontFamily": "Inter",
+                          "fontSize": 13
+                        },
+                        {
+                          "type": "frame",
+                          "id": "skdmt",
+                          "name": "Meta Row",
+                          "width": 260,
+                          "gap": 8,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "kGgI0",
+                              "name": "Date",
+                              "fill": "#7d8590",
+                              "content": "2026.06.10",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            },
+                            {
+                              "type": "text",
+                              "id": "vkAqD",
+                              "name": "Tag",
+                              "fill": "#9198a1",
+                              "content": "#效率",
+                              "fontFamily": "Inter",
+                              "fontSize": 11
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "v4sb4u",
+                      "name": "Card: 更多",
+                      "width": 300,
+                      "height": 300,
+                      "fill": "#161b22",
+                      "cornerRadius": 8,
+                      "stroke": "#30363d",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 20,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "aRydk",
+                          "name": "More Icon",
+                          "width": 40,
+                          "height": 40,
+                          "icon": "plus",
+                          "library": "lucide",
+                          "fill": "#484f58"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ZSp8y",
+                          "name": "More Text",
+                          "fill": "#7d8590",
+                          "content": "更多分享即将到来",
+                          "fontFamily": "Inter",
+                          "fontSize": 14
+                        },
+                        {
+                          "type": "text",
+                          "id": "SDZB8",
+                          "name": "More Sub",
+                          "fill": "#484f58",
+                          "content": "敬请期待…",
+                          "fontFamily": "Inter",
+                          "fontSize": 12
                         }
                       ]
                     }
@@ -2208,27 +3123,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "frame",
-          "id": "OFzDJ",
-          "name": "Spacer",
-          "width": "fill_container",
-          "height": "fill_container"
-        },
-        {
-          "type": "text",
-          "id": "Vv1qc",
-          "name": "Page Footer",
-          "fill": "$text-muted",
-          "textGrowth": "fixed-width",
-          "width": "fill_container",
-          "content": "© 2026 C1991",
-          "textAlign": "center",
-          "fontFamily": "Inter",
-          "fontSize": 11,
-          "fontWeight": "300",
-          "letterSpacing": 0.06
         }
       ]
     }
