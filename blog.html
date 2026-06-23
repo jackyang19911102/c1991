@@ -15,7 +15,7 @@
 <main class="subpage">
   <div class="subpage-container" id="blogContainer">
 
-    <a href="/" class="subpage-back">← 返回首页</a>
+    <a href="/" class="subpage-back" id="backLink">← 返回首页</a>
 
     <!-- Photo Blog view (default) -->
     <div id="photoView">
@@ -59,6 +59,11 @@ if (postSlug) {
   document.getElementById('photoView').style.display = 'none';
   document.getElementById('postDetail').style.display = 'block';
   document.title = '文章 — C1991';
+
+  // Switch back link to return to blog listing
+  const backLink = document.getElementById('backLink');
+  backLink.href = '/blog.html';
+  backLink.textContent = '← 返回图文博客';
 
   (async () => {
     await Blog.init();
