@@ -92,7 +92,7 @@ if (postSlug) {
     grid.innerHTML = posts.map(p => {
       const link = p.slug ? '?post=' + encodeURIComponent(p.slug) : null;
       const imgStyle = p.img ? "background-image:url('" + p.img + "');background-size:cover;background-position:center;" : '';
-      const inner = '<div class="card-image" style="background:rgba(255,255,255,0.03);' + imgStyle + '"></div>' +
+      const inner = '<div class="card-image placeholder-surface" style="' + imgStyle + '"></div>' +
         '<div class="card-body">' +
           '<h3 class="card-title">' + p.title + '</h3>' +
           '<span class="card-date">' + p.date + '</span>' +

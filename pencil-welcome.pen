@@ -24,7 +24,7 @@
           "type": "text",
           "id": "t2jmD",
           "name": "Brand",
-          "fill": "#e6edf3",
+          "fill": "$text-primary",
           "content": "C1991",
           "fontFamily": "Playfair Display",
           "fontSize": 56,
@@ -35,7 +35,7 @@
           "type": "text",
           "id": "moEbs",
           "name": "Tagline",
-          "fill": "#8b949e",
+          "fill": "$text-secondary",
           "content": "文字 · 影像 · 作品 · 思考",
           "textAlign": "center",
           "fontFamily": "Inter",
@@ -78,13 +78,13 @@
                   "height": 20,
                   "icon": "user",
                   "library": "feather",
-                  "fill": "#8b949e"
+                  "fill": "$text-secondary"
                 },
                 {
                   "type": "text",
                   "id": "GSwk6",
                   "name": "Nav Label 1",
-                  "fill": "#e6edf3",
+                  "fill": "$text-primary",
                   "content": "关于我",
                   "fontFamily": "Inter",
                   "fontSize": 18,
@@ -95,7 +95,7 @@
                   "type": "text",
                   "id": "x70Ywy",
                   "name": "Nav Sub 1",
-                  "fill": "#6e7681",
+                  "fill": "$text-muted",
                   "content": "About Me",
                   "fontFamily": "Inter",
                   "fontSize": 12,
@@ -110,7 +110,7 @@
                   "height": 14,
                   "icon": "chevron-right",
                   "library": "feather",
-                  "fill": "#ffffff1a"
+                  "fill": "$text-muted"
                 }
               ]
             },
@@ -133,13 +133,13 @@
                   "height": 20,
                   "icon": "briefcase",
                   "library": "feather",
-                  "fill": "#8b949e"
+                  "fill": "$text-secondary"
                 },
                 {
                   "type": "text",
                   "id": "y30glX",
                   "name": "Nav Label 2",
-                  "fill": "#e6edf3",
+                  "fill": "$text-primary",
                   "content": "我的作品",
                   "fontFamily": "Inter",
                   "fontSize": 18,
@@ -150,7 +150,7 @@
                   "type": "text",
                   "id": "Edn8L",
                   "name": "Nav Sub 2",
-                  "fill": "#6e7681",
+                  "fill": "$text-muted",
                   "content": "My Works",
                   "fontFamily": "Inter",
                   "fontSize": 12,
@@ -165,7 +165,7 @@
                   "height": 14,
                   "icon": "chevron-right",
                   "library": "feather",
-                  "fill": "#ffffff1a"
+                  "fill": "$text-muted"
                 }
               ]
             },
@@ -188,13 +188,13 @@
                   "height": 20,
                   "icon": "camera",
                   "library": "feather",
-                  "fill": "#8b949e"
+                  "fill": "$text-secondary"
                 },
                 {
                   "type": "text",
                   "id": "BHISz",
                   "name": "Nav Label 3",
-                  "fill": "#e6edf3",
+                  "fill": "$text-primary",
                   "content": "图文博客",
                   "fontFamily": "Inter",
                   "fontSize": 18,
@@ -205,7 +205,7 @@
                   "type": "text",
                   "id": "X2FIM",
                   "name": "Nav Sub 3",
-                  "fill": "#6e7681",
+                  "fill": "$text-muted",
                   "content": "Photo Blog",
                   "fontFamily": "Inter",
                   "fontSize": 12,
@@ -220,7 +220,7 @@
                   "height": 14,
                   "icon": "chevron-right",
                   "library": "feather",
-                  "fill": "#ffffff1a"
+                  "fill": "$text-muted"
                 }
               ]
             },
@@ -243,13 +243,13 @@
                   "height": 20,
                   "icon": "share-2",
                   "library": "feather",
-                  "fill": "#8b949e"
+                  "fill": "$text-secondary"
                 },
                 {
                   "type": "text",
                   "id": "g6cDs",
                   "name": "Nav Label 4",
-                  "fill": "#e6edf3",
+                  "fill": "$text-primary",
                   "content": "作者分享",
                   "fontFamily": "Inter",
                   "fontSize": 18,
@@ -260,7 +260,7 @@
                   "type": "text",
                   "id": "o97nz8",
                   "name": "Nav Sub 4",
-                  "fill": "#6e7681",
+                  "fill": "$text-muted",
                   "content": "Author Shares",
                   "fontFamily": "Inter",
                   "fontSize": 12,
@@ -275,7 +275,7 @@
                   "height": 14,
                   "icon": "chevron-right",
                   "library": "feather",
-                  "fill": "#ffffff1a"
+                  "fill": "$text-muted"
                 }
               ]
             }
@@ -309,7 +309,7 @@
                   "type": "text",
                   "id": "DUKMG",
                   "name": "Value",
-                  "fill": "#8b949e",
+                  "fill": "$text-secondary",
                   "content": "12",
                   "fontFamily": "Inter",
                   "fontSize": 13,
@@ -319,7 +319,7 @@
                   "type": "text",
                   "id": "v5urT",
                   "name": "Label",
-                  "fill": "#6e7681",
+                  "fill": "$text-muted",
                   "content": "文章",
                   "fontFamily": "Inter",
                   "fontSize": 11,
@@ -339,7 +339,7 @@
                   "type": "text",
                   "id": "eFc4R",
                   "name": "Value",
-                  "fill": "#8b949e",
+                  "fill": "$text-secondary",
                   "content": "8",
                   "fontFamily": "Inter",
                   "fontSize": 13,
@@ -349,7 +349,7 @@
                   "type": "text",
                   "id": "nnx7R",
                   "name": "Label",
-                  "fill": "#6e7681",
+                  "fill": "$text-muted",
                   "content": "照片",
                   "fontFamily": "Inter",
                   "fontSize": 11,
@@ -369,7 +369,7 @@
                   "type": "text",
                   "id": "idx1r",
                   "name": "Value",
-                  "fill": "#8b949e",
+                  "fill": "$text-secondary",
                   "content": "1.2k",
                   "fontFamily": "Inter",
                   "fontSize": 13,
@@ -379,7 +379,7 @@
                   "type": "text",
                   "id": "guV9u",
                   "name": "Label",
-                  "fill": "#6e7681",
+                  "fill": "$text-muted",
                   "content": "浏览",
                   "fontFamily": "Inter",
                   "fontSize": 11,
@@ -399,7 +399,7 @@
                   "type": "text",
                   "id": "dC38i",
                   "name": "Value",
-                  "fill": "#8b949e",
+                  "fill": "$text-secondary",
                   "content": "328",
                   "fontFamily": "Inter",
                   "fontSize": 13,
@@ -409,7 +409,7 @@
                   "type": "text",
                   "id": "JRG1w",
                   "name": "Label",
-                  "fill": "#6e7681",
+                  "fill": "$text-muted",
                   "content": "访客",
                   "fontFamily": "Inter",
                   "fontSize": 11,
@@ -424,7 +424,7 @@
           "type": "text",
           "id": "amFor",
           "name": "Copyright",
-          "fill": "#6e7681",
+          "fill": "$text-muted",
           "textGrowth": "fixed-width",
           "width": "fill_container",
           "content": "© 2026 C1991",
@@ -491,7 +491,7 @@
           "x": 718,
           "y": 345,
           "name": "Deco Dot",
-          "fill": "#8b949e",
+          "fill": "$text-secondary",
           "width": 3,
           "height": 3
         }
@@ -529,7 +529,7 @@
               "type": "text",
               "id": "X12obZ",
               "name": "Back Link",
-              "fill": "#6e7681",
+              "fill": "$text-muted",
               "content": "← 返回首页",
               "fontFamily": "Inter",
               "fontSize": 13,
@@ -551,7 +551,7 @@
               "type": "text",
               "id": "G5Mcwa",
               "name": "Page Title",
-              "fill": "#e6edf3",
+              "fill": "$text-primary",
               "content": "作者分享",
               "fontFamily": "Playfair Display",
               "fontSize": 32,
@@ -562,7 +562,7 @@
               "type": "text",
               "id": "lPqsj",
               "name": "Page Desc",
-              "fill": "#8b949e",
+              "fill": "$text-secondary",
               "content": "技术要点 · 热门图文 · 灵感收集",
               "fontFamily": "Inter",
               "fontSize": 14,
@@ -610,7 +610,7 @@
                       "type": "text",
                       "id": "dC40C",
                       "name": "Item Title 1",
-                      "fill": "#e6edf3",
+                      "fill": "$text-primary",
                       "content": "如何让 AI 生图更加趋近于真实感",
                       "fontFamily": "Inter",
                       "fontSize": 15,
@@ -620,7 +620,7 @@
                       "type": "text",
                       "id": "zzlb1",
                       "name": "Item Desc 1",
-                      "fill": "#8b949e",
+                      "fill": "$text-secondary",
                       "textGrowth": "fixed-width",
                       "width": "fill_container",
                       "content": "去除 AI 绘画塑料感的完整方法论：从情绪感官到场景搭建的实用指南",
@@ -641,7 +641,7 @@
                           "type": "text",
                           "id": "KDawm",
                           "name": "Item Date 1",
-                          "fill": "#6e7681",
+                          "fill": "$text-muted",
                           "content": "2026.06.22 · 置顶",
                           "fontFamily": "Inter",
                           "fontSize": 11,
@@ -652,7 +652,7 @@
                           "type": "text",
                           "id": "MHDIs",
                           "name": "Item Tag 1",
-                          "fill": "#8b949e",
+                          "fill": "$text-secondary",
                           "content": "AI 绘画 · 热门",
                           "fontFamily": "Inter",
                           "fontSize": 11,
@@ -671,7 +671,7 @@
                   "height": 14,
                   "icon": "chevron-right",
                   "library": "feather",
-                  "fill": "#ffffff1a"
+                  "fill": "$text-muted"
                 }
               ]
             },
@@ -708,7 +708,7 @@
                       "type": "text",
                       "id": "ddS3K",
                       "name": "Item Title 2",
-                      "fill": "#e6edf3",
+                      "fill": "$text-primary",
                       "content": "现代 CSS 布局最佳实践 2026",
                       "fontFamily": "Inter",
                       "fontSize": 15,
@@ -718,7 +718,7 @@
                       "type": "text",
                       "id": "ZgWQU",
                       "name": "Item Desc 2",
-                      "fill": "#8b949e",
+                      "fill": "$text-secondary",
                       "content": "Grid、Flexbox、Container Queries 的实战总结",
                       "fontFamily": "Inter",
                       "fontSize": 13,
@@ -741,7 +741,7 @@
           "type": "text",
           "id": "FXxJj",
           "name": "Page Footer",
-          "fill": "#6e7681",
+          "fill": "$text-muted",
           "textGrowth": "fixed-width",
           "width": "fill_container",
           "content": "© 2026 C1991",
@@ -785,7 +785,7 @@
               "type": "text",
               "id": "G5OQJ9",
               "name": "Back Link",
-              "fill": "#6e7681",
+              "fill": "$text-muted",
               "content": "← 返回首页",
               "fontFamily": "Inter",
               "fontSize": 13,
@@ -805,7 +805,7 @@
           "type": "text",
           "id": "TijlJ",
           "name": "Name",
-          "fill": "#e6edf3",
+          "fill": "$text-primary",
           "content": "小羊的私域",
           "fontFamily": "Playfair Display",
           "fontSize": 32,
@@ -816,7 +816,7 @@
           "type": "text",
           "id": "nSR5R",
           "name": "Handle",
-          "fill": "#6e7681",
+          "fill": "$text-muted",
           "content": "@jackyang19911102",
           "fontFamily": "Inter",
           "fontSize": 12,
@@ -827,7 +827,7 @@
           "type": "text",
           "id": "oll9V",
           "name": "Bio",
-          "fill": "#8b949e",
+          "fill": "$text-secondary",
           "textGrowth": "fixed-width",
           "width": 400,
           "content": "一个喜欢发掘新奇事物、拍照片、记录生活的人。",
@@ -857,7 +857,7 @@
               "type": "text",
               "id": "ylyZG",
               "name": "Card 1 Title",
-              "fill": "#8b949e",
+              "fill": "$text-secondary",
               "content": "关于本站",
               "fontFamily": "Inter",
               "fontSize": 14,
@@ -868,7 +868,7 @@
               "type": "text",
               "id": "RPv5Q",
               "name": "Card 1 Body",
-              "fill": "#8b949e",
+              "fill": "$text-secondary",
               "textGrowth": "fixed-width",
               "width": "fill_container",
               "content": "C1991 是小羊的个人博客，没有广告，没有评论区，没有社交分享按钮。有的只是文字和图片，以及偶尔的技术分享。",
@@ -892,7 +892,7 @@
               "type": "text",
               "id": "uBF5S",
               "name": "Card 2 Title",
-              "fill": "#8b949e",
+              "fill": "$text-secondary",
               "content": "联系方式",
               "fontFamily": "Inter",
               "fontSize": 14,
@@ -903,7 +903,7 @@
               "type": "text",
               "id": "BjAiB",
               "name": "Card 2 Body",
-              "fill": "#8b949e",
+              "fill": "$text-secondary",
               "content": "邮箱：502055254@qq.com",
               "fontFamily": "Inter",
               "fontSize": 13,
@@ -924,7 +924,7 @@
               "type": "text",
               "id": "wVjF5",
               "name": "Card 3 Title",
-              "fill": "#8b949e",
+              "fill": "$text-secondary",
               "content": "时间线",
               "fontFamily": "Inter",
               "fontSize": 14,
@@ -948,7 +948,7 @@
                   "type": "text",
                   "id": "AesRm",
                   "name": "Year",
-                  "fill": "#8b949e",
+                  "fill": "$text-secondary",
                   "textGrowth": "fixed-width",
                   "width": 90,
                   "content": "2026.6.22",
@@ -961,7 +961,7 @@
                   "type": "text",
                   "id": "uTkN4",
                   "name": "Event",
-                  "fill": "#8b949e",
+                  "fill": "$text-secondary",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
                   "content": "c1991.cn 小羊的私域上线。开始在这个角落记录和分享个人的工作和想法。",
@@ -986,7 +986,7 @@
           "type": "text",
           "id": "PLZ89",
           "name": "Page Footer",
-          "fill": "#6e7681",
+          "fill": "$text-muted",
           "textGrowth": "fixed-width",
           "width": "fill_container",
           "content": "© 2026 C1991",
@@ -1029,7 +1029,7 @@
               "type": "text",
               "id": "syCVj",
               "name": "Back Link",
-              "fill": "#6e7681",
+              "fill": "$text-muted",
               "content": "← 返回首页",
               "fontFamily": "Inter",
               "fontSize": 13,
@@ -1051,7 +1051,7 @@
               "type": "text",
               "id": "h7Zcdq",
               "name": "Page Title",
-              "fill": "#e6edf3",
+              "fill": "$text-primary",
               "content": "图文博客",
               "fontFamily": "Playfair Display",
               "fontSize": 32,
@@ -1062,7 +1062,7 @@
               "type": "text",
               "id": "Y88cy",
               "name": "Page Desc",
-              "fill": "#8b949e",
+              "fill": "$text-secondary",
               "content": "日常打卡 · 生活碎片 · 影像记录",
               "fontFamily": "Inter",
               "fontSize": 14,
@@ -1091,7 +1091,7 @@
               "type": "frame",
               "id": "TY4Y0",
               "name": "Tag 全部",
-              "fill": "#ffffff1a",
+              "fill": "$accent-emphasis",
               "cornerRadius": 20,
               "padding": [
                 6,
@@ -1102,7 +1102,7 @@
                   "type": "text",
                   "id": "ggPFz",
                   "name": "Tag Text",
-                  "fill": "#ffffff99",
+                  "fill": "$text-primary",
                   "content": "全部",
                   "fontFamily": "Inter",
                   "fontSize": 12,
@@ -1115,7 +1115,7 @@
               "type": "frame",
               "id": "OzBN8",
               "name": "Tag 日常",
-              "fill": "#ffffff08",
+              "fill": "$border-muted",
               "cornerRadius": 20,
               "padding": [
                 6,
@@ -1126,7 +1126,7 @@
                   "type": "text",
                   "id": "S6nH6L",
                   "name": "Tag Text",
-                  "fill": "#ffffff4d",
+                  "fill": "$text-secondary",
                   "content": "日常",
                   "fontFamily": "Inter",
                   "fontSize": 12,
@@ -1139,7 +1139,7 @@
               "type": "frame",
               "id": "g9e6Ok",
               "name": "Tag 摄影",
-              "fill": "#ffffff08",
+              "fill": "$border-muted",
               "cornerRadius": 20,
               "padding": [
                 6,
@@ -1150,7 +1150,7 @@
                   "type": "text",
                   "id": "Q6FhAn",
                   "name": "Tag Text",
-                  "fill": "#ffffff4d",
+                  "fill": "$text-secondary",
                   "content": "摄影",
                   "fontFamily": "Inter",
                   "fontSize": 12,
@@ -1163,7 +1163,7 @@
               "type": "frame",
               "id": "GfqLi",
               "name": "Tag 打卡",
-              "fill": "#ffffff08",
+              "fill": "$border-muted",
               "cornerRadius": 20,
               "padding": [
                 6,
@@ -1174,7 +1174,7 @@
                   "type": "text",
                   "id": "blHjL",
                   "name": "Tag Text",
-                  "fill": "#ffffff4d",
+                  "fill": "$text-secondary",
                   "content": "打卡",
                   "fontFamily": "Inter",
                   "fontSize": 12,
@@ -1187,7 +1187,7 @@
               "type": "frame",
               "id": "VGeGH",
               "name": "Tag 旅行",
-              "fill": "#ffffff08",
+              "fill": "$border-muted",
               "cornerRadius": 20,
               "padding": [
                 6,
@@ -1198,7 +1198,7 @@
                   "type": "text",
                   "id": "rN0cF",
                   "name": "Tag Text",
-                  "fill": "#ffffff4d",
+                  "fill": "$text-secondary",
                   "content": "旅行",
                   "fontFamily": "Inter",
                   "fontSize": 12,
@@ -1211,7 +1211,7 @@
               "type": "frame",
               "id": "LFS0W",
               "name": "Tag 美食",
-              "fill": "#ffffff08",
+              "fill": "$border-muted",
               "cornerRadius": 20,
               "padding": [
                 6,
@@ -1222,7 +1222,7 @@
                   "type": "text",
                   "id": "hxvDq",
                   "name": "Tag Text",
-                  "fill": "#ffffff4d",
+                  "fill": "$text-secondary",
                   "content": "美食",
                   "fontFamily": "Inter",
                   "fontSize": 12,
@@ -1293,7 +1293,7 @@
                           "type": "text",
                           "id": "xNm3V",
                           "name": "Card Title",
-                          "fill": "#ffffffd9",
+                          "fill": "$text-primary",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
                           "content": "清晨的第一缕阳光",
@@ -1306,7 +1306,7 @@
                           "type": "text",
                           "id": "nIxcG",
                           "name": "Card Date",
-                          "fill": "#ffffff33",
+                          "fill": "$text-muted",
                           "content": "2026.06.22",
                           "fontFamily": "Inter",
                           "fontSize": 11,
@@ -1362,7 +1362,7 @@
                           "type": "text",
                           "id": "lbUQ7",
                           "name": "Card Title",
-                          "fill": "#ffffffd9",
+                          "fill": "$text-primary",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
                           "content": "周末咖啡时光",
@@ -1375,7 +1375,7 @@
                           "type": "text",
                           "id": "UAqO3",
                           "name": "Card Date",
-                          "fill": "#ffffff33",
+                          "fill": "$text-muted",
                           "content": "2026.06.21",
                           "fontFamily": "Inter",
                           "fontSize": 11,
@@ -1431,7 +1431,7 @@
                           "type": "text",
                           "id": "zWNia",
                           "name": "Card Title",
-                          "fill": "#ffffffd9",
+                          "fill": "$text-primary",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
                           "content": "雨后街景随拍",
@@ -1444,7 +1444,7 @@
                           "type": "text",
                           "id": "SxhzA",
                           "name": "Card Date",
-                          "fill": "#ffffff33",
+                          "fill": "$text-muted",
                           "content": "2026.06.20",
                           "fontFamily": "Inter",
                           "fontSize": 11,
@@ -1509,7 +1509,7 @@
                           "type": "text",
                           "id": "Lhj62",
                           "name": "Card Title",
-                          "fill": "#ffffffd9",
+                          "fill": "$text-primary",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
                           "content": "书架一角",
@@ -1522,7 +1522,7 @@
                           "type": "text",
                           "id": "QfB05",
                           "name": "Card Date",
-                          "fill": "#ffffff33",
+                          "fill": "$text-muted",
                           "content": "2026.06.19",
                           "fontFamily": "Inter",
                           "fontSize": 11,
@@ -1578,7 +1578,7 @@
                           "type": "text",
                           "id": "i3PJQ",
                           "name": "Card Title",
-                          "fill": "#ffffffd9",
+                          "fill": "$text-primary",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
                           "content": "黄昏时分的天际线",
@@ -1591,7 +1591,7 @@
                           "type": "text",
                           "id": "puots",
                           "name": "Card Date",
-                          "fill": "#ffffff33",
+                          "fill": "$text-muted",
                           "content": "2026.06.18",
                           "fontFamily": "Inter",
                           "fontSize": 11,
@@ -1647,7 +1647,7 @@
                           "type": "text",
                           "id": "rdn1J",
                           "name": "Card Title",
-                          "fill": "#ffffffd9",
+                          "fill": "$text-primary",
                           "textGrowth": "fixed-width",
                           "width": "fill_container",
                           "content": "新发现的小店",
@@ -1660,7 +1660,7 @@
                           "type": "text",
                           "id": "xUMdP",
                           "name": "Card Date",
-                          "fill": "#ffffff33",
+                          "fill": "$text-muted",
                           "content": "2026.06.17",
                           "fontFamily": "Inter",
                           "fontSize": 11,
@@ -1686,7 +1686,7 @@
           "type": "text",
           "id": "t3zk7o",
           "name": "Page Footer",
-          "fill": "#6e7681",
+          "fill": "$text-muted",
           "textGrowth": "fixed-width",
           "width": "fill_container",
           "content": "© 2026 C1991",
@@ -1729,7 +1729,7 @@
               "type": "text",
               "id": "Epxip",
               "name": "Back Link",
-              "fill": "#6e7681",
+              "fill": "$text-muted",
               "content": "← 返回首页",
               "fontFamily": "Inter",
               "fontSize": 13,
@@ -1751,7 +1751,7 @@
               "type": "text",
               "id": "nrNX2",
               "name": "Page Title",
-              "fill": "#e6edf3",
+              "fill": "$text-primary",
               "content": "我的作品",
               "fontFamily": "Playfair Display",
               "fontSize": 32,
@@ -1762,7 +1762,7 @@
               "type": "text",
               "id": "aHTQ8",
               "name": "Page Desc",
-              "fill": "#8b949e",
+              "fill": "$text-secondary",
               "content": "文字创作 · 视觉作品 · 个人项目",
               "fontFamily": "Inter",
               "fontSize": 14,
@@ -1806,7 +1806,7 @@
                       "type": "text",
                       "id": "agEPW",
                       "name": "Section Title",
-                      "fill": "#8b949e",
+                      "fill": "$text-secondary",
                       "content": "文字作品",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -1817,7 +1817,7 @@
                       "type": "text",
                       "id": "xEA0c",
                       "name": "Section Desc",
-                      "fill": "#6e7681",
+                      "fill": "$text-muted",
                       "content": "小说 · 随笔 · 诗歌",
                       "fontFamily": "Inter",
                       "fontSize": 12,
@@ -1849,7 +1849,7 @@
                           "type": "text",
                           "id": "y072le",
                           "name": "Novel Title",
-                          "fill": "#ffffffd9",
+                          "fill": "$text-primary",
                           "content": "《城市边缘》",
                           "fontFamily": "Inter",
                           "fontSize": 15,
@@ -1867,7 +1867,7 @@
                               "type": "text",
                               "id": "WzkTI",
                               "name": "Novel Chapters",
-                              "fill": "#ffffff4d",
+                              "fill": "$text-secondary",
                               "content": "连载中 · 12 章",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1878,7 +1878,7 @@
                               "type": "text",
                               "id": "XO3wY",
                               "name": "Novel Date",
-                              "fill": "#ffffff33",
+                              "fill": "$text-muted",
                               "content": "2026.06",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1891,7 +1891,7 @@
                           "type": "text",
                           "id": "wxemb",
                           "name": "Novel Desc",
-                          "fill": "#ffffff4d",
+                          "fill": "$text-secondary",
                           "content": "一个关于都市生活的现实主义小说",
                           "lineHeight": 1.5,
                           "fontFamily": "Inter",
@@ -1905,7 +1905,7 @@
                       "type": "rectangle",
                       "id": "Pq7sN",
                       "name": "Item Divider",
-                      "fill": "#ffffff08",
+                      "fill": "$border-muted",
                       "width": "fill_container",
                       "height": 1
                     },
@@ -1925,7 +1925,7 @@
                           "type": "text",
                           "id": "l932H",
                           "name": "Novel Title",
-                          "fill": "#ffffffd9",
+                          "fill": "$text-primary",
                           "content": "《夏日终曲》",
                           "fontFamily": "Inter",
                           "fontSize": 15,
@@ -1943,7 +1943,7 @@
                               "type": "text",
                               "id": "rf0WW",
                               "name": "Novel Chapters",
-                              "fill": "#ffffff4d",
+                              "fill": "$text-secondary",
                               "content": "已完结 · 8 章",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1954,7 +1954,7 @@
                               "type": "text",
                               "id": "sNfgD",
                               "name": "Novel Date",
-                              "fill": "#ffffff33",
+                              "fill": "$text-muted",
                               "content": "2025.12",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -1967,7 +1967,7 @@
                           "type": "text",
                           "id": "TjiYj",
                           "name": "Novel Desc",
-                          "fill": "#ffffff4d",
+                          "fill": "$text-secondary",
                           "content": "青春短篇小说集",
                           "lineHeight": 1.5,
                           "fontFamily": "Inter",
@@ -1981,7 +1981,7 @@
                       "type": "rectangle",
                       "id": "a32VR",
                       "name": "Item Divider",
-                      "fill": "#ffffff08",
+                      "fill": "$border-muted",
                       "width": "fill_container",
                       "height": 1
                     },
@@ -2001,7 +2001,7 @@
                           "type": "text",
                           "id": "Q6e5i",
                           "name": "Novel Title",
-                          "fill": "#ffffffd9",
+                          "fill": "$text-primary",
                           "content": "《随笔集》",
                           "fontFamily": "Inter",
                           "fontSize": 15,
@@ -2019,7 +2019,7 @@
                               "type": "text",
                               "id": "GOtqI",
                               "name": "Novel Chapters",
-                              "fill": "#ffffff4d",
+                              "fill": "$text-secondary",
                               "content": "不定期更新",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -2030,7 +2030,7 @@
                               "type": "text",
                               "id": "U7dK3",
                               "name": "Novel Date",
-                              "fill": "#ffffff33",
+                              "fill": "$text-muted",
                               "content": "2026.03",
                               "fontFamily": "Inter",
                               "fontSize": 11,
@@ -2043,7 +2043,7 @@
                           "type": "text",
                           "id": "E6tlYf",
                           "name": "Novel Desc",
-                          "fill": "#ffffff4d",
+                          "fill": "$text-secondary",
                           "content": "日常随笔与生活感悟",
                           "lineHeight": 1.5,
                           "fontFamily": "Inter",
@@ -2077,7 +2077,7 @@
                       "type": "text",
                       "id": "zrSxz",
                       "name": "Section Title",
-                      "fill": "#8b949e",
+                      "fill": "$text-secondary",
                       "content": "视觉作品",
                       "fontFamily": "Inter",
                       "fontSize": 16,
@@ -2088,7 +2088,7 @@
                       "type": "text",
                       "id": "ejW42",
                       "name": "Section Desc",
-                      "fill": "#6e7681",
+                      "fill": "$text-muted",
                       "content": "摄影 · 设计 · 插画",
                       "fontFamily": "Inter",
                       "fontSize": 12,
@@ -2220,7 +2220,7 @@
           "type": "text",
           "id": "Vv1qc",
           "name": "Page Footer",
-          "fill": "#6e7681",
+          "fill": "$text-muted",
           "textGrowth": "fixed-width",
           "width": "fill_container",
           "content": "© 2026 C1991",
@@ -2244,10 +2244,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#E7E8E5"
-        },
-        {
-          "value": "#18181b",
+          "value": "#161b22",
           "theme": {
             "Mode": "Dark"
           }
@@ -2258,10 +2255,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#666666"
-        },
-        {
-          "value": "#fafafa",
+          "value": "#f0f6fc",
           "theme": {
             "Mode": "Dark"
           }
@@ -2272,10 +2266,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#18181b"
-        },
-        {
-          "value": "#18181b",
+          "value": "#161b22",
           "theme": {
             "Mode": "Dark"
           }
@@ -2286,10 +2277,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#fafafa"
-        },
-        {
-          "value": "#fafafa",
+          "value": "#f0f6fc",
           "theme": {
             "Mode": "Dark"
           }
@@ -2300,10 +2288,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#CBCCC9"
-        },
-        {
-          "value": "#ffffff1a",
+          "value": "#30363d",
           "theme": {
             "Mode": "Dark"
           }
@@ -2314,10 +2299,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#CBCCC9"
-        },
-        {
-          "value": "#2a2a30",
+          "value": "#21262d",
           "theme": {
             "Mode": "Dark"
           }
@@ -2328,10 +2310,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#18181b"
-        },
-        {
-          "value": "#fafafa",
+          "value": "#f0f6fc",
           "theme": {
             "Mode": "Dark"
           }
@@ -2340,26 +2319,13 @@
     },
     "--sidebar-ring": {
       "type": "color",
-      "value": [
-        {
-          "value": "#71717a"
-        },
-        {
-          "value": "#71717a",
-          "theme": {
-            "Mode": "Dark"
-          }
-        }
-      ]
+      "value": "#58a6ff"
     },
     "--background": {
       "type": "color",
       "value": [
         {
-          "value": "#F2F3F0"
-        },
-        {
-          "value": "#111111",
+          "value": "#0d1117",
           "theme": {
             "Mode": "Dark"
           }
@@ -2370,10 +2336,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#111111"
-        },
-        {
-          "value": "#FFFFFF",
+          "value": "#f0f6fc",
           "theme": {
             "Mode": "Dark"
           }
@@ -2384,10 +2347,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#FFFFFF"
-        },
-        {
-          "value": "#1A1A1A",
+          "value": "#161b22",
           "theme": {
             "Mode": "Dark"
           }
@@ -2398,10 +2358,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#111111"
-        },
-        {
-          "value": "#FFFFFF",
+          "value": "#f0f6fc",
           "theme": {
             "Mode": "Dark"
           }
@@ -2412,10 +2369,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#FFFFFF"
-        },
-        {
-          "value": "#1A1A1A",
+          "value": "#161b22",
           "theme": {
             "Mode": "Dark"
           }
@@ -2426,10 +2380,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#111111"
-        },
-        {
-          "value": "#FFFFFF",
+          "value": "#f0f6fc",
           "theme": {
             "Mode": "Dark"
           }
@@ -2438,17 +2389,7 @@
     },
     "--primary": {
       "type": "color",
-      "value": [
-        {
-          "value": "#FF8400"
-        },
-        {
-          "value": "#FF8400",
-          "theme": {
-            "Mode": "Dark"
-          }
-        }
-      ]
+      "value": "#1f6feb"
     },
     "--primary-foreground": {
       "type": "color",
@@ -2468,10 +2409,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#E7E8E5"
-        },
-        {
-          "value": "#2E2E2E",
+          "value": "#21262d",
           "theme": {
             "Mode": "Dark"
           }
@@ -2482,10 +2420,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#111111"
-        },
-        {
-          "value": "#FFFFFF",
+          "value": "#f0f6fc",
           "theme": {
             "Mode": "Dark"
           }
@@ -2496,10 +2431,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#F2F3F0"
-        },
-        {
-          "value": "#2E2E2E",
+          "value": "#21262d",
           "theme": {
             "Mode": "Dark"
           }
@@ -2510,10 +2442,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#666666"
-        },
-        {
-          "value": "#B8B9B6",
+          "value": "#9198a1",
           "theme": {
             "Mode": "Dark"
           }
@@ -2524,10 +2453,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#F2F3F0"
-        },
-        {
-          "value": "#111111",
+          "value": "#21262d",
           "theme": {
             "Mode": "Dark"
           }
@@ -2538,10 +2464,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#111111"
-        },
-        {
-          "value": "#F2F3F0",
+          "value": "#f0f6fc",
           "theme": {
             "Mode": "Dark"
           }
@@ -2550,26 +2473,13 @@
     },
     "--destructive": {
       "type": "color",
-      "value": [
-        {
-          "value": "#D93C15"
-        },
-        {
-          "value": "#FF5C33",
-          "theme": {
-            "Mode": "Dark"
-          }
-        }
-      ]
+      "value": "#f85149"
     },
     "--border": {
       "type": "color",
       "value": [
         {
-          "value": "#CBCCC9"
-        },
-        {
-          "value": "#2E2E2E",
+          "value": "#30363d",
           "theme": {
             "Mode": "Dark"
           }
@@ -2580,10 +2490,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#CBCCC9"
-        },
-        {
-          "value": "#2E2E2E",
+          "value": "#30363d",
           "theme": {
             "Mode": "Dark"
           }
@@ -2592,17 +2499,7 @@
     },
     "--ring": {
       "type": "color",
-      "value": [
-        {
-          "value": "#666666"
-        },
-        {
-          "value": "#666666",
-          "theme": {
-            "Mode": "Dark"
-          }
-        }
-      ]
+      "value": "#58a6ff"
     },
     "--white": {
       "type": "color",
@@ -2632,10 +2529,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#DFE6E1"
-        },
-        {
-          "value": "#222924",
+          "value": "#161b22",
           "theme": {
             "Mode": "Dark"
           }
@@ -2646,10 +2540,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#004D1A"
-        },
-        {
-          "value": "#B6FFCE",
+          "value": "#3fb950",
           "theme": {
             "Mode": "Dark"
           }
@@ -2660,10 +2551,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#E9E3D8"
-        },
-        {
-          "value": "#291C0F",
+          "value": "#161b22",
           "theme": {
             "Mode": "Dark"
           }
@@ -2674,10 +2562,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#804200"
-        },
-        {
-          "value": "#FF8400",
+          "value": "#d2991d",
           "theme": {
             "Mode": "Dark"
           }
@@ -2688,10 +2573,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#E5DCDA"
-        },
-        {
-          "value": "#24100B",
+          "value": "#161b22",
           "theme": {
             "Mode": "Dark"
           }
@@ -2702,10 +2584,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#8C1C00"
-        },
-        {
-          "value": "#FF5C33",
+          "value": "#f85149",
           "theme": {
             "Mode": "Dark"
           }
@@ -2716,10 +2595,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#DFDFE6"
-        },
-        {
-          "value": "#222229",
+          "value": "#161b22",
           "theme": {
             "Mode": "Dark"
           }
@@ -2730,10 +2606,7 @@
       "type": "color",
       "value": [
         {
-          "value": "#000066"
-        },
-        {
-          "value": "#B2B2FF",
+          "value": "#58a6ff",
           "theme": {
             "Mode": "Dark"
           }
@@ -2762,11 +2635,11 @@
     },
     "bg-card": {
       "type": "color",
-      "value": "#0c0c14"
+      "value": "#161b22"
     },
     "bg-primary": {
       "type": "color",
-      "value": "#050508"
+      "value": "#010409"
     },
     "card-gap": {
       "type": "number",
@@ -2786,15 +2659,15 @@
     },
     "text-dim": {
       "type": "color",
-      "value": "#8e8e98"
+      "value": "#484f58"
     },
     "text-muted": {
       "type": "color",
-      "value": "#6e7681"
+      "value": "#7d8590"
     },
     "text-primary": {
       "type": "color",
-      "value": "#e6edf3"
+      "value": "#f0f6fc"
     },
     "accent-blue": {
       "type": "color",
@@ -2822,7 +2695,23 @@
     },
     "text-secondary": {
       "type": "color",
-      "value": "#8b949e"
+      "value": "#9198a1"
+    },
+    "accent-emphasis": {
+      "type": "color",
+      "value": "#1f6feb"
+    },
+    "border-muted": {
+      "type": "color",
+      "value": "#21262d"
+    },
+    "btn-primary-bg": {
+      "type": "color",
+      "value": "#238636"
+    },
+    "btn-primary-hover": {
+      "type": "color",
+      "value": "#29903ff"
     }
   }
 }
