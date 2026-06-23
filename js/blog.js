@@ -132,7 +132,6 @@ const Blog = (() => {
       let title = post.title;
       let date = post.date;
       let tags = post.tags || [];
-      let coverImage = post.coverImage || null;
 
       if (md.startsWith('---')) {
         const end = md.indexOf('---', 3);
@@ -147,7 +146,6 @@ const Blog = (() => {
               if (key === 'title') title = val;
               if (key === 'date') date = val;
               if (key === 'tags') tags = val.split(',').map(t => t.trim());
-              if (key === 'coverimage' || key === 'cover_image') coverImage = val;
             }
           });
         }
@@ -159,14 +157,11 @@ const Blog = (() => {
         ? marked.parse(content)
         : `<pre>${_esc(content)}</pre>`;
 
-      // Cover image (wrapped for watermark)
-      const coverHtml = coverImage
-        ? `<span class="img-watermark cover-img-wrap"><img src="${coverImage.startsWith('http') ? coverImage : IMG_BASE + coverImage}" alt="${_esc(title)}" class="cover-image" onerror="this.parentElement.style.display='none'"></span>`
-        : '';
+      // Cover image used only for listing card thumbnails;
+      // article body images come from Markdown content.
 
       el.innerHTML = `
         <div class="post-detail">
-          ${coverHtml}
           <header>
             <h1>${_esc(title)}</h1>
             <div class="meta">
@@ -229,15 +224,7 @@ const Blog = (() => {
       });
     });
 
-    // Bind cover image click
-    const coverImg = container.querySelector('.cover-image');
-    if (coverImg) {
-      coverImg.addEventListener('click', () => {
-        lbImg.src = coverImg.src;
-        lbImg.alt = coverImg.alt || '';
-        lb.classList.add('open');
-      });
-    }
+
   }
 
   // ============================================================
