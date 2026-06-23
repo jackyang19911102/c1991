@@ -51,38 +51,6 @@ const SHARES = [
     priority: 'pin',
     url: '/shares/ai-prompts.html'
   },
-  {
-    title: '现代 CSS 布局最佳实践 2026',
-    desc: 'Grid、Flexbox、Container Queries 的实战总结。从响应式到自适应，掌握现代 CSS 布局的全部武器。',
-    date: '2026.06.20',
-    tag: '前端',
-    priority: 'hot',
-    url: '/shares/css-layout.html'
-  },
-  {
-    title: 'Git 工作流的艺术',
-    desc: '从 Conventional Commits 到分支策略，一套适合个人开发者的高效 Git 实践方案。',
-    date: '2026.06.18',
-    tag: '工具',
-    priority: 'new',
-    url: '/shares/git-workflow.html'
-  },
-  {
-    title: '静态网站部署指南',
-    desc: '使用 GitHub Pages + GitHub Actions 实现零成本、自动化的静态网站部署流程。',
-    date: '2026.06.15',
-    tag: 'DevOps',
-    priority: null,
-    url: '/shares/static-deploy.html'
-  },
-  {
-    title: '个人知识管理系统的搭建',
-    desc: '如何用 Markdown + Git 构建一个轻量、持久、可检索的个人知识库。告别 Notion 依赖，拥抱纯文本的未来。',
-    date: '2026.06.10',
-    tag: '效率',
-    priority: null,
-    url: '/shares/pkm.html'
-  },
 ];
 
 function renderShares(shares) {
@@ -106,7 +74,7 @@ function renderShares(shares) {
     return b.date.localeCompare(a.date);
   });
 
-  grid.innerHTML = sorted.map((s, i) => {
+  list.innerHTML = sorted.map((s, i) => {
     const accentMap = { pin: 'accent-yellow', hot: 'accent-red', new: 'accent-blue' };
     const badgeMap = { pin: '📌 置顶', hot: '🔥 热门', new: '🆕 新发布' };
     const accent = s.priority ? accentMap[s.priority] : '';
@@ -133,7 +101,7 @@ function renderShares(shares) {
   }).join('');
 
   if (sorted.length < 6) {
-    grid.innerHTML += '<div class="sq-card ghost">' +
+    list.innerHTML += '<div class="sq-card ghost">' +
       '<svg class="ghost-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>' +
       '<span class="ghost-text">更多分享即将到来</span>' +
       '<span class="ghost-sub">敬请期待…</span>' +
@@ -144,20 +112,8 @@ function renderShares(shares) {
 // Initial render
 renderShares(SHARES);
 
-// In production, also try to load from shares manifest
-(async () => {
-  try {
-    const res = await fetch('/shares/manifest.json');
-    if (!res.ok) return;
-    const shares = await res.json();
-    if (shares.length) {
-      // Merge with hardcoded data
-      SHARES.length = 0;
-      SHARES.push(...shares);
-      renderShares(SHARES);
-    }
-  } catch(e) {}
-})();
+// Future: load additional shares from /shares/manifest.json when available
+
 </script>
 
 </body>

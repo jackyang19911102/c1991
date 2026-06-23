@@ -2,7 +2,6 @@
 title: 打卡深圳"湾区之眼BOOK"最大书店
 date: 2026-06-21
 tags: 打卡, 深圳, 书店, 湾区之眼
-coverImage: wanquzhiyan-book-01.jpg
 ---
 
 ## 湾区之眼 BOOK — 全球最大实体书城
