@@ -133,11 +133,12 @@ const Blog = (() => {
       let date = post.date;
       let tags = post.tags || [];
 
-      if (md.startsWith('---')) {
-        const end = md.indexOf('---', 3);
-        if (end > 0) {
+      if (md.startsWith('---\n') || md.startsWith('---\r\n')) {
+        const endMatch = md.slice(3).match(/\n---\r?\n/);
+        if (endMatch) {
+          const end = 3 + endMatch.index;
           const fm = md.slice(3, end).trim();
-          content = md.slice(end + 3).trim();
+          content = md.slice(end + endMatch[0].length).trim();
           fm.split('\n').forEach(line => {
             const idx = line.indexOf(':');
             if (idx > 0) {

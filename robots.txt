@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://c1991.cn/sitemap.xml

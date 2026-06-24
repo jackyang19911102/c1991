@@ -19,12 +19,39 @@
     <h1 class="subpage-heading">我的作品</h1>
     <p class="subpage-desc">文字创作 · 视觉作品 · 个人项目</p>
 
-    <hr class="subpage-divider">
+		<div class="search-wrap">
+			<input id="worksSearch" type="search" class="search-input" placeholder="搜索作品..." aria-label="搜索作品">
+		</div>
+
+		<hr class="subpage-divider">
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const input = document.getElementById('worksSearch');
+				if (!input) return;
+				const cards = Array.from(document.querySelectorAll('.card-grid article'));
+				const filter = () => {
+					const q = input.value.trim().toLowerCase();
+					cards.forEach(card => {
+						const text = card.textContent.toLowerCase();
+						const match = q === '' || text.indexOf(q) !== -1;
+						card.style.display = match ? '' : 'none';
+					});
+				};
+				input.addEventListener('input', filter);
+				// allow Enter to focus first visible card (optional UX)
+				input.addEventListener('keydown', (e) => {
+					if (e.key === 'Enter') {
+						const first = cards.find(c => c.style.display !== 'none');
+						if (first) first.scrollIntoView({behavior:'smooth',block:'center'});
+					}
+				});
+			});
+		</script>
 	    <div class="card-grid">
 
 	      <article class="sq-card accent-blue">
 	        <h3 class="sq-card-title">文字作品</h3>
-	        <p class="sq-card-desc" style="text-indent:0;font-size:12px;color:var(--color-text-tertiary);">小说 · 随笔 · 诗歌</p>
+	        <p class="sq-card-desc sq-card-desc--meta">小说 · 随笔 · 诗歌</p>
 	        <div class="novel-list-mini">
 	          <div class="novel-row"><span class="novel-dot" style="background:var(--color-accent)"></span><span class="novel-name">《城市边缘》</span><span class="novel-status">连载中 · 12章</span></div>
 	          <div class="novel-row"><span class="novel-dot" style="background:var(--color-accent)"></span><span class="novel-name">《夏日终曲》</span><span class="novel-status">已完结 · 8章</span></div>

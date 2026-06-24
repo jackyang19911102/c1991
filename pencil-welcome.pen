@@ -1,5 +1,5 @@
 {
-  "version": "2.13",
+  "version": "2.14",
   "children": [
     {
       "type": "frame",
@@ -40,7 +40,8 @@
           "fill": "#9198a1",
           "content": "文字 · 影像 · 作品 · 思考",
           "fontFamily": "Inter",
-          "fontSize": 14
+          "fontSize": 14,
+          "fontWeight": "normal"
         },
         {
           "type": "frame",
@@ -118,7 +119,8 @@
                       "fill": "#7d8590",
                       "content": "了解作者，关于本站",
                       "fontFamily": "Inter",
-                      "fontSize": 12
+                      "fontSize": 12,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -193,7 +195,8 @@
                       "fill": "#7d8590",
                       "content": "日常打卡 · 生活碎片",
                       "fontFamily": "Inter",
-                      "fontSize": 12
+                      "fontSize": 12,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -268,7 +271,8 @@
                       "fill": "#7d8590",
                       "content": "文字创作 · 视觉作品",
                       "fontFamily": "Inter",
-                      "fontSize": 12
+                      "fontSize": 12,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -343,7 +347,8 @@
                       "fill": "#7d8590",
                       "content": "技术要点 · 灵感收集",
                       "fontFamily": "Inter",
-                      "fontSize": 12
+                      "fontSize": 12,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -371,7 +376,7 @@
       "name": "Blog Page",
       "clip": true,
       "width": 1440,
-      "height": 900,
+      "height": 960,
       "fill": "#0d1117",
       "layout": "vertical",
       "padding": [
@@ -416,7 +421,8 @@
                   "fill": "#7d8590",
                   "content": "返回首页",
                   "fontFamily": "Inter",
-                  "fontSize": 13
+                  "fontSize": 13,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -437,7 +443,46 @@
               "fill": "#9198a1",
               "content": "日常打卡 · 生活碎片 · 影像记录",
               "fontFamily": "Inter",
-              "fontSize": 14
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "E74KC0",
+              "name": "Search Bar",
+              "width": "fill_container",
+              "fill": "#161b22",
+              "cornerRadius": 8,
+              "stroke": "#30363d",
+              "strokeWidth": 1,
+              "gap": 10,
+              "padding": [
+                10,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "vfPiA",
+                  "name": "Search Icon",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "search",
+                  "library": "lucide",
+                  "fill": "#484f58"
+                },
+                {
+                  "type": "text",
+                  "id": "mGw8m",
+                  "name": "Placeholder",
+                  "fill": "#484f58",
+                  "content": "搜索博文...",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
             },
             {
               "type": "frame",
@@ -699,7 +744,8 @@
                                   "fill": "#7d8590",
                                   "content": "2026.06.22",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -708,7 +754,8 @@
                                   "fill": "#7d8590",
                                   "content": "#日常",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             }
@@ -792,7 +839,8 @@
                                   "fill": "#7d8590",
                                   "content": "2026.06.21",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -801,7 +849,8 @@
                                   "fill": "#7d8590",
                                   "content": "#打卡",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             }
@@ -885,7 +934,8 @@
                                   "fill": "#7d8590",
                                   "content": "2026.06.21",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -894,7 +944,8 @@
                                   "fill": "#7d8590",
                                   "content": "#美食",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             }
@@ -988,7 +1039,8 @@
                                   "fill": "#7d8590",
                                   "content": "2026.06.20",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -997,7 +1049,8 @@
                                   "fill": "#7d8590",
                                   "content": "#摄影",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             }
@@ -1081,7 +1134,8 @@
                                   "fill": "#7d8590",
                                   "content": "2026.06.19",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -1090,7 +1144,8 @@
                                   "fill": "#7d8590",
                                   "content": "#日常",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             }
@@ -1174,7 +1229,8 @@
                                   "fill": "#7d8590",
                                   "content": "2026.06.18",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -1183,7 +1239,8 @@
                                   "fill": "#7d8590",
                                   "content": "#摄影",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             }
@@ -1252,7 +1309,8 @@
                   "fill": "#7d8590",
                   "content": "返回首页",
                   "fontFamily": "Inter",
-                  "fontSize": 13
+                  "fontSize": 13,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -1273,7 +1331,8 @@
               "fill": "#7d8590",
               "content": "@jackyang19911102",
               "fontFamily": "Inter",
-              "fontSize": 13
+              "fontSize": 13,
+              "fontWeight": "normal"
             },
             {
               "type": "text",
@@ -1282,7 +1341,8 @@
               "fill": "#9198a1",
               "content": "一个喜欢发掘新奇事物、拍照片、记录生活的人。",
               "fontFamily": "Inter",
-              "fontSize": 14
+              "fontSize": 14,
+              "fontWeight": "normal"
             },
             {
               "type": "frame",
@@ -1341,7 +1401,8 @@
                           "width": 270,
                           "content": "　　C1991 是小羊的个人博客。这里没有广告，没有评论区，没有社交分享按钮。有的只是文字和图片，以及偶尔的技术分享。这里是我的一方天地，一个安静记录和表达的空间。",
                           "fontFamily": "Inter",
-                          "fontSize": 14
+                          "fontSize": 14,
+                          "fontWeight": "normal"
                         }
                       ]
                     },
@@ -1378,7 +1439,8 @@
                           "width": 270,
                           "content": "　　一名热爱技术与生活的开发者。喜欢摄影、写作、探索新事物。相信文字和影像的力量，通过这个网站分享个人的所见所想。工作之余喜欢旅拍和咖啡，也热衷于折腾各种技术工具。",
                           "fontFamily": "Inter",
-                          "fontSize": 14
+                          "fontSize": 14,
+                          "fontWeight": "normal"
                         }
                       ]
                     }
@@ -1425,7 +1487,8 @@
                           "width": 270,
                           "content": "邮箱：502055254@qq.com",
                           "fontFamily": "Inter",
-                          "fontSize": 14
+                          "fontSize": 14,
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "text",
@@ -1436,7 +1499,8 @@
                           "width": 270,
                           "content": "GitHub：github.com/jackyang19911102",
                           "fontFamily": "Inter",
-                          "fontSize": 14
+                          "fontSize": 14,
+                          "fontWeight": "normal"
                         }
                       ]
                     },
@@ -1529,7 +1593,8 @@
                                   "width": 270,
                                   "content": "c1991.cn 全新改版上线。四大板块正式推出。",
                                   "fontFamily": "Inter",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             }
@@ -1600,7 +1665,8 @@
                                   "width": 270,
                                   "content": "C1991 项目开源，代码托管于 GitHub。",
                                   "fontFamily": "Inter",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             }
@@ -1671,7 +1737,8 @@
                                   "width": 270,
                                   "content": "注册 c1991.cn 域名，C1991 网站正式启动。",
                                   "fontFamily": "Inter",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             }
@@ -1740,7 +1807,8 @@
                   "fill": "#7d8590",
                   "content": "返回首页",
                   "fontFamily": "Inter",
-                  "fontSize": 13
+                  "fontSize": 13,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -1761,7 +1829,46 @@
               "fill": "#9198a1",
               "content": "文字创作 · 视觉作品 · 个人项目",
               "fontFamily": "Inter",
-              "fontSize": 14
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "c6m0C",
+              "name": "Search Bar",
+              "width": "fill_container",
+              "fill": "#161b22",
+              "cornerRadius": 8,
+              "stroke": "#30363d",
+              "strokeWidth": 1,
+              "gap": 10,
+              "padding": [
+                10,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "BfBZi",
+                  "name": "Search Icon",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "search",
+                  "library": "lucide",
+                  "fill": "#484f58"
+                },
+                {
+                  "type": "text",
+                  "id": "Pb8EX",
+                  "name": "Placeholder",
+                  "fill": "#484f58",
+                  "content": "搜索作品...",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
             },
             {
               "type": "frame",
@@ -1820,7 +1927,8 @@
                           "width": 260,
                           "content": "小说 · 随笔 · 诗歌",
                           "fontFamily": "Inter",
-                          "fontSize": 13
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "frame",
@@ -1856,7 +1964,8 @@
                               "fill": "#7d8590",
                               "content": "连载中 · 12章",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -1894,7 +2003,8 @@
                               "fill": "#7d8590",
                               "content": "已完结 · 8章",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -1932,7 +2042,8 @@
                               "fill": "#7d8590",
                               "content": "不定期更新",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -1986,7 +2097,8 @@
                               "fill": "#7d8590",
                               "content": "2026.06",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -1999,7 +2111,8 @@
                           "width": 260,
                           "content": "　　一个关于都市生活的现实主义小说，讲述普通人在城市变迁中的挣扎与坚守。故事围绕几位不同背景的年轻人展开，描绘他们在快速发展的都市中寻找自我、守护初心的旅程。",
                           "fontFamily": "Inter",
-                          "fontSize": 13
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         }
                       ]
                     },
@@ -2051,7 +2164,8 @@
                               "fill": "#7d8590",
                               "content": "2025.12",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -2064,7 +2178,8 @@
                           "width": 260,
                           "content": "　　青春短篇小说集，收录了八个关于成长、离别与重逢的故事。每个故事独立成篇，却又在情感脉络中相互呼应，构成一幅完整的青春图景。",
                           "fontFamily": "Inter",
-                          "fontSize": 13
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         }
                       ]
                     }
@@ -2126,7 +2241,8 @@
                               "fill": "#7d8590",
                               "content": "2026.03",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -2139,7 +2255,8 @@
                           "width": 260,
                           "content": "　　日常随笔与生活感悟，记录那些值得被记住的瞬间与思考。从一杯咖啡的温度到一场雨后的街景，用文字捕捉生活中的微光时刻。",
                           "fontFamily": "Inter",
-                          "fontSize": 13
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         }
                       ]
                     },
@@ -2322,7 +2439,8 @@
                           "width": 260,
                           "content": "　　探索技术与创意的交叉点，构建有意义的数字产品与体验。以下是一些正在进行的个人项目：",
                           "fontFamily": "Inter",
-                          "fontSize": 13
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "frame",
@@ -2366,7 +2484,8 @@
                                   "fill": "#7d8590",
                                   "content": "个人博客系统",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -2404,7 +2523,8 @@
                                   "fill": "#7d8590",
                                   "content": "照片展示工具",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             },
@@ -2442,7 +2562,8 @@
                                   "fill": "#7d8590",
                                   "content": "轻量写作平台",
                                   "fontFamily": "Inter",
-                                  "fontSize": 11
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
                                 }
                               ]
                             }
@@ -2511,7 +2632,8 @@
                   "fill": "#7d8590",
                   "content": "返回首页",
                   "fontFamily": "Inter",
-                  "fontSize": 13
+                  "fontSize": 13,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -2532,7 +2654,46 @@
               "fill": "#9198a1",
               "content": "技术要点 · 热门图文 · 灵感收集",
               "fontFamily": "Inter",
-              "fontSize": 14
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "JRdje",
+              "name": "Search Bar",
+              "width": "fill_container",
+              "fill": "#161b22",
+              "cornerRadius": 8,
+              "stroke": "#30363d",
+              "strokeWidth": 1,
+              "gap": 10,
+              "padding": [
+                10,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "PEAdv",
+                  "name": "Search Icon",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "search",
+                  "library": "lucide",
+                  "fill": "#484f58"
+                },
+                {
+                  "type": "text",
+                  "id": "S7qLK",
+                  "name": "Placeholder",
+                  "fill": "#484f58",
+                  "content": "搜索分享...",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
             },
             {
               "type": "frame",
@@ -2636,7 +2797,8 @@
                           "width": 260,
                           "content": "　　去除 AI 绘画塑料感的完整方法论：从情绪感官到场景搭建的实用指南。涵盖 Prompt 工程、后期处理与风格迁移的核心技巧。",
                           "fontFamily": "Inter",
-                          "fontSize": 13
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "frame",
@@ -2653,7 +2815,8 @@
                               "fill": "#7d8590",
                               "content": "2026.06.22",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -2662,7 +2825,8 @@
                               "fill": "#d2991d",
                               "content": "#AI 绘画",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -2746,7 +2910,8 @@
                           "width": 260,
                           "content": "　　Grid、Flexbox、Container Queries 的实战总结。从响应式到自适应，掌握现代 CSS 布局的全部武器。",
                           "fontFamily": "Inter",
-                          "fontSize": 13
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "frame",
@@ -2763,7 +2928,8 @@
                               "fill": "#7d8590",
                               "content": "2026.06.20",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -2772,7 +2938,8 @@
                               "fill": "#f85149",
                               "content": "#前端",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -2856,7 +3023,8 @@
                           "width": 260,
                           "content": "　　从 Conventional Commits 到分支策略，一套适合个人开发者的高效 Git 实践方案。",
                           "fontFamily": "Inter",
-                          "fontSize": 13
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "frame",
@@ -2873,7 +3041,8 @@
                               "fill": "#7d8590",
                               "content": "2026.06.18",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -2882,7 +3051,8 @@
                               "fill": "#58a6ff",
                               "content": "#工具",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -2953,7 +3123,8 @@
                           "width": 260,
                           "content": "　　使用 GitHub Pages + GitHub Actions 实现零成本、自动化的静态网站部署流程。",
                           "fontFamily": "Inter",
-                          "fontSize": 13
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "frame",
@@ -2970,7 +3141,8 @@
                               "fill": "#7d8590",
                               "content": "2026.06.15",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -2979,7 +3151,8 @@
                               "fill": "#9198a1",
                               "content": "#DevOps",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -3040,7 +3213,8 @@
                           "width": 260,
                           "content": "　　如何用 Markdown + Git 构建一个轻量、持久、可检索的个人知识库。告别 Notion 依赖，拥抱纯文本的未来。",
                           "fontFamily": "Inter",
-                          "fontSize": 13
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "frame",
@@ -3057,7 +3231,8 @@
                               "fill": "#7d8590",
                               "content": "2026.06.10",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -3066,7 +3241,8 @@
                               "fill": "#9198a1",
                               "content": "#效率",
                               "fontFamily": "Inter",
-                              "fontSize": 11
+                              "fontSize": 11,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -3105,7 +3281,8 @@
                           "fill": "#7d8590",
                           "content": "更多分享即将到来",
                           "fontFamily": "Inter",
-                          "fontSize": 14
+                          "fontSize": 14,
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "text",
@@ -3114,7 +3291,8 @@
                           "fill": "#484f58",
                           "content": "敬请期待…",
                           "fontFamily": "Inter",
-                          "fontSize": 12
+                          "fontSize": 12,
+                          "fontWeight": "normal"
                         }
                       ]
                     }
@@ -3607,5 +3785,6 @@
       "type": "color",
       "value": "#29903ff"
     }
-  }
+  },
+  "fileToken": "2188d782-12fa-41cb-857e-1ead8d25f4a2"
 }

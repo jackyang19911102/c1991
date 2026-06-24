@@ -21,14 +21,17 @@
     <div id="photoView">
       <h1 class="subpage-heading">图文博客</h1>
       <p class="subpage-desc">日常打卡 · 生活碎片 · 影像记录</p>
+      <div class="search-wrap">
+        <input id="blogSearch" type="search" class="search-input" placeholder="搜索博文..." aria-label="搜索博文">
+      </div>
       <hr class="subpage-divider">
       <div class="tag-filter-bar" id="tagFilter">
         <button class="tag-pill active" data-tag="all">全部</button>
-        <button class="tag-pill" data-tag="日常">日常</button>
-        <button class="tag-pill" data-tag="摄影">摄影</button>
         <button class="tag-pill" data-tag="打卡">打卡</button>
-        <button class="tag-pill" data-tag="旅行">旅行</button>
-        <button class="tag-pill" data-tag="美食">美食</button>
+        <button class="tag-pill" data-tag="深圳">深圳</button>
+        <button class="tag-pill" data-tag="书店">书店</button>
+        <button class="tag-pill" data-tag="随笔">随笔</button>
+        <button class="tag-pill" data-tag="建站">建站</button>
       </div>
       <div class="card-grid" id="photoGrid"></div>
       <div class="empty-state" id="emptyState" style="display:none;">暂无内容，敬请期待…</div>
@@ -99,16 +102,30 @@ if (postSlug) {
     }).join('');
   }
 
+  function applyFilters() {
+    const q = document.getElementById('blogSearch').value.trim().toLowerCase();
+    let filtered = activeTag === 'all' ? PHOTO_POSTS : PHOTO_POSTS.filter(p => p.tag === activeTag);
+    if (q) {
+      filtered = filtered.filter(p =>
+        p.title.toLowerCase().includes(q) ||
+        (p.tag || '').toLowerCase().includes(q) ||
+        (p.date || '').includes(q)
+      );
+    }
+    renderCards(filtered);
+    document.querySelectorAll('.tag-pill').forEach(btn => btn.classList.toggle('active', btn.dataset.tag === activeTag));
+  }
+
   function filterByTag(tag) {
     activeTag = tag;
-    const filtered = tag === 'all' ? PHOTO_POSTS : PHOTO_POSTS.filter(p => p.tag === tag);
-    renderCards(filtered);
-    document.querySelectorAll('.tag-pill').forEach(btn => btn.classList.toggle('active', btn.dataset.tag === tag));
+    applyFilters();
   }
 
   document.getElementById('tagFilter').addEventListener('click', (e) => {
     if (e.target.classList.contains('tag-pill')) filterByTag(e.target.dataset.tag);
   });
+
+  document.getElementById('blogSearch').addEventListener('input', applyFilters);
 
   // Highlight initial tag if provided
   if (initTag) filterByTag(initTag);

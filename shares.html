@@ -19,6 +19,10 @@
     <h1 class="subpage-heading">作者分享</h1>
     <p class="subpage-desc">技术要点 · 热门图文 · 灵感收集</p>
 
+    <div class="search-wrap">
+      <input id="sharesSearch" type="search" class="search-input" placeholder="搜索分享..." aria-label="搜索分享">
+    </div>
+
     <hr class="subpage-divider">
 
     <!-- Share list — time-sorted with priority ranking -->
@@ -111,6 +115,25 @@ function renderShares(shares) {
 
 // Initial render
 renderShares(SHARES);
+
+// Search filter
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('sharesSearch');
+  if (!input) return;
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    const cards = document.querySelectorAll('#shareGrid .sq-card:not(.ghost)');
+    const ghost = document.querySelector('#shareGrid .sq-card.ghost');
+    let hasVisible = false;
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      const match = q === '' || text.indexOf(q) !== -1;
+      card.style.display = match ? '' : 'none';
+      if (match) hasVisible = true;
+    });
+    if (ghost) ghost.style.display = q ? 'none' : '';
+  });
+});
 
 // Future: load additional shares from /shares/manifest.json when available
 
